@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Login Page-->
@@ -48,7 +49,57 @@
                     <view key="view" contentMode="scaleToFill" id="Tlc-Gg-W5d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laY-5e-3D1">
+                                <rect key="frame" x="200" y="556" width="200" height="44"/>
+                                <color key="backgroundColor" red="0.32156862745098036" green="0.55686274509803924" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="排行榜" image="rank"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nj-VX-hzf">
+                                <rect key="frame" x="400" y="556" width="200" height="44"/>
+                                <color key="backgroundColor" red="0.32156862745098036" green="0.55686274509803924" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xCv-pd-E1K"/>
+                                </constraints>
+                                <color key="tintColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="我的球隊" image="team"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-VG-GZo">
+                                <rect key="frame" x="0.0" y="556" width="200" height="44"/>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.36862745098039218" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="個人首頁" image="person"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26666666666666666" green="0.36862745098039218" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Nj-VX-hzf" secondAttribute="trailing" id="2b4-AE-M4G"/>
+                            <constraint firstItem="0Nj-VX-hzf" firstAttribute="bottom" secondItem="laY-5e-3D1" secondAttribute="bottom" id="4if-iC-iGV"/>
+                            <constraint firstItem="AaR-VG-GZo" firstAttribute="leading" secondItem="Tlc-Gg-W5d" secondAttribute="leading" id="8Qc-f7-1Xj"/>
+                            <constraint firstItem="aLW-F0-Eh7" firstAttribute="top" secondItem="AaR-VG-GZo" secondAttribute="bottom" id="I1g-FB-EBf"/>
+                            <constraint firstItem="AaR-VG-GZo" firstAttribute="height" secondItem="laY-5e-3D1" secondAttribute="height" id="KvH-Vk-GVg"/>
+                            <constraint firstItem="laY-5e-3D1" firstAttribute="width" secondItem="0Nj-VX-hzf" secondAttribute="width" multiplier="1:3" id="Nx8-q0-DOk"/>
+                            <constraint firstItem="AaR-VG-GZo" firstAttribute="bottom" secondItem="laY-5e-3D1" secondAttribute="bottom" id="RiI-ZW-waj"/>
+                            <constraint firstItem="laY-5e-3D1" firstAttribute="width" secondItem="Tlc-Gg-W5d" secondAttribute="width" multiplier="1:3" id="TOA-CV-4Tl"/>
+                            <constraint firstItem="laY-5e-3D1" firstAttribute="height" secondItem="0Nj-VX-hzf" secondAttribute="height" id="Ysa-5C-eSf"/>
+                            <constraint firstItem="0Nj-VX-hzf" firstAttribute="width" secondItem="laY-5e-3D1" secondAttribute="width" id="fSB-3q-wmg"/>
+                            <constraint firstItem="AaR-VG-GZo" firstAttribute="width" secondItem="laY-5e-3D1" secondAttribute="width" id="h0Q-9Q-vmj"/>
+                            <constraint firstItem="laY-5e-3D1" firstAttribute="centerX" secondItem="Tlc-Gg-W5d" secondAttribute="centerX" id="kWB-CH-Jrz"/>
+                            <constraint firstItem="aLW-F0-Eh7" firstAttribute="top" secondItem="laY-5e-3D1" secondAttribute="bottom" id="lSe-5t-KuA"/>
+                            <constraint firstItem="aLW-F0-Eh7" firstAttribute="top" secondItem="0Nj-VX-hzf" secondAttribute="bottom" id="rzO-Md-RQ2"/>
+                            <constraint firstItem="laY-5e-3D1" firstAttribute="leading" secondItem="AaR-VG-GZo" secondAttribute="trailing" id="vsd-02-X2N"/>
+                            <constraint firstItem="AaR-VG-GZo" firstAttribute="width" secondItem="laY-5e-3D1" secondAttribute="width" id="yNY-Uf-C4F"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RiI-ZW-waj"/>
+                                <exclude reference="h0Q-9Q-vmj"/>
+                                <exclude reference="Nx8-q0-DOk"/>
+                                <exclude reference="vsd-02-X2N"/>
+                                <exclude reference="4if-iC-iGV"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="yNc-Z3-Kz1"/>
                 </viewController>
@@ -75,4 +126,9 @@
             <point key="canvasLocation" x="958" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person" width="24" height="24"/>
+        <image name="rank" width="24" height="24"/>
+        <image name="team" width="24" height="24"/>
+    </resources>
 </document>
