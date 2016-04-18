@@ -22,7 +22,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofu-ww-aCz"/>
-                                    <segue destination="RG0-Cj-vVZ" kind="show" id="M81-oQ-vWD"/>
+                                    <segue destination="rVY-D9-aJY" kind="show" id="M81-oQ-vWD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,8 +50,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yNc-Z3-Kz1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Prz-LA-LbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tKv-hY-qSq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rVY-D9-aJY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I2u-0n-p54">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RG0-Cj-vVZ" kind="relationship" relationship="rootViewController" id="7n5-gA-9Mf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K2j-Zt-0P8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="958" y="339"/>
         </scene>
