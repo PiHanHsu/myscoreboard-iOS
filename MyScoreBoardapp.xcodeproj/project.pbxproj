@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F48A63D1CC4BC47001CE4A4 /* PersonalMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A63C1CC4BC47001CE4A4 /* PersonalMainPage.swift */; };
+		9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */; };
 		E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8D31CBF80C900329ECA /* AppDelegate.swift */; };
 		E87DF8D61CBF80C900329ECA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8D51CBF80C900329ECA /* ViewController.swift */; };
 		E87DF8D91CBF80C900329ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8D71CBF80C900329ECA /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F48A63C1CC4BC47001CE4A4 /* PersonalMainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMainPage.swift; sourceTree = "<group>"; };
+		9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		E87DF8D01CBF80C800329ECA /* MyScoreBoardapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyScoreBoardapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87DF8D31CBF80C900329ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E87DF8D51CBF80C900329ECA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F48A6401CC4BDE6001CE4A4 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */,
+				E87DF8D71CBF80C900329ECA /* Main.storyboard */,
+				E87DF8DC1CBF80C900329ECA /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
 		E87DF8C71CBF80C800329ECA = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +113,9 @@
 			children = (
 				E87DF8D31CBF80C900329ECA /* AppDelegate.swift */,
 				E87DF8D51CBF80C900329ECA /* ViewController.swift */,
-				E87DF8D71CBF80C900329ECA /* Main.storyboard */,
+				9F48A6401CC4BDE6001CE4A4 /* StoryBoard */,
+				9F48A63C1CC4BC47001CE4A4 /* PersonalMainPage.swift */,
 				E87DF8DA1CBF80C900329ECA /* Assets.xcassets */,
-				E87DF8DC1CBF80C900329ECA /* LaunchScreen.storyboard */,
 				E87DF8DF1CBF80C900329ECA /* Info.plist */,
 			);
 			path = MyScoreBoardapp;
@@ -230,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */,
+				9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */,
 				E87DF8DB1CBF80C900329ECA /* Assets.xcassets in Resources */,
 				E87DF8D91CBF80C900329ECA /* Main.storyboard in Resources */,
 			);
@@ -256,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F48A63D1CC4BC47001CE4A4 /* PersonalMainPage.swift in Sources */,
 				E87DF8D61CBF80C900329ECA /* ViewController.swift in Sources */,
 				E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +500,7 @@
 				E87DF8FA1CBF80C900329ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E87DF8FB1CBF80C900329ECA /* Build configuration list for PBXNativeTarget "MyScoreBoardappTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +509,7 @@
 				E87DF8FD1CBF80C900329ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E87DF8FE1CBF80C900329ECA /* Build configuration list for PBXNativeTarget "MyScoreBoardappUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +518,7 @@
 				E87DF9001CBF80C900329ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
