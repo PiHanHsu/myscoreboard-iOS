@@ -12,7 +12,7 @@ class PersonalMainPage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = Params.PersonalMainPageTitle
         // Do any additional setup after loading the view.
     }
 
