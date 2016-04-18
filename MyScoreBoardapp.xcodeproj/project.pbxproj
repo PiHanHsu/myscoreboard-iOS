@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F3AE8721CC4D62800869F06 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AE8711CC4D62800869F06 /* Params.swift */; };
 		9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */; };
 		9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A6421CC4C132001CE4A4 /* LoginPage.swift */; };
 		9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A6441CC4C261001CE4A4 /* PersonalMainPage.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F3AE8711CC4D62800869F06 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		9F48A6421CC4C132001CE4A4 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		9F48A6441CC4C261001CE4A4 /* PersonalMainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMainPage.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F3AE8731CC4D62B00869F06 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AE8711CC4D62800869F06 /* Params.swift */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		9F48A6401CC4BDE6001CE4A4 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 				9F48A6441CC4C261001CE4A4 /* PersonalMainPage.swift */,
 				9F48A6411CC4C0D8001CE4A4 /* Login */,
 				9F48A6401CC4BDE6001CE4A4 /* StoryBoard */,
+				9F3AE8731CC4D62B00869F06 /* Class */,
 				E87DF8DA1CBF80C900329ECA /* Assets.xcassets */,
 				E87DF8DF1CBF80C900329ECA /* Info.plist */,
 			);
@@ -282,6 +293,7 @@
 				9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */,
 				9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */,
 				E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */,
+				9F3AE8721CC4D62800869F06 /* Params.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
