@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class LoginPage: UIViewController {
 
@@ -37,7 +37,24 @@ class LoginPage: UIViewController {
     }
     
     func loginByBackEnd() {
+        let api_ip = "http://45.32.254.188/"
+        let api_login_url = "/api/v1/login"
+        let test_account = "hello@test.co"
+        let test_password = "12345678"
         
+        
+        let url = api_ip + api_login_url
+        Alamofire.request(.POST,
+            url,
+            parameters:
+            [   "email": test_account,
+                "password": test_password ])
+            .responseJSON(completionHandler: {
+                response in if let data = response.result.value{
+                    let json = JSON(data)
+                    print(json)
+                }
+            })
     }
     
     func loginByFB() {

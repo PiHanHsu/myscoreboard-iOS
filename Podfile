@@ -5,6 +5,7 @@
 
 target 'MyScoreBoardapp' do
 	pod 'Alamofire'
+	pod 'SwiftyJSON'
 end
 
 target 'MyScoreBoardappTests' do
