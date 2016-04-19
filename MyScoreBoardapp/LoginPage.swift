@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginPage: UIViewController {
 
     override func viewDidLoad() {
@@ -24,6 +25,23 @@ class LoginPage: UIViewController {
     @IBAction func LoginAction(sender: UIButton) {
         let personalMainPage = storyboard?.instantiateViewControllerWithIdentifier("PersonalMainPage") as! PersonalMainPage
         self.presentViewController(personalMainPage, animated: true, completion: nil)
+    }
+    
+    
+    func checkAuthToken() {
+        
+    }
+    
+    func register() {
+        
+    }
+    
+    func loginByBackEnd() {
+        
+    }
+    
+    func loginByFB() {
+        
     }
 
     /*
