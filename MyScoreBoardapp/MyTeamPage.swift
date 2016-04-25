@@ -35,6 +35,10 @@ class MyTeamPage: UIViewController,UIScrollViewDelegate,UICollectionViewDataSour
         self.teamCollectionView.delegate = self
         self.teamCollectionView.dataSource = self
         
+        
+        
+        
+        
         self.teamImage.image = UIImage(named: self.teams[0][TeamDetail.teamimage]!)
         self.teamName.text = self.teams[0][TeamDetail.Name]
         self.playGameTime.text = self.teams[0][TeamDetail.time]
@@ -98,6 +102,11 @@ class MyTeamPage: UIViewController,UIScrollViewDelegate,UICollectionViewDataSour
         
             
         cell.playerImage.image = UIImage(named: eachplaycard[PlayerCardDtail.photo]!)
+        
+        cell.playerImage.layer.cornerRadius = 10
+        cell.playerImage.layer.masksToBounds = true
+
+        
         
 //        print(eachplaycard[PlayerCardDtail.photo])
         

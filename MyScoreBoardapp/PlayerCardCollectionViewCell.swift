@@ -13,11 +13,15 @@ class PlayerCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet weak var playerName: UILabel!
     
-
+     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code   
+        
+//        self.playerImage.layer.cornerRadius = 100
+//        self.playerImage.layer.masksToBounds = true
+        
      
     }
 

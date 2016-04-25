@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		759EB6BA1CCC971E00BA694F /* AddTeamPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EB6B91CCC971E00BA694F /* AddTeamPage.swift */; };
+		759EB6BC1CCCA85500BA694F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EB6BB1CCCA85500BA694F /* ViewController.swift */; };
+		759EB6BE1CCCC99D00BA694F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759EB6BD1CCCC99D00BA694F /* Assets.xcassets */; };
 		75EA0E971CC87C34007699DE /* PlayerCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA0E951CC87C34007699DE /* PlayerCardCollectionViewCell.swift */; };
 		75EA0E981CC87C34007699DE /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EA0E961CC87C34007699DE /* PlayerCardCollectionViewCell.xib */; };
 		75EA0E9B1CC8938C007699DE /* MyTeamPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA0E9A1CC8938C007699DE /* MyTeamPage.swift */; };
@@ -18,7 +21,6 @@
 		9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A6441CC4C261001CE4A4 /* PersonalMainPage.swift */; };
 		E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8D31CBF80C900329ECA /* AppDelegate.swift */; };
 		E87DF8D91CBF80C900329ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8D71CBF80C900329ECA /* Main.storyboard */; };
-		E87DF8DB1CBF80C900329ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8DA1CBF80C900329ECA /* Assets.xcassets */; };
 		E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8DC1CBF80C900329ECA /* LaunchScreen.storyboard */; };
 		E87DF8E91CBF80C900329ECA /* MyScoreBoardappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8E81CBF80C900329ECA /* MyScoreBoardappTests.swift */; };
 		E87DF8F41CBF80C900329ECA /* MyScoreBoardappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8F31CBF80C900329ECA /* MyScoreBoardappUITests.swift */; };
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		759EB6B91CCC971E00BA694F /* AddTeamPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamPage.swift; sourceTree = "<group>"; };
+		759EB6BB1CCCA85500BA694F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		759EB6BD1CCCC99D00BA694F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyScoreBoardapp/Assets.xcassets; sourceTree = "<group>"; };
 		75EA0E951CC87C34007699DE /* PlayerCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		75EA0E961CC87C34007699DE /* PlayerCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		75EA0E9A1CC8938C007699DE /* MyTeamPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamPage.swift; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		E87DF8D01CBF80C800329ECA /* MyScoreBoardapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyScoreBoardapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87DF8D31CBF80C900329ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E87DF8D81CBF80C900329ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E87DF8DA1CBF80C900329ECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E87DF8DD1CBF80C900329ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E87DF8DF1CBF80C900329ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E87DF8E41CBF80C900329ECA /* MyScoreBoardappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyScoreBoardappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				75EA0E9A1CC8938C007699DE /* MyTeamPage.swift */,
+				759EB6B91CCC971E00BA694F /* AddTeamPage.swift */,
+				759EB6BB1CCCA85500BA694F /* ViewController.swift */,
 			);
 			name = Team;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E87DF8D21CBF80C900329ECA /* MyScoreBoardapp */,
+				759EB6BD1CCCC99D00BA694F /* Assets.xcassets */,
 				E87DF8E71CBF80C900329ECA /* MyScoreBoardappTests */,
 				E87DF8F21CBF80C900329ECA /* MyScoreBoardappUITests */,
 				E87DF8D11CBF80C800329ECA /* Products */,
@@ -165,7 +172,6 @@
 				9F48A6401CC4BDE6001CE4A4 /* StoryBoard */,
 				75EA0E8F1CC87AD0007699DE /* Xib */,
 				9F3AE8731CC4D62B00869F06 /* Class */,
-				E87DF8DA1CBF80C900329ECA /* Assets.xcassets */,
 				E87DF8DF1CBF80C900329ECA /* Info.plist */,
 			);
 			path = MyScoreBoardapp;
@@ -296,8 +302,8 @@
 				75EA0E981CC87C34007699DE /* PlayerCardCollectionViewCell.xib in Resources */,
 				E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */,
 				9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */,
-				E87DF8DB1CBF80C900329ECA /* Assets.xcassets in Resources */,
 				E87DF8D91CBF80C900329ECA /* Main.storyboard in Resources */,
+				759EB6BE1CCCC99D00BA694F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +328,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759EB6BC1CCCA85500BA694F /* ViewController.swift in Sources */,
+				759EB6BA1CCC971E00BA694F /* AddTeamPage.swift in Sources */,
 				9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */,
 				75EA0E9F1CC8BFAF007699DE /* TeamDetail.swift in Sources */,
 				75EA0E9B1CC8938C007699DE /* MyTeamPage.swift in Sources */,
