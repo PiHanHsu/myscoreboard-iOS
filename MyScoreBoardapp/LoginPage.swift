@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LoginPage: UIViewController {
 
@@ -23,6 +24,7 @@ class LoginPage: UIViewController {
     }
     
     @IBAction func LoginAction(sender: UIButton) {
+        self.loginByBackEnd()
         let personalMainPage = storyboard?.instantiateViewControllerWithIdentifier("PersonalMainPage") as! PersonalMainPage
         self.presentViewController(personalMainPage, animated: true, completion: nil)
     }
@@ -52,7 +54,9 @@ class LoginPage: UIViewController {
             .responseJSON(completionHandler: {
                 response in if let data = response.result.value{
                     let json = JSON(data)
-                    print(json)
+                    //print(json)
+                    print("user_id      :   \(json["user_id"])")
+                    print("auth_token   :   \(json["auth_token"])")
                 }
             })
     }
