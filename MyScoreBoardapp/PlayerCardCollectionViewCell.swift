@@ -18,9 +18,9 @@ class PlayerCardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code   
-        
-//        self.playerImage.layer.cornerRadius = 100
-//        self.playerImage.layer.masksToBounds = true
+
+        self.playerImage.layer.cornerRadius = 42
+        self.playerImage.layer.masksToBounds = true
         
      
     }

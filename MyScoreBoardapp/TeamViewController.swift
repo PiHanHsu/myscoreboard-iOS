@@ -28,6 +28,10 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         self.teamCollectionView.dataSource = self
         self.teamCollectionView.delegate = self
         
+        self.recordScoreButton.layer.cornerRadius = 5
+        
+        
+        
         
         
         let player1 = Player()

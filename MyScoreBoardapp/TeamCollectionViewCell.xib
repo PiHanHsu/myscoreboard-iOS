@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="111" height="143.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OFG-CC-Ucf">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="122.5"/>
+                                                <rect key="frame" x="12" y="0.0" width="99" height="122.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="108" id="1nw-ZX-nK1"/>
                                                     <constraint firstAttribute="height" constant="108" id="Lxc-4s-gsK"/>
@@ -43,7 +43,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="球隊成員" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX5-sw-8uy">
-                                                <rect key="frame" x="0.0" y="122.5" width="111" height="21"/>
+                                                <rect key="frame" x="12" y="122.5" width="99" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="4Xb-OQ-Kue"/>
                                                     <constraint firstAttribute="width" constant="68" id="PjX-C0-cwu"/>
@@ -68,8 +68,8 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="oX5-sw-8uy" firstAttribute="leading" secondItem="v76-qF-915" secondAttribute="leading" id="42n-GZ-1yn"/>
-                                            <constraint firstItem="OFG-CC-Ucf" firstAttribute="leading" secondItem="v76-qF-915" secondAttribute="leading" id="BdS-57-WyN"/>
+                                            <constraint firstItem="oX5-sw-8uy" firstAttribute="leading" secondItem="v76-qF-915" secondAttribute="leading" constant="12" id="42n-GZ-1yn"/>
+                                            <constraint firstItem="OFG-CC-Ucf" firstAttribute="leading" secondItem="v76-qF-915" secondAttribute="leading" constant="12" id="BdS-57-WyN"/>
                                             <constraint firstAttribute="trailing" secondItem="OFG-CC-Ucf" secondAttribute="trailing" id="Ht6-bx-SfR"/>
                                             <constraint firstItem="oX5-sw-8uy" firstAttribute="top" secondItem="OFG-CC-Ucf" secondAttribute="bottom" id="Sdd-Ki-S42"/>
                                             <constraint firstAttribute="trailing" secondItem="oX5-sw-8uy" secondAttribute="trailing" id="Y6d-47-H0Z"/>
@@ -82,13 +82,13 @@
                                                 <include reference="oX5-sw-8uy"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <include reference="BdS-57-WyN"/>
+                                                <include reference="Ht6-bx-SfR"/>
+                                                <include reference="jsQ-g2-qJK"/>
                                                 <include reference="42n-GZ-1yn"/>
                                                 <include reference="Sdd-Ki-S42"/>
                                                 <include reference="Y6d-47-H0Z"/>
                                                 <include reference="miQ-0P-yc1"/>
-                                                <include reference="BdS-57-WyN"/>
-                                                <include reference="Ht6-bx-SfR"/>
-                                                <include reference="jsQ-g2-qJK"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -216,9 +216,9 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="wst-Ly-bnC"/>
                                                         <exclude reference="1KO-cS-TIE"/>
                                                         <exclude reference="3l3-9Y-6iw"/>
-                                                        <exclude reference="wst-Ly-bnC"/>
                                                         <exclude reference="JHy-U5-h9C"/>
                                                         <exclude reference="vMS-zs-4zg"/>
                                                     </mask>
@@ -231,15 +231,15 @@
                                                     </mask>
                                                     <mask key="constraints">
                                                         <include reference="Y6u-Wf-nce"/>
+                                                        <include reference="GNY-lW-hfM"/>
+                                                        <include reference="fhx-4h-Dyy"/>
+                                                        <include reference="hhQ-Or-Hy0"/>
+                                                        <exclude reference="wst-Ly-bnC"/>
                                                         <exclude reference="1KO-cS-TIE"/>
                                                         <exclude reference="3l3-9Y-6iw"/>
                                                         <include reference="Mje-n8-vMc"/>
                                                         <include reference="QbZ-nQ-MLy"/>
                                                         <include reference="cH3-xs-eXa"/>
-                                                        <include reference="GNY-lW-hfM"/>
-                                                        <include reference="fhx-4h-Dyy"/>
-                                                        <include reference="hhQ-Or-Hy0"/>
-                                                        <exclude reference="wst-Ly-bnC"/>
                                                         <exclude reference="JHy-U5-h9C"/>
                                                         <include reference="P1H-BU-gT9"/>
                                                         <include reference="PVM-qB-zFp"/>
@@ -360,6 +360,10 @@
                                                 <include reference="DOb-FE-Fc2"/>
                                                 <include reference="DUt-QQ-mea"/>
                                                 <include reference="oXR-jI-u6z"/>
+                                                <include reference="IVm-aw-9zh"/>
+                                                <include reference="Mhs-0n-hO8"/>
+                                                <include reference="eif-zE-VaU"/>
+                                                <include reference="hib-wG-aRF"/>
                                                 <include reference="GHf-Xq-VMP"/>
                                                 <exclude reference="H0c-7J-pHb"/>
                                                 <exclude reference="Lal-lH-mfQ"/>
@@ -368,10 +372,6 @@
                                                 <exclude reference="fEi-Wn-Qwp"/>
                                                 <include reference="kLr-bx-EEt"/>
                                                 <exclude reference="omA-1L-VIj"/>
-                                                <include reference="IVm-aw-9zh"/>
-                                                <include reference="Mhs-0n-hO8"/>
-                                                <include reference="eif-zE-VaU"/>
-                                                <include reference="hib-wG-aRF"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -404,14 +404,14 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-Y4-dLU" userLabel="ChildPlayerCollection View">
-                                <rect key="frame" x="0.0" y="143.5" width="333" height="287.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-Y4-dLU" userLabel="ChildPlayerCollection View">
+                                <rect key="frame" x="0.0" y="143" width="333" height="287.5"/>
                                 <color key="backgroundColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7IB-u3-Sw8">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="0.0" id="7IB-u3-Sw8">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="12" minY="8" maxX="12" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
@@ -432,14 +432,14 @@
                                 <include reference="PeP-Y4-dLU"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8Rm-Nj-6LK"/>
-                                <include reference="Vmz-23-9up"/>
-                                <include reference="jvc-Bb-9Fc"/>
-                                <include reference="xcS-uI-96s"/>
                                 <include reference="88u-8O-HP9"/>
                                 <include reference="NB8-UR-v14"/>
                                 <include reference="NsZ-q2-Fqg"/>
                                 <include reference="jKu-Nm-XCc"/>
+                                <include reference="8Rm-Nj-6LK"/>
+                                <include reference="Vmz-23-9up"/>
+                                <include reference="jvc-Bb-9Fc"/>
+                                <include reference="xcS-uI-96s"/>
                             </mask>
                         </variation>
                     </view>

@@ -17,7 +17,4 @@ class Team: NSObject {
     var GameTimeHour:String?
     var GameLocation:String?
     
-    //    init(data: JSON) {
-    //        self.TeamName = data["name"].
-    //    }
-}
+   }
