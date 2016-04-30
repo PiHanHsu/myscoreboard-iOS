@@ -31,6 +31,10 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     @IBOutlet weak var gameLocationTitle: UILabel!
     @IBOutlet weak var gameLocation: UILabel!
     @IBOutlet weak var TeamMemberTitle: UILabel!
+    @IBOutlet weak var lightBlueView: UIView!
+    @IBOutlet weak var imageBackground: UIView!
+    @IBOutlet weak var teamDetailBackground: UIView!
+    @IBOutlet weak var headerBackground: UIView!
     
     
     override func awakeFromNib() {
@@ -40,27 +44,18 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         let nib = UINib(nibName: "PlayerCardCollectionViewCell", bundle: nil)
         childCollectionView?.registerNib(nib, forCellWithReuseIdentifier: "PlayerCardCollectionViewCell")
         
-        
-        
-        //        var players = [Player]()
-        
-        //        let player1 = Player()
-        //        player1.playerImageUrl = "player1"
-        //        player1.playerName = "abear"
-        //        players.append(player1)
-        
-        
-        
-        
         self.childCollectionView.dataSource = self
         self.childCollectionView.delegate = self
         
-        //        if self.team != nil {
-        //            self.teamNameLabel.text = self.team?.TeamName
-        //            self.gameTimeHour.text =  self.team?.GameTimeHour
-        //            self.gameTimeDay.text = self.team?.GameTimeDay
-        //            self.gameLocation.text = self.team?.GameLocation
-        //        }
+        
+        self.lightBlueView.layer.cornerRadius = 10
+        self.teamBackgroundView.layer.cornerRadius = 10
+        self.imageBackground.layer.cornerRadius = 10
+        self.teamBackgroundView.layer.cornerRadius = 10
+        self.headerBackground.layer.cornerRadius = 10
+        self.childCollectionView.layer.cornerRadius = 10
+
+        
         
     }
     

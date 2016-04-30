@@ -14,17 +14,21 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="333" height="431"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-ot-sxG">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-on-IHd">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="431"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-ot-sxG">
+                        <rect key="frame" x="2" y="2" width="329" height="427"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-1s-JnS">
-                                <rect key="frame" x="0.0" y="0.0" width="333" height="143.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="142.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v76-qF-915">
-                                        <rect key="frame" x="0.0" y="0.0" width="111" height="143.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="142.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OFG-CC-Ucf">
-                                                <rect key="frame" x="12" y="0.0" width="99" height="122.5"/>
+                                                <rect key="frame" x="12" y="0.0" width="98" height="121.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="108" id="1nw-ZX-nK1"/>
                                                     <constraint firstAttribute="height" constant="108" id="Lxc-4s-gsK"/>
@@ -43,7 +47,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="球隊成員" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX5-sw-8uy">
-                                                <rect key="frame" x="12" y="122.5" width="99" height="21"/>
+                                                <rect key="frame" x="12" y="121.5" width="98" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="4Xb-OQ-Kue"/>
                                                     <constraint firstAttribute="width" constant="68" id="PjX-C0-cwu"/>
@@ -93,10 +97,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z59-4Y-VNg">
-                                        <rect key="frame" x="111" y="0.0" width="222" height="143.5"/>
+                                        <rect key="frame" x="110" y="0.0" width="219" height="142.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeamName                  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtG-2D-64H">
-                                                <rect key="frame" x="0.0" y="28" width="222" height="24"/>
+                                                <rect key="frame" x="0.0" y="27" width="219" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="XRg-CZ-sw4">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="21"/>
@@ -122,7 +126,7 @@
                                                 </variation>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-ux-VlI">
-                                                <rect key="frame" x="0.0" y="52" width="222" height="40"/>
+                                                <rect key="frame" x="0.0" y="51" width="219" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聚會時間：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWi-Yf-IXc">
                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
@@ -151,7 +155,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:00 - 11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rql-1p-1jT">
-                                                        <rect key="frame" x="85" y="20" width="137" height="20"/>
+                                                        <rect key="frame" x="85" y="20" width="134" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="103" id="WDY-Sm-UGe">
                                                                 <variation key="heightClass=regular-widthClass=compact" constant="120"/>
@@ -175,7 +179,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-7O-Rvc">
-                                                        <rect key="frame" x="85" y="0.0" width="137" height="20"/>
+                                                        <rect key="frame" x="85" y="0.0" width="134" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="GFT-rA-jRc"/>
                                                             <constraint firstAttribute="height" constant="21" id="OhS-AW-8RH"/>
@@ -250,7 +254,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AV0-DL-Ldv">
-                                                <rect key="frame" x="0.0" y="92" width="222" height="21"/>
+                                                <rect key="frame" x="0.0" y="91" width="219" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="球場位置：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzJ-dR-R9k">
                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
@@ -271,7 +275,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中正運動中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNZ-AV-scG">
-                                                        <rect key="frame" x="85" y="0.0" width="137" height="21"/>
+                                                        <rect key="frame" x="85" y="0.0" width="134" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="102" id="ALo-CX-CLW">
                                                                 <variation key="heightClass=regular-widthClass=compact" constant="120"/>
@@ -376,7 +380,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.2901960784" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="v76-qF-915" firstAttribute="width" secondItem="qWB-1s-JnS" secondAttribute="width" multiplier="1:3" id="BNR-vi-ovv"/>
                                     <constraint firstItem="v76-qF-915" firstAttribute="top" secondItem="qWB-1s-JnS" secondAttribute="top" id="LIO-Gr-fcT"/>
@@ -405,8 +409,8 @@
                                 </variation>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-Y4-dLU" userLabel="ChildPlayerCollection View">
-                                <rect key="frame" x="0.0" y="143" width="333" height="287.5"/>
-                                <color key="backgroundColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="144.5" width="329" height="282"/>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="0.0" id="7IB-u3-Sw8">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -415,7 +419,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qWB-1s-JnS" firstAttribute="leading" secondItem="3ZZ-ot-sxG" secondAttribute="leading" id="88u-8O-HP9"/>
                             <constraint firstAttribute="bottom" secondItem="PeP-Y4-dLU" secondAttribute="bottom" id="8Rm-Nj-6LK"/>
@@ -423,7 +427,7 @@
                             <constraint firstItem="qWB-1s-JnS" firstAttribute="height" secondItem="3ZZ-ot-sxG" secondAttribute="height" multiplier="1:3" id="NsZ-q2-Fqg"/>
                             <constraint firstAttribute="trailing" secondItem="PeP-Y4-dLU" secondAttribute="trailing" id="Vmz-23-9up"/>
                             <constraint firstItem="qWB-1s-JnS" firstAttribute="top" secondItem="3ZZ-ot-sxG" secondAttribute="top" id="jKu-Nm-XCc"/>
-                            <constraint firstItem="PeP-Y4-dLU" firstAttribute="top" secondItem="qWB-1s-JnS" secondAttribute="bottom" id="jvc-Bb-9Fc"/>
+                            <constraint firstItem="PeP-Y4-dLU" firstAttribute="top" secondItem="qWB-1s-JnS" secondAttribute="bottom" constant="2" id="jvc-Bb-9Fc"/>
                             <constraint firstItem="PeP-Y4-dLU" firstAttribute="leading" secondItem="3ZZ-ot-sxG" secondAttribute="leading" id="xcS-uI-96s"/>
                         </constraints>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -447,10 +451,14 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="3ZZ-ot-sxG" secondAttribute="bottom" id="FEs-2A-zM9"/>
-                <constraint firstItem="3ZZ-ot-sxG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZNB-Sf-H67"/>
-                <constraint firstItem="3ZZ-ot-sxG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qTk-GN-2MI"/>
-                <constraint firstAttribute="trailing" secondItem="3ZZ-ot-sxG" secondAttribute="trailing" id="tYl-u5-kJY"/>
+                <constraint firstAttribute="bottom" secondItem="3ZZ-ot-sxG" secondAttribute="bottom" constant="2" id="FEs-2A-zM9"/>
+                <constraint firstAttribute="bottom" secondItem="BG4-on-IHd" secondAttribute="bottom" id="KcS-Sn-LUA"/>
+                <constraint firstAttribute="trailing" secondItem="BG4-on-IHd" secondAttribute="trailing" id="Rfl-c3-ijl"/>
+                <constraint firstItem="3ZZ-ot-sxG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="ZNB-Sf-H67"/>
+                <constraint firstItem="BG4-on-IHd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jIa-Wi-Pe7"/>
+                <constraint firstItem="BG4-on-IHd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pSy-3f-7ip"/>
+                <constraint firstItem="3ZZ-ot-sxG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="qTk-GN-2MI"/>
+                <constraint firstAttribute="trailing" secondItem="3ZZ-ot-sxG" secondAttribute="trailing" constant="2" id="tYl-u5-kJY"/>
             </constraints>
             <size key="customSize" width="333" height="532"/>
             <variation key="heightClass=regular-widthClass=compact">
@@ -473,7 +481,11 @@
                 <outlet property="gameTimeDay" destination="3ul-7O-Rvc" id="EhF-oN-W1H"/>
                 <outlet property="gameTimeHour" destination="Rql-1p-1jT" id="xEb-qJ-3rl"/>
                 <outlet property="gameTimeTitle" destination="IWi-Yf-IXc" id="Q9P-SB-wp4"/>
+                <outlet property="headerBackground" destination="qWB-1s-JnS" id="DA4-a1-8Fc"/>
+                <outlet property="imageBackground" destination="v76-qF-915" id="6J4-rK-hoM"/>
+                <outlet property="lightBlueView" destination="BG4-on-IHd" id="PCO-aT-cUk"/>
                 <outlet property="teamBackgroundView" destination="3ZZ-ot-sxG" id="eMh-lN-47V"/>
+                <outlet property="teamDetailBackground" destination="z59-4Y-VNg" id="t4g-e2-wuz"/>
                 <outlet property="teamImageUrl" destination="OFG-CC-Ucf" id="U95-yk-9T3"/>
                 <outlet property="teamNameLabel" destination="AtG-2D-64H" id="Zfq-Uc-ePu"/>
             </connections>

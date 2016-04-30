@@ -15,6 +15,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     @IBOutlet weak var teamCollectionView: UICollectionView!
     @IBOutlet weak var teamLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var recordScoreButton: UIButton!
+  
     
     
     
@@ -29,9 +30,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         self.teamCollectionView.delegate = self
         
         self.recordScoreButton.layer.cornerRadius = 5
-        
-        
-        
+       
         
         
         let player1 = Player()
