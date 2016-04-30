@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JVT-wd-D6H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Mv-n7-YcB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--排行榜-->
+        <scene sceneID="ogJ-bw-mOd">
+            <objects>
+                <viewController id="RFR-lQ-XSK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gtR-aU-UC5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mev-U3-DaD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ef-il-CpU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="排行榜" image="rank" id="jgq-wb-tLc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCw-Zp-HQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1544" y="532"/>
+        </scene>
+        <!--個人資訊-->
+        <scene sceneID="YRT-Cx-6pd">
+            <objects>
+                <viewController id="RMl-3j-NFR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I0F-cF-vbj"/>
+                        <viewControllerLayoutGuide type="bottom" id="SU6-l6-J4S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Dt-im-Ioj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="個人資訊" image="person" id="6XT-4O-paD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8E-mv-Eh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1544" y="-134"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HYV-P9-DK7">
+            <objects>
+                <tabBarController id="8Mv-n7-YcB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hux-OS-tCp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RMl-3j-NFR" kind="relationship" relationship="viewControllers" id="LcG-Vy-gtm"/>
+                        <segue destination="RFR-lQ-XSK" kind="relationship" relationship="viewControllers" id="gWw-pC-vha"/>
+                        <segue destination="ChA-KD-5US" kind="relationship" relationship="viewControllers" id="gKL-x5-N6F"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-4Y-MKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2312" y="634"/>
+        </scene>
         <!--我的球隊-->
         <scene sceneID="iAk-FZ-aPa">
             <objects>
@@ -19,36 +74,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOa-7p-6vC">
-                                <rect key="frame" x="0.0" y="550" width="200" height="49.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wOa-7p-6vC" secondAttribute="height" multiplier="4:1" id="opg-4O-pwC"/>
-                                </constraints>
-                                <state key="normal" title="  個人頁面" image="person"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="opg-4O-pwC"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mu-S2-aIk">
-                                <rect key="frame" x="200" y="550" width="200" height="49.5"/>
-                                <state key="normal" title="  排行榜" image="rank"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he7-u2-9RU">
-                                <rect key="frame" x="400" y="550" width="200" height="49.5"/>
-                                <state key="normal" title="  我的球隊" image="team"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-mh-P6C">
-                                <rect key="frame" x="8" y="512" width="584" height="30"/>
+                                <rect key="frame" x="8" y="512" width="572" height="30"/>
                                 <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="進入計分">
                                     <color key="titleColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Th-nM4" userLabel="Team Collection View">
-                                <rect key="frame" x="8" y="40" width="584" height="464"/>
-                                <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="8" y="76" width="572" height="426"/>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Blv-8S-hBj" userLabel="TeamLayout">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -68,28 +104,24 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.29019607843137257" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="he7-u2-9RU" secondAttribute="bottom" id="01U-So-vcJ"/>
-                            <constraint firstItem="he7-u2-9RU" firstAttribute="height" secondItem="wOa-7p-6vC" secondAttribute="height" id="1w3-Ql-BV5"/>
-                            <constraint firstItem="5Mu-S2-aIk" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="8" id="7jY-0h-ya8"/>
-                            <constraint firstItem="5Mu-S2-aIk" firstAttribute="leading" secondItem="wOa-7p-6vC" secondAttribute="trailing" id="8gg-Va-vjo"/>
-                            <constraint firstAttribute="trailing" secondItem="2GQ-mh-P6C" secondAttribute="trailing" constant="8" id="Bia-5b-bP7"/>
-                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="8" id="Csb-gX-7bL"/>
+                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="12" id="Ba8-U6-e99"/>
+                            <constraint firstAttribute="trailing" secondItem="2GQ-mh-P6C" secondAttribute="trailing" constant="20" id="Bia-5b-bP7"/>
+                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="10" id="Csb-gX-7bL"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="20" id="EH6-XT-O2M"/>
-                            <constraint firstItem="he7-u2-9RU" firstAttribute="width" secondItem="wOa-7p-6vC" secondAttribute="width" id="Ftn-QN-xQI"/>
-                            <constraint firstItem="5Mu-S2-aIk" firstAttribute="width" secondItem="wOa-7p-6vC" secondAttribute="width" id="Jiu-zT-25d"/>
-                            <constraint firstItem="he7-u2-9RU" firstAttribute="leading" secondItem="5Mu-S2-aIk" secondAttribute="trailing" id="KgV-16-hfa"/>
-                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="wOa-7p-6vC" secondAttribute="bottom" id="NWY-EY-N9V"/>
+                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="7k0-mq-ryN" secondAttribute="top" constant="75" id="UWj-JE-WjG"/>
                             <constraint firstItem="2GQ-mh-P6C" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="XI5-wq-zR7"/>
-                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="5Mu-S2-aIk" secondAttribute="bottom" id="iHU-Ay-S5e"/>
-                            <constraint firstItem="wOa-7p-6vC" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" id="kBb-nU-2pz"/>
+                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="9" id="ZXr-i1-wFg"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="m0q-Tj-rQV"/>
-                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="8" id="p6F-FM-Xgi"/>
-                            <constraint firstItem="wOa-7p-6vC" firstAttribute="height" secondItem="7k0-mq-ryN" secondAttribute="height" multiplier="1:12" id="vVK-x7-x3B"/>
-                            <constraint firstAttribute="trailing" secondItem="he7-u2-9RU" secondAttribute="trailing" id="y1i-9O-16b"/>
-                            <constraint firstItem="5Mu-S2-aIk" firstAttribute="height" secondItem="wOa-7p-6vC" secondAttribute="height" id="ywD-7e-mYc"/>
+                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="20" id="p6F-FM-Xgi"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EH6-XT-O2M"/>
+                                <exclude reference="UWj-JE-WjG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="我的球隊" id="A5t-PU-i8L"/>
                     <connections>
@@ -100,7 +132,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKv-qD-IDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-580" y="286"/>
+            <point key="canvasLocation" x="-884" y="1218"/>
+        </scene>
+        <!--我的球隊-->
+        <scene sceneID="yBb-0T-Cqk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ChA-KD-5US" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的球隊" image="team" id="SfB-Tc-GvR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TvJ-2c-pib">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JVT-wd-D6H" kind="relationship" relationship="rootViewController" id="KP6-kJ-dOz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2b-Fn-g5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1536" y="1218"/>
         </scene>
     </scenes>
     <resources>
