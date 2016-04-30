@@ -1,1238 +1,3 @@
-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0242C9549E29461E5A15A914</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9B4EBACC2ADA9DC607975E51</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>289C135278BADA6E91CF8FC0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>427A401B3B2DA9E1F32F6644</string>
-				<string>EB023AF0A789A865103C0F52</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>427A401B3B2DA9E1F32F6644</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-MyScoreBoardapp.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4DA6184377B3AC1164E00FE9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9B4EBACC2ADA9DC607975E51</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E30AC2B9D9C14E8B912A3EF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6B946D038101B1FDFE3911AB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>9B4EBACC2ADA9DC607975E51</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_MyScoreBoardapp.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9F3AE8711CC4D62800869F06</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Params.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F3AE8721CC4D62800869F06</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9F3AE8711CC4D62800869F06</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9F3AE8731CC4D62B00869F06</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9F3AE8711CC4D62800869F06</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Class</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F48A63E1CC4BDD8001CE4A4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Team.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F48A63F1CC4BDD8001CE4A4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9F48A63E1CC4BDD8001CE4A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9F48A6401CC4BDE6001CE4A4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9F48A63E1CC4BDD8001CE4A4</string>
-				<string>E87DF8D71CBF80C900329ECA</string>
-				<string>E87DF8DC1CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>StoryBoard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F48A6411CC4C0D8001CE4A4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9F48A6421CC4C132001CE4A4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Login</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F48A6421CC4C132001CE4A4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LoginPage.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F48A6431CC4C132001CE4A4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9F48A6421CC4C132001CE4A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9F48A6441CC4C261001CE4A4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PersonalMainPage.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F48A6451CC4C261001CE4A4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9F48A6441CC4C261001CE4A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8C71CBF80C800329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8D21CBF80C900329ECA</string>
-				<string>E87DF8E71CBF80C900329ECA</string>
-				<string>E87DF8F21CBF80C900329ECA</string>
-				<string>E87DF8D11CBF80C800329ECA</string>
-				<string>289C135278BADA6E91CF8FC0</string>
-				<string>4DA6184377B3AC1164E00FE9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8C81CBF80C800329ECA</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>PiHan Hsu</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>E87DF8CF1CBF80C800329ECA</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>E87DF8E31CBF80C900329ECA</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>E87DF8CF1CBF80C800329ECA</string>
-					</dict>
-					<key>E87DF8EE1CBF80C900329ECA</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>E87DF8CF1CBF80C800329ECA</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>E87DF8CB1CBF80C800329ECA</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>E87DF8C71CBF80C800329ECA</string>
-			<key>productRefGroup</key>
-			<string>E87DF8D11CBF80C800329ECA</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>E87DF8CF1CBF80C800329ECA</string>
-				<string>E87DF8E31CBF80C900329ECA</string>
-				<string>E87DF8EE1CBF80C900329ECA</string>
-			</array>
-		</dict>
-		<key>E87DF8CB1CBF80C800329ECA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E87DF8F61CBF80C900329ECA</string>
-				<string>E87DF8F71CBF80C900329ECA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E87DF8CC1CBF80C800329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9F48A6451CC4C261001CE4A4</string>
-				<string>9F48A6431CC4C132001CE4A4</string>
-				<string>E87DF8D41CBF80C900329ECA</string>
-				<string>9F3AE8721CC4D62800869F06</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8CD1CBF80C800329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0242C9549E29461E5A15A914</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8CE1CBF80C800329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E87DF8DE1CBF80C900329ECA</string>
-				<string>9F48A63F1CC4BDD8001CE4A4</string>
-				<string>E87DF8DB1CBF80C900329ECA</string>
-				<string>E87DF8D91CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8CF1CBF80C800329ECA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E87DF8F81CBF80C900329ECA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>FD22DBEF8D267F335C8ED908</string>
-				<string>E87DF8CC1CBF80C800329ECA</string>
-				<string>E87DF8CD1CBF80C800329ECA</string>
-				<string>E87DF8CE1CBF80C800329ECA</string>
-				<string>5E30AC2B9D9C14E8B912A3EF</string>
-				<string>6B946D038101B1FDFE3911AB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MyScoreBoardapp</string>
-			<key>productName</key>
-			<string>MyScoreBoardapp</string>
-			<key>productReference</key>
-			<string>E87DF8D01CBF80C800329ECA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>E87DF8D01CBF80C800329ECA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MyScoreBoardapp.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E87DF8D11CBF80C800329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8D01CBF80C800329ECA</string>
-				<string>E87DF8E41CBF80C900329ECA</string>
-				<string>E87DF8EF1CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8D21CBF80C900329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8D31CBF80C900329ECA</string>
-				<string>9F48A6441CC4C261001CE4A4</string>
-				<string>9F48A6411CC4C0D8001CE4A4</string>
-				<string>9F48A6401CC4BDE6001CE4A4</string>
-				<string>9F3AE8731CC4D62B00869F06</string>
-				<string>E87DF8DA1CBF80C900329ECA</string>
-				<string>E87DF8DF1CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MyScoreBoardapp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8D31CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8D41CBF80C900329ECA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87DF8D31CBF80C900329ECA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8D71CBF80C900329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8D81CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8D81CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8D91CBF80C900329ECA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87DF8D71CBF80C900329ECA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8DA1CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8DB1CBF80C900329ECA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87DF8DA1CBF80C900329ECA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8DC1CBF80C900329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8DD1CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8DD1CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8DE1CBF80C900329ECA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87DF8DC1CBF80C900329ECA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8DF1CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8E01CBF80C900329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E87DF8E91CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8E11CBF80C900329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8E21CBF80C900329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8E31CBF80C900329ECA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E87DF8FB1CBF80C900329ECA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E87DF8E01CBF80C900329ECA</string>
-				<string>E87DF8E11CBF80C900329ECA</string>
-				<string>E87DF8E21CBF80C900329ECA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E87DF8E61CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MyScoreBoardappTests</string>
-			<key>productName</key>
-			<string>MyScoreBoardappTests</string>
-			<key>productReference</key>
-			<string>E87DF8E41CBF80C900329ECA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>E87DF8E41CBF80C900329ECA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MyScoreBoardappTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E87DF8E51CBF80C900329ECA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>E87DF8C81CBF80C800329ECA</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E87DF8CF1CBF80C800329ECA</string>
-			<key>remoteInfo</key>
-			<string>MyScoreBoardapp</string>
-		</dict>
-		<key>E87DF8E61CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>E87DF8CF1CBF80C800329ECA</string>
-			<key>targetProxy</key>
-			<string>E87DF8E51CBF80C900329ECA</string>
-		</dict>
-		<key>E87DF8E71CBF80C900329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8E81CBF80C900329ECA</string>
-				<string>E87DF8EA1CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MyScoreBoardappTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8E81CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MyScoreBoardappTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8E91CBF80C900329ECA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87DF8E81CBF80C900329ECA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8EA1CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8EB1CBF80C900329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E87DF8F41CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8EC1CBF80C900329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8ED1CBF80C900329ECA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E87DF8EE1CBF80C900329ECA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E87DF8FE1CBF80C900329ECA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E87DF8EB1CBF80C900329ECA</string>
-				<string>E87DF8EC1CBF80C900329ECA</string>
-				<string>E87DF8ED1CBF80C900329ECA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E87DF8F11CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MyScoreBoardappUITests</string>
-			<key>productName</key>
-			<string>MyScoreBoardappUITests</string>
-			<key>productReference</key>
-			<string>E87DF8EF1CBF80C900329ECA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>E87DF8EF1CBF80C900329ECA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MyScoreBoardappUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E87DF8F01CBF80C900329ECA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>E87DF8C81CBF80C800329ECA</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E87DF8CF1CBF80C800329ECA</string>
-			<key>remoteInfo</key>
-			<string>MyScoreBoardapp</string>
-		</dict>
-		<key>E87DF8F11CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>E87DF8CF1CBF80C800329ECA</string>
-			<key>targetProxy</key>
-			<string>E87DF8F01CBF80C900329ECA</string>
-		</dict>
-		<key>E87DF8F21CBF80C900329ECA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87DF8F31CBF80C900329ECA</string>
-				<string>E87DF8F51CBF80C900329ECA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MyScoreBoardappUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8F31CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MyScoreBoardappUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8F41CBF80C900329ECA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87DF8F31CBF80C900329ECA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E87DF8F51CBF80C900329ECA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E87DF8F61CBF80C900329ECA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E87DF8F71CBF80C900329ECA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E87DF8F81CBF80C900329ECA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E87DF8F91CBF80C900329ECA</string>
-				<string>E87DF8FA1CBF80C900329ECA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E87DF8F91CBF80C900329ECA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>427A401B3B2DA9E1F32F6644</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MyScoreBoardapp/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.pihanhsu.MyScoreBoardapp</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E87DF8FA1CBF80C900329ECA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EB023AF0A789A865103C0F52</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MyScoreBoardapp/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.pihanhsu.MyScoreBoardapp</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E87DF8FB1CBF80C900329ECA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E87DF8FC1CBF80C900329ECA</string>
-				<string>E87DF8FD1CBF80C900329ECA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E87DF8FC1CBF80C900329ECA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MyScoreBoardappTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.pihanhsu.MyScoreBoardappTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/MyScoreBoardapp.app/MyScoreBoardapp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E87DF8FD1CBF80C900329ECA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MyScoreBoardappTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.pihanhsu.MyScoreBoardappTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/MyScoreBoardapp.app/MyScoreBoardapp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E87DF8FE1CBF80C900329ECA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E87DF8FF1CBF80C900329ECA</string>
-				<string>E87DF9001CBF80C900329ECA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E87DF8FF1CBF80C900329ECA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>MyScoreBoardappUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.pihanhsu.MyScoreBoardappUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>MyScoreBoardapp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E87DF9001CBF80C900329ECA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>MyScoreBoardappUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.pihanhsu.MyScoreBoardappUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>MyScoreBoardapp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EB023AF0A789A865103C0F52</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-MyScoreBoardapp.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FD22DBEF8D267F335C8ED908</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>E87DF8C81CBF80C800329ECA</string>
-</dict>
-</plist>
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
@@ -1242,20 +7,22 @@ fi
 	objects = {
 
 /* Begin PBXBuildFile section */
-		759EB6BA1CCC971E00BA694F /* AddTeamPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EB6B91CCC971E00BA694F /* AddTeamPage.swift */; };
-		759EB6BC1CCCA85500BA694F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EB6BB1CCCA85500BA694F /* ViewController.swift */; };
-		759EB6BE1CCCC99D00BA694F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759EB6BD1CCCC99D00BA694F /* Assets.xcassets */; };
-		75EA0E971CC87C34007699DE /* PlayerCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA0E951CC87C34007699DE /* PlayerCardCollectionViewCell.swift */; };
-		75EA0E981CC87C34007699DE /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EA0E961CC87C34007699DE /* PlayerCardCollectionViewCell.xib */; };
-		75EA0E9B1CC8938C007699DE /* MyTeamPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA0E9A1CC8938C007699DE /* MyTeamPage.swift */; };
-		75EA0E9F1CC8BFAF007699DE /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA0E9E1CC8BFAF007699DE /* TeamDetail.swift */; };
-		75EA0EA11CC9289A007699DE /* PlayerCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA0EA01CC9289A007699DE /* PlayerCardDetail.swift */; };
+		0242C9549E29461E5A15A914 /* Pods_MyScoreBoardapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4EBACC2ADA9DC607975E51 /* Pods_MyScoreBoardapp.framework */; };
+		7596EE9F1CD4625000C55438 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EE9E1CD4625000C55438 /* TeamViewController.swift */; };
+		7596EEA11CD462A000C55438 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEA01CD462A000C55438 /* PlayerViewController.swift */; };
+		7596EEA31CD462CF00C55438 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEA21CD462CF00C55438 /* Team.swift */; };
+		7596EEA51CD462EF00C55438 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEA41CD462EF00C55438 /* Player.swift */; };
+		7596EEA91CD463BF00C55438 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEA71CD463BF00C55438 /* TeamCollectionViewCell.swift */; };
+		7596EEAA1CD463BF00C55438 /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEA81CD463BF00C55438 /* TeamCollectionViewCell.xib */; };
+		7596EEAD1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEAB1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift */; };
+		7596EEAE1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */; };
 		9F3AE8721CC4D62800869F06 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AE8711CC4D62800869F06 /* Params.swift */; };
 		9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */; };
 		9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A6421CC4C132001CE4A4 /* LoginPage.swift */; };
 		9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A6441CC4C261001CE4A4 /* PersonalMainPage.swift */; };
 		E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8D31CBF80C900329ECA /* AppDelegate.swift */; };
 		E87DF8D91CBF80C900329ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8D71CBF80C900329ECA /* Main.storyboard */; };
+		E87DF8DB1CBF80C900329ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8DA1CBF80C900329ECA /* Assets.xcassets */; };
 		E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DF8DC1CBF80C900329ECA /* LaunchScreen.storyboard */; };
 		E87DF8E91CBF80C900329ECA /* MyScoreBoardappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8E81CBF80C900329ECA /* MyScoreBoardappTests.swift */; };
 		E87DF8F41CBF80C900329ECA /* MyScoreBoardappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DF8F31CBF80C900329ECA /* MyScoreBoardappUITests.swift */; };
@@ -1279,14 +46,16 @@ fi
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		759EB6B91CCC971E00BA694F /* AddTeamPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamPage.swift; sourceTree = "<group>"; };
-		759EB6BB1CCCA85500BA694F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		759EB6BD1CCCC99D00BA694F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyScoreBoardapp/Assets.xcassets; sourceTree = "<group>"; };
-		75EA0E951CC87C34007699DE /* PlayerCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		75EA0E961CC87C34007699DE /* PlayerCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCardCollectionViewCell.xib; sourceTree = "<group>"; };
-		75EA0E9A1CC8938C007699DE /* MyTeamPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTeamPage.swift; sourceTree = "<group>"; };
-		75EA0E9E1CC8BFAF007699DE /* TeamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
-		75EA0EA01CC9289A007699DE /* PlayerCardDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCardDetail.swift; sourceTree = "<group>"; };
+		427A401B3B2DA9E1F32F6644 /* Pods-MyScoreBoardapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyScoreBoardapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp.debug.xcconfig"; sourceTree = "<group>"; };
+		7596EE9E1CD4625000C55438 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		7596EEA01CD462A000C55438 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		7596EEA21CD462CF00C55438 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		7596EEA41CD462EF00C55438 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7596EEA71CD463BF00C55438 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		7596EEA81CD463BF00C55438 /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
+		7596EEAB1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		9B4EBACC2ADA9DC607975E51 /* Pods_MyScoreBoardapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyScoreBoardapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3AE8711CC4D62800869F06 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		9F48A6421CC4C132001CE4A4 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
@@ -1294,6 +63,7 @@ fi
 		E87DF8D01CBF80C800329ECA /* MyScoreBoardapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyScoreBoardapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87DF8D31CBF80C900329ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E87DF8D81CBF80C900329ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E87DF8DA1CBF80C900329ECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E87DF8DD1CBF80C900329ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E87DF8DF1CBF80C900329ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E87DF8E41CBF80C900329ECA /* MyScoreBoardappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyScoreBoardappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1302,6 +72,7 @@ fi
 		E87DF8EF1CBF80C900329ECA /* MyScoreBoardappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyScoreBoardappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87DF8F31CBF80C900329ECA /* MyScoreBoardappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScoreBoardappUITests.swift; sourceTree = "<group>"; };
 		E87DF8F51CBF80C900329ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB023AF0A789A865103C0F52 /* Pods-MyScoreBoardapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyScoreBoardapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1309,6 +80,7 @@ fi
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0242C9549E29461E5A15A914 /* Pods_MyScoreBoardapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1329,31 +101,49 @@ fi
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		75EA0E8F1CC87AD0007699DE /* Xib */ = {
+		289C135278BADA6E91CF8FC0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75EA0E951CC87C34007699DE /* PlayerCardCollectionViewCell.swift */,
-				75EA0E961CC87C34007699DE /* PlayerCardCollectionViewCell.xib */,
+				427A401B3B2DA9E1F32F6644 /* Pods-MyScoreBoardapp.debug.xcconfig */,
+				EB023AF0A789A865103C0F52 /* Pods-MyScoreBoardapp.release.xcconfig */,
 			);
-			name = Xib;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		75EA0E991CC88EDD007699DE /* Team */ = {
+		4DA6184377B3AC1164E00FE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75EA0E9A1CC8938C007699DE /* MyTeamPage.swift */,
-				759EB6B91CCC971E00BA694F /* AddTeamPage.swift */,
-				759EB6BB1CCCA85500BA694F /* ViewController.swift */,
+				9B4EBACC2ADA9DC607975E51 /* Pods_MyScoreBoardapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7596EE9D1CD461FE00C55438 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				7596EE9E1CD4625000C55438 /* TeamViewController.swift */,
+				7596EEA01CD462A000C55438 /* PlayerViewController.swift */,
+				7596EEA41CD462EF00C55438 /* Player.swift */,
+				7596EEA21CD462CF00C55438 /* Team.swift */,
 			);
 			name = Team;
+			sourceTree = "<group>";
+		};
+		7596EEA61CD4638800C55438 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				7596EEA71CD463BF00C55438 /* TeamCollectionViewCell.swift */,
+				7596EEA81CD463BF00C55438 /* TeamCollectionViewCell.xib */,
+				7596EEAB1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift */,
+				7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */,
+			);
+			name = Xib;
 			sourceTree = "<group>";
 		};
 		9F3AE8731CC4D62B00869F06 /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				9F3AE8711CC4D62800869F06 /* Params.swift */,
-				75EA0E9E1CC8BFAF007699DE /* TeamDetail.swift */,
-				75EA0EA01CC9289A007699DE /* PlayerCardDetail.swift */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -1361,9 +151,9 @@ fi
 		9F48A6401CC4BDE6001CE4A4 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				E87DF8DC1CBF80C900329ECA /* LaunchScreen.storyboard */,
-				E87DF8D71CBF80C900329ECA /* Main.storyboard */,
 				9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */,
+				E87DF8D71CBF80C900329ECA /* Main.storyboard */,
+				E87DF8DC1CBF80C900329ECA /* LaunchScreen.storyboard */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -1380,10 +170,11 @@ fi
 			isa = PBXGroup;
 			children = (
 				E87DF8D21CBF80C900329ECA /* MyScoreBoardapp */,
-				759EB6BD1CCCC99D00BA694F /* Assets.xcassets */,
 				E87DF8E71CBF80C900329ECA /* MyScoreBoardappTests */,
 				E87DF8F21CBF80C900329ECA /* MyScoreBoardappUITests */,
 				E87DF8D11CBF80C800329ECA /* Products */,
+				289C135278BADA6E91CF8FC0 /* Pods */,
+				4DA6184377B3AC1164E00FE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1403,10 +194,11 @@ fi
 				E87DF8D31CBF80C900329ECA /* AppDelegate.swift */,
 				9F48A6441CC4C261001CE4A4 /* PersonalMainPage.swift */,
 				9F48A6411CC4C0D8001CE4A4 /* Login */,
-				75EA0E991CC88EDD007699DE /* Team */,
+				7596EE9D1CD461FE00C55438 /* Team */,
 				9F48A6401CC4BDE6001CE4A4 /* StoryBoard */,
-				75EA0E8F1CC87AD0007699DE /* Xib */,
+				7596EEA61CD4638800C55438 /* Xib */,
 				9F3AE8731CC4D62B00869F06 /* Class */,
+				E87DF8DA1CBF80C900329ECA /* Assets.xcassets */,
 				E87DF8DF1CBF80C900329ECA /* Info.plist */,
 			);
 			path = MyScoreBoardapp;
@@ -1437,9 +229,12 @@ fi
 			isa = PBXNativeTarget;
 			buildConfigurationList = E87DF8F81CBF80C900329ECA /* Build configuration list for PBXNativeTarget "MyScoreBoardapp" */;
 			buildPhases = (
+				FD22DBEF8D267F335C8ED908 /* Check Pods Manifest.lock */,
 				E87DF8CC1CBF80C800329ECA /* Sources */,
 				E87DF8CD1CBF80C800329ECA /* Frameworks */,
 				E87DF8CE1CBF80C800329ECA /* Resources */,
+				5E30AC2B9D9C14E8B912A3EF /* Embed Pods Frameworks */,
+				6B946D038101B1FDFE3911AB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1534,11 +329,12 @@ fi
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75EA0E981CC87C34007699DE /* PlayerCardCollectionViewCell.xib in Resources */,
+				7596EEAE1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib in Resources */,
 				E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */,
 				9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */,
+				E87DF8DB1CBF80C900329ECA /* Assets.xcassets in Resources */,
+				7596EEAA1CD463BF00C55438 /* TeamCollectionViewCell.xib in Resources */,
 				E87DF8D91CBF80C900329ECA /* Main.storyboard in Resources */,
-				759EB6BE1CCCC99D00BA694F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1558,21 +354,69 @@ fi
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E30AC2B9D9C14E8B912A3EF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B946D038101B1FDFE3911AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyScoreBoardapp/Pods-MyScoreBoardapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD22DBEF8D267F335C8ED908 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E87DF8CC1CBF80C800329ECA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759EB6BC1CCCA85500BA694F /* ViewController.swift in Sources */,
-				759EB6BA1CCC971E00BA694F /* AddTeamPage.swift in Sources */,
+				7596EEA91CD463BF00C55438 /* TeamCollectionViewCell.swift in Sources */,
 				9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */,
-				75EA0E9F1CC8BFAF007699DE /* TeamDetail.swift in Sources */,
-				75EA0E9B1CC8938C007699DE /* MyTeamPage.swift in Sources */,
-				75EA0EA11CC9289A007699DE /* PlayerCardDetail.swift in Sources */,
 				9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */,
+				7596EEA31CD462CF00C55438 /* Team.swift in Sources */,
 				E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */,
+				7596EEA51CD462EF00C55438 /* Player.swift in Sources */,
 				9F3AE8721CC4D62800869F06 /* Params.swift in Sources */,
-				75EA0E971CC87C34007699DE /* PlayerCardCollectionViewCell.swift in Sources */,
+				7596EE9F1CD4625000C55438 /* TeamViewController.swift in Sources */,
+				7596EEA11CD462A000C55438 /* PlayerViewController.swift in Sources */,
+				7596EEAD1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1714,6 +558,7 @@ fi
 		};
 		E87DF8F91CBF80C900329ECA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427A401B3B2DA9E1F32F6644 /* Pods-MyScoreBoardapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyScoreBoardapp/Info.plist;
@@ -1725,6 +570,7 @@ fi
 		};
 		E87DF8FA1CBF80C900329ECA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB023AF0A789A865103C0F52 /* Pods-MyScoreBoardapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyScoreBoardapp/Info.plist;
@@ -1823,4 +669,3 @@ fi
 	};
 	rootObject = E87DF8C81CBF80C800329ECA /* Project object */;
 }
-
