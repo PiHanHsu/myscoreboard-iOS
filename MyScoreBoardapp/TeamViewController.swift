@@ -132,7 +132,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.teams.count
+        return self.teams.count+1
     }
     
     
@@ -140,12 +140,13 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let myTeams = teams[indexPath.row]
+       
         
         if indexPath.row < self.teams.count{
             
         let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("TeamCollectionViewCell", forIndexPath: indexPath) as! TeamCollectionViewCell
-        
+            
+        let myTeams = teams[indexPath.row]
         myCell.delegate = self
         myCell.team = myTeams
         
