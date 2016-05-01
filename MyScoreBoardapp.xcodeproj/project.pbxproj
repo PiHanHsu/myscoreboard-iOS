@@ -16,6 +16,8 @@
 		7596EEAA1CD463BF00C55438 /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEA81CD463BF00C55438 /* TeamCollectionViewCell.xib */; };
 		7596EEAD1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEAB1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift */; };
 		7596EEAE1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */; };
+		7596EEB11CD5A80600C55438 /* addTeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */; };
+		7596EEB21CD5A80600C55438 /* addTeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */; };
 		9F3AE8721CC4D62800869F06 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AE8711CC4D62800869F06 /* Params.swift */; };
 		9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */; };
 		9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48A6421CC4C132001CE4A4 /* LoginPage.swift */; };
@@ -55,6 +57,8 @@
 		7596EEA81CD463BF00C55438 /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
 		7596EEAB1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addTeamCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B4EBACC2ADA9DC607975E51 /* Pods_MyScoreBoardapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyScoreBoardapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3AE8711CC4D62800869F06 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		9F48A63E1CC4BDD8001CE4A4 /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				7596EEA71CD463BF00C55438 /* TeamCollectionViewCell.swift */,
 				7596EEA81CD463BF00C55438 /* TeamCollectionViewCell.xib */,
+				7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */,
+				7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */,
 				7596EEAB1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift */,
 				7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */,
 			);
@@ -331,6 +337,7 @@
 			files = (
 				7596EEAE1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib in Resources */,
 				E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */,
+				7596EEB21CD5A80600C55438 /* addTeamCollectionViewCell.xib in Resources */,
 				9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */,
 				E87DF8DB1CBF80C900329ECA /* Assets.xcassets in Resources */,
 				7596EEAA1CD463BF00C55438 /* TeamCollectionViewCell.xib in Resources */,
@@ -412,6 +419,7 @@
 				9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */,
 				7596EEA31CD462CF00C55438 /* Team.swift in Sources */,
 				E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */,
+				7596EEB11CD5A80600C55438 /* addTeamCollectionViewCell.swift in Sources */,
 				7596EEA51CD462EF00C55438 /* Player.swift in Sources */,
 				9F3AE8721CC4D62800869F06 /* Params.swift in Sources */,
 				7596EE9F1CD4625000C55438 /* TeamViewController.swift in Sources */,
