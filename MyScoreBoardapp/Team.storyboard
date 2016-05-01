@@ -75,14 +75,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-mh-P6C">
-                                <rect key="frame" x="8" y="512" width="572" height="30"/>
+                                <rect key="frame" x="8" y="506" width="572" height="36"/>
                                 <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="進入計分">
                                     <color key="titleColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Th-nM4" userLabel="Team Collection View">
-                                <rect key="frame" x="8" y="76" width="572" height="426"/>
+                                <rect key="frame" x="8" y="76" width="572" height="420"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Blv-8S-hBj" userLabel="TeamLayout">

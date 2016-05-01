@@ -23,9 +23,12 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "TeamCollectionViewCell", bundle: nil)
-        teamCollectionView?.registerNib(nib, forCellWithReuseIdentifier: "TeamCollectionViewCell")
+        self.teamCollectionView.registerNib(UINib(nibName: "TeamCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "TeamCollectionViewCell")
+    
         
+        self.teamCollectionView.registerNib(UINib(nibName: "addTeamCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "addTeamCollectionViewCell")
+
+    
         self.teamCollectionView.dataSource = self
         self.teamCollectionView.delegate = self
         
@@ -139,6 +142,8 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         
         let myTeams = teams[indexPath.row]
         
+        if indexPath.row < self.teams.count{
+            
         let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("TeamCollectionViewCell", forIndexPath: indexPath) as! TeamCollectionViewCell
         
         myCell.delegate = self
@@ -150,10 +155,22 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         myCell.gameTimeHour.text = teams[indexPath.row].GameTimeHour
         myCell.gameLocation.text = teams[indexPath.row].GameLocation
         
-        
-        
-        
         return myCell
+            
+        }else if indexPath.row == self.teams.count{
+            
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("addTeamCollectionViewCell", forIndexPath: indexPath) as! addTeamCollectionViewCell
+                
+        cell.addTeamImage.image = UIImage(named:"addTeam")
+                
+        return cell
+        
+        }else{
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("addTeamCollectionViewCell", forIndexPath: indexPath) as! addTeamCollectionViewCell
+            return cell
+        
+        }
+        
     }
     
     
