@@ -30,6 +30,9 @@
             <constraints>
                 <constraint firstItem="7Vv-Fi-f99" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" id="Daz-ti-W0i"/>
             </constraints>
+            <connections>
+                <outlet property="addTeamImage" destination="7Vv-Fi-f99" id="Xir-eH-ffO"/>
+            </connections>
             <point key="canvasLocation" x="210" y="304"/>
         </tableViewCell>
     </objects>

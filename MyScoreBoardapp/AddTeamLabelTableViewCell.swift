@@ -10,6 +10,9 @@ import UIKit
 
 class AddTeamLabelTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var addTeamDetailText: UITextField!
+    @IBOutlet weak var addTeamDetailIcon: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

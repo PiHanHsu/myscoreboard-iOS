@@ -9,6 +9,7 @@
 import UIKit
 
 class AddTeamImageTableViewCell: UITableViewCell {
+    @IBOutlet weak var addTeamImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
