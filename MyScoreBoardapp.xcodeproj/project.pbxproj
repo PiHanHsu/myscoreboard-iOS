@@ -13,6 +13,9 @@
 		752357471CD63D130053CE72 /* AddTeamLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752357451CD63D130053CE72 /* AddTeamLabelTableViewCell.swift */; };
 		752357481CD63D130053CE72 /* AddTeamLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752357461CD63D130053CE72 /* AddTeamLabelTableViewCell.xib */; };
 		7523574A1CD6411E0053CE72 /* AddTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752357491CD6411E0053CE72 /* AddTeamTableViewController.swift */; };
+		754FD7C21CD70F2F00029F22 /* AddTeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FD7C11CD70F2F00029F22 /* AddTeamMemberViewController.swift */; };
+		754FD7C41CD7125100029F22 /* AddGameLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FD7C31CD7125100029F22 /* AddGameLocationViewController.swift */; };
+		754FD7C61CD773FC00029F22 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FD7C51CD773FC00029F22 /* Teams.swift */; };
 		7596EE9F1CD4625000C55438 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EE9E1CD4625000C55438 /* TeamViewController.swift */; };
 		7596EEA11CD462A000C55438 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEA01CD462A000C55438 /* PlayerViewController.swift */; };
 		7596EEA31CD462CF00C55438 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEA21CD462CF00C55438 /* Team.swift */; };
@@ -59,6 +62,9 @@
 		752357451CD63D130053CE72 /* AddTeamLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamLabelTableViewCell.swift; sourceTree = "<group>"; };
 		752357461CD63D130053CE72 /* AddTeamLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTeamLabelTableViewCell.xib; sourceTree = "<group>"; };
 		752357491CD6411E0053CE72 /* AddTeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamTableViewController.swift; sourceTree = "<group>"; };
+		754FD7C11CD70F2F00029F22 /* AddTeamMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamMemberViewController.swift; sourceTree = "<group>"; };
+		754FD7C31CD7125100029F22 /* AddGameLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameLocationViewController.swift; sourceTree = "<group>"; };
+		754FD7C51CD773FC00029F22 /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		7596EE9E1CD4625000C55438 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		7596EEA01CD462A000C55438 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		7596EEA21CD462CF00C55438 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -150,9 +156,13 @@
 			children = (
 				7596EE9E1CD4625000C55438 /* TeamViewController.swift */,
 				752357491CD6411E0053CE72 /* AddTeamTableViewController.swift */,
+				754FD7C11CD70F2F00029F22 /* AddTeamMemberViewController.swift */,
+				754FD7C31CD7125100029F22 /* AddGameLocationViewController.swift */,
 				7596EEA01CD462A000C55438 /* PlayerViewController.swift */,
 				7596EEA41CD462EF00C55438 /* Player.swift */,
 				7596EEA21CD462CF00C55438 /* Team.swift */,
+				754FD7C51CD773FC00029F22 /* Teams.swift */,
+				7596EEA61CD4638800C55438 /* Xib */,
 			);
 			name = Team;
 			sourceTree = "<group>";
@@ -225,7 +235,6 @@
 				9F48A6411CC4C0D8001CE4A4 /* Login */,
 				7596EE9D1CD461FE00C55438 /* Team */,
 				9F48A6401CC4BDE6001CE4A4 /* StoryBoard */,
-				7596EEA61CD4638800C55438 /* Xib */,
 				9F3AE8731CC4D62B00869F06 /* Class */,
 				E87DF8DA1CBF80C900329ECA /* Assets.xcassets */,
 				E87DF8DF1CBF80C900329ECA /* Info.plist */,
@@ -440,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7523573E1CD636590053CE72 /* AddTeamImageTableViewCell.swift in Sources */,
+				754FD7C41CD7125100029F22 /* AddGameLocationViewController.swift in Sources */,
 				7596EEA91CD463BF00C55438 /* TeamCollectionViewCell.swift in Sources */,
 				9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */,
 				9F48A6431CC4C132001CE4A4 /* LoginPage.swift in Sources */,
@@ -449,9 +459,11 @@
 				7596EEB11CD5A80600C55438 /* addTeamCollectionViewCell.swift in Sources */,
 				7596EEA51CD462EF00C55438 /* Player.swift in Sources */,
 				9F3AE8721CC4D62800869F06 /* Params.swift in Sources */,
+				754FD7C21CD70F2F00029F22 /* AddTeamMemberViewController.swift in Sources */,
 				7596EE9F1CD4625000C55438 /* TeamViewController.swift in Sources */,
 				7596EEA11CD462A000C55438 /* PlayerViewController.swift in Sources */,
 				7523574A1CD6411E0053CE72 /* AddTeamTableViewController.swift in Sources */,
+				754FD7C61CD773FC00029F22 /* Teams.swift in Sources */,
 				7596EEAD1CD465BB00C55438 /* PlayerCardCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
