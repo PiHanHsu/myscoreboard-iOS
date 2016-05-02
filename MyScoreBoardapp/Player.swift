@@ -11,5 +11,6 @@ import Foundation
 class Player: NSObject {
     var playerName:String?
     var playerImageUrl:String?
+    var playerId:String?
 }
 
