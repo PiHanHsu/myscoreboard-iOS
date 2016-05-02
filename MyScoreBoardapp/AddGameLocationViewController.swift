@@ -8,11 +8,15 @@
 
 import UIKit
 
+
 class AddGameLocationViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let teams = Teams.sharedInstance
+        
         // Do any additional setup after loading the view.
     }
 
