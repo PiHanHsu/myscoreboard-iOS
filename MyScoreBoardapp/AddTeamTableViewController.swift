@@ -8,11 +8,17 @@
 
 import UIKit
 
-class AddTeamTableViewController: UITableViewController {
+class AddTeamTableViewController: UITableViewController,AddMemberDelegate {
 
+    @IBOutlet var pickerBackgroundView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let teams = Teams.sharedInstance
+        
+        print(teams)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -63,14 +69,6 @@ class AddTeamTableViewController: UITableViewController {
         
         switch indexPath.section {
             
-//        case 0 :
-//            
-//        let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamImageTableViewCell", forIndexPath: indexPath) as! AddTeamImageTableViewCell
-//        
-//        cell.addTeamImage.image = UIImage(named: "warrior")
-//            
-//        return cell
-            
         case 0:
             
             let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamLabelTableViewCell", forIndexPath: indexPath) as! AddTeamLabelTableViewCell
@@ -78,7 +76,6 @@ class AddTeamTableViewController: UITableViewController {
             cell.addTeamDetailIcon.image = UIImage(named:"" )
             cell.addTeamDetailText.placeholder = "請輸入球隊名稱"
             return cell
-            
             
         case 1:
             
@@ -90,7 +87,6 @@ class AddTeamTableViewController: UITableViewController {
             
             return cell
             
-        
         case 2:
             
             let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamLabelTableViewCell", forIndexPath: indexPath) as! AddTeamLabelTableViewCell
@@ -116,52 +112,39 @@ class AddTeamTableViewController: UITableViewController {
             
             let cell = AddTeamLabelTableViewCell()
             return cell
+        }
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        //Add cases here to move to different segues
+      
+        if indexPath.section == 1{
+            self.view.addSubview(pickerBackgroundView)
+            
+      
+        }
+        
+        if indexPath.section == 2{
+            self.performSegueWithIdentifier("showAddGameLocation", sender: self)
+        }else if indexPath.section == 3{
+            self.performSegueWithIdentifier("showAddTeamMember", sender: self)
+        }else{
+        
+        }
+        }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showAddGameLocation" {
+//            let desViewcontroller = segue.destinationViewController as! AddTeamMemberViewController
+////            desViewcontroller.student = class1.students[0]
+////            desViewcontroller.delegate = self
+//        }
+//    }
+
+    
+
+    func addMemberChanged(newMember:String){
+    
+    
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
