@@ -52,7 +52,13 @@
             </tableViewCellContentView>
             <constraints>
                 <constraint firstItem="7bZ-af-15i" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="5z9-fv-KPe"/>
+                <constraint firstItem="dIR-B4-cCv" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="62" id="K3Y-7l-Jwp"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="K3Y-7l-Jwp"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="addTeamDetailIcon" destination="7bZ-af-15i" id="ZhC-r5-6kE"/>
                 <outlet property="addTeamDetailText" destination="dIR-B4-cCv" id="KwJ-Bd-sim"/>
