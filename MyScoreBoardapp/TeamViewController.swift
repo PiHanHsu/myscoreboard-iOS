@@ -174,6 +174,10 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showAddTeam", sender: self)
+    }
+    
     
     
     //Delegate 方法，取得 TeamCollectionViewCell 中的 PlayerCardCollectionViewCell 被選擇的 Player 資訊
@@ -185,10 +189,10 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     }
     
     override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let player = sender as! Player
-        
-        let destinationController = segue.destinationViewController as! PlayerViewController
-        destinationController.player = player
+//        let player = sender as! Player
+//        
+//        let destinationController = segue.destinationViewController as! PlayerViewController
+//        destinationController.player = player
     }
     
     
