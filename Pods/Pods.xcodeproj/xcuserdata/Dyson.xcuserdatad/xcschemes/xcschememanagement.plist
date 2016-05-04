@@ -9,6 +9,31 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyScoreBoardapp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +47,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0BEB888AB6478B5A10CC47BBFB394F28</key>
+		<key>0EB19C1377A747F81110D44E2D5FCF78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>283609DB73E9194DB2403200D932A704</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52D82BFDD1E808D9CB257431922C1EE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>572660A79001A9365E9379DF914C80EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A932845C7A5BE5374224A90EA874591</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,17 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>894A87E44FA8BD4DCB99C0B18E20F6C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E502EE858CD6426C2B3E6EB359F14EDA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F6F0516F82D07656D12F1C0716898F73</key>
+		<key>A744C5B15543A006A464418AD51DF541</key>
 		<dict>
 			<key>primary</key>
 			<true/>
