@@ -8,20 +8,38 @@
 
 import UIKit
 
-class AddTeamLabelTableViewCell: UITableViewCell {
+class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
 
+    @IBOutlet weak var bottomLineView: UIView!
+    var delegate:labelCellDelegate?
+    var textFieldType:TextFieldType?
     @IBOutlet weak var addTeamDetailText: UITextField!
     @IBOutlet weak var addTeamDetailIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.addTeamDetailText.delegate = self
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let enteredText = self.addTeamDetailText.text
+        self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
+        self.addTeamDetailText.endEditing(true)
+        return false
+    }
+
+    @IBAction func textEditingChange(sender: UITextField) {
+        let enteredText = self.addTeamDetailText.text
+        self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
+        
     }
     
 }
