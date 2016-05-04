@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCw-Zp-HQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1528" y="564"/>
+            <point key="canvasLocation" x="-3256" y="540"/>
         </scene>
         <!--個人資訊-->
         <scene sceneID="YRT-Cx-6pd">
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8E-mv-Eh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1528" y="-102"/>
+            <point key="canvasLocation" x="-3256" y="-126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HYV-P9-DK7">
@@ -61,7 +61,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-4Y-MKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2312" y="634"/>
+            <point key="canvasLocation" x="-4040" y="610"/>
         </scene>
         <!--我的球隊-->
         <scene sceneID="iAk-FZ-aPa">
@@ -136,42 +136,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKv-qD-IDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884" y="1218"/>
+            <point key="canvasLocation" x="-2612" y="1194"/>
         </scene>
         <!--新增球隊-->
         <scene sceneID="7ez-Rp-hew">
             <objects>
                 <tableViewController storyboardIdentifier="AddTeamTableViewController" hidesBottomBarWhenPushed="YES" id="BhG-wz-Llj" customClass="AddTeamTableViewController" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lm2-PU-BP7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lm2-PU-BP7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="f5z-jB-vsK">
-                            <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                        <view key="tableHeaderView" contentMode="scaleAspectFit" id="f5z-jB-vsK">
+                            <rect key="frame" x="0.0" y="64" width="600" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadImage" translatesAutoresizingMaskIntoConstraints="NO" id="3Go-8J-E2d">
-                                    <rect key="frame" x="199.5" y="0.0" width="201" height="200"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73B-eN-k9f">
+                                    <rect key="frame" x="243" y="25" width="115" height="115"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="3Go-8J-E2d" secondAttribute="height" multiplier="1:1" constant="1" id="pc2-RB-4MD"/>
+                                        <constraint firstAttribute="width" secondItem="73B-eN-k9f" secondAttribute="height" multiplier="1:1" id="fn5-b3-K2F"/>
                                     </constraints>
-                                </imageView>
+                                    <state key="normal" title="Button" image="icon_upload_3x"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="3Go-8J-E2d" firstAttribute="centerX" secondItem="f5z-jB-vsK" secondAttribute="centerX" id="Mxl-vb-a9i"/>
-                                <constraint firstAttribute="bottom" secondItem="3Go-8J-E2d" secondAttribute="bottom" id="V8v-Qy-42b"/>
-                                <constraint firstItem="3Go-8J-E2d" firstAttribute="top" secondItem="f5z-jB-vsK" secondAttribute="top" id="cN7-vC-WKt"/>
+                                <constraint firstItem="73B-eN-k9f" firstAttribute="centerX" secondItem="f5z-jB-vsK" secondAttribute="centerX" id="IHl-as-d2Z"/>
+                                <constraint firstItem="73B-eN-k9f" firstAttribute="height" secondItem="f5z-jB-vsK" secondAttribute="height" id="OYY-MH-8AB"/>
+                                <constraint firstAttribute="bottom" secondItem="73B-eN-k9f" secondAttribute="bottom" constant="10" id="YGA-1M-Kef"/>
+                                <constraint firstItem="73B-eN-k9f" firstAttribute="top" secondItem="f5z-jB-vsK" secondAttribute="top" constant="25" id="ix7-Uy-bbQ"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="OYY-MH-8AB"/>
+                                </mask>
+                            </variation>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="1Sq-K4-05m">
-                            <rect key="frame" x="0.0" y="336" width="600" height="262"/>
+                            <rect key="frame" x="0.0" y="286" width="600" height="215"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-gK-owb">
-                                    <rect key="frame" x="30" y="40" width="540" height="50"/>
+                                    <rect key="frame" x="30" y="40" width="540" height="42"/>
                                     <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                     <color key="tintColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -191,13 +198,14 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
+                                    <exclude reference="kui-bu-ZBL"/>
                                     <exclude reference="rdW-Bp-bL2"/>
                                 </mask>
                             </variation>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lRC-vT-xCY">
-                                <rect key="frame" x="0.0" y="292" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="242" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRC-vT-xCY" id="X66-Ac-AjA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -214,6 +222,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="新增球隊" id="yIX-Zy-USr"/>
                     <connections>
+                        <outlet property="TeamImageuploadbackground" destination="f5z-jB-vsK" id="mjZ-Jn-1db"/>
                         <outlet property="gameTimepicker" destination="91E-sP-4zU" id="g5S-7G-Bhk"/>
                         <outlet property="pickerBackgroundView" destination="WZY-3d-nAD" id="Zl8-Ox-MPb"/>
                         <segue destination="0Bm-cL-iWD" kind="show" identifier="showAddGameLocation" id="QqA-o5-oGK"/>
@@ -258,9 +267,9 @@
                                 <constraint firstAttribute="bottom" secondItem="ezz-L9-ex8" secondAttribute="bottom" constant="5" id="v8t-yw-le7"/>
                             </constraints>
                         </view>
-                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91E-sP-4zU">
+                        <pickerView alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91E-sP-4zU">
                             <rect key="frame" x="0.0" y="40" width="240" height="88"/>
-                            <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <outlet property="dataSource" destination="BhG-wz-Llj" id="XdS-iJ-JLl"/>
                                 <outlet property="delegate" destination="BhG-wz-Llj" id="Ytg-IK-UFN"/>
@@ -293,7 +302,92 @@
                     </variation>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-900" y="2106"/>
+            <point key="canvasLocation" x="-2628" y="2082"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="pEu-p2-xay">
+            <objects>
+                <tableViewController id="9gO-du-wAL" customClass="EditPlayerOfTeamTableViewController" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Am-Vu-1Tn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditPlayerOfTeamTableViewCell" id="IY1-yH-zRz" customClass="EditPlayerOfTeamTableViewCell" customModule="MyScoreBoardapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IY1-yH-zRz" id="BiI-Ki-9Qq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5w-Uf-Hqv">
+                                            <rect key="frame" x="103" y="11" width="243" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="gtv-zb-Hep"/>
+                                                <constraint firstAttribute="width" constant="243" id="rob-eQ-mJw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-hG-Ncf">
+                                            <rect key="frame" x="40" y="0.0" width="43.5" height="43.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="KXC-hG-Ncf" secondAttribute="height" multiplier="1:1" id="l2K-2q-a0O"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="S5w-Uf-Hqv" firstAttribute="leading" secondItem="KXC-hG-Ncf" secondAttribute="trailing" constant="20" id="8QC-bj-fyO"/>
+                                        <constraint firstItem="KXC-hG-Ncf" firstAttribute="height" secondItem="BiI-Ki-9Qq" secondAttribute="height" id="9fL-TX-Xu5"/>
+                                        <constraint firstItem="S5w-Uf-Hqv" firstAttribute="centerY" secondItem="KXC-hG-Ncf" secondAttribute="centerY" id="CFX-fu-8yS"/>
+                                        <constraint firstItem="KXC-hG-Ncf" firstAttribute="top" secondItem="BiI-Ki-9Qq" secondAttribute="top" constant="6" id="Jiy-g6-YBA"/>
+                                        <constraint firstItem="KXC-hG-Ncf" firstAttribute="leading" secondItem="BiI-Ki-9Qq" secondAttribute="leading" constant="20" id="TVt-Ok-vZK"/>
+                                        <constraint firstItem="KXC-hG-Ncf" firstAttribute="leading" secondItem="BiI-Ki-9Qq" secondAttribute="leading" constant="40" id="diU-Jv-Gwl"/>
+                                        <constraint firstAttribute="bottom" secondItem="KXC-hG-Ncf" secondAttribute="bottom" id="h1O-Qh-y94"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Jiy-g6-YBA"/>
+                                            <exclude reference="TVt-Ok-vZK"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerImage" destination="KXC-hG-Ncf" id="njV-vB-Ouw"/>
+                                    <outlet property="playerNameofTeam" destination="S5w-Uf-Hqv" id="t0d-Bh-rFD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9gO-du-wAL" id="DOY-HT-jLi"/>
+                            <outlet property="delegate" destination="9gO-du-wAL" id="ixq-pW-u3k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="O0Q-xf-ZUk"/>
+                    <connections>
+                        <outlet property="playertableview" destination="6Am-Vu-1Tn" id="CI0-Ag-bIz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbh-7d-25u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2287" y="3775"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Zw-LL-Ovn">
+            <objects>
+                <navigationController id="Lc0-tt-OeA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cGX-WX-m6X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9gO-du-wAL" kind="relationship" relationship="rootViewController" id="EGm-tA-M3Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rD-NM-O8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3107" y="3775"/>
         </scene>
         <!--新增成員-->
         <scene sceneID="TGs-pD-bM2">
@@ -347,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3o-h8-sOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="1814"/>
+            <point key="canvasLocation" x="-1697" y="1790"/>
         </scene>
         <!--Add Game Location View Controller-->
         <scene sceneID="vvt-jO-5Fh">
@@ -394,7 +488,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="21" y="2565"/>
+            <point key="canvasLocation" x="-1707" y="2541"/>
         </scene>
         <!--我的球隊-->
         <scene sceneID="yBb-0T-Cqk">
@@ -413,13 +507,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2b-Fn-g5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536" y="1218"/>
+            <point key="canvasLocation" x="-3264" y="1194"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon_upload_3x" width="230" height="230"/>
         <image name="person" width="24" height="24"/>
         <image name="rank" width="24" height="24"/>
         <image name="team" width="24" height="24"/>
-        <image name="uploadImage" width="194" height="181"/>
     </resources>
 </document>

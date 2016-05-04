@@ -26,6 +26,8 @@
 		7596EEAE1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */; };
 		7596EEB11CD5A80600C55438 /* addTeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */; };
 		7596EEB21CD5A80600C55438 /* addTeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */; };
+		75A432AB1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A432AA1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift */; };
+		75A432AD1CDA01090036578F /* EditPlayerOfTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A432AC1CDA01090036578F /* EditPlayerOfTeamTableViewCell.swift */; };
 		9F3AE8721CC4D62800869F06 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AE8711CC4D62800869F06 /* Params.swift */; };
 		9F3FF0E61CD79FF900167C5F /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */; };
 		9F3FF0E71CD79FF900167C5F /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3FF0E51CD79FF900167C5F /* ButtonTableViewCell.xib */; };
@@ -81,6 +83,8 @@
 		7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addTeamCollectionViewCell.xib; sourceTree = "<group>"; };
+		75A432AA1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPlayerOfTeamTableViewController.swift; sourceTree = "<group>"; };
+		75A432AC1CDA01090036578F /* EditPlayerOfTeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPlayerOfTeamTableViewCell.swift; sourceTree = "<group>"; };
 		9B4EBACC2ADA9DC607975E51 /* Pods_MyScoreBoardapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyScoreBoardapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3AE8711CC4D62800869F06 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				752357491CD6411E0053CE72 /* AddTeamTableViewController.swift */,
 				754FD7C11CD70F2F00029F22 /* AddTeamMemberViewController.swift */,
 				754FD7C31CD7125100029F22 /* AddGameLocationViewController.swift */,
+				75A432AA1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift */,
+				75A432AC1CDA01090036578F /* EditPlayerOfTeamTableViewCell.swift */,
 				7596EEA01CD462A000C55438 /* PlayerViewController.swift */,
 				7596EEA41CD462EF00C55438 /* Player.swift */,
 				7596EEA21CD462CF00C55438 /* Team.swift */,
@@ -471,11 +477,13 @@
 			files = (
 				E80C331B1CD9AB3E0036A49F /* GooglePlacesAutocomplete.swift in Sources */,
 				9F7F890F1CD88EA300BA240F /* LoginPage.swift in Sources */,
+				75A432AB1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift in Sources */,
 				7523573E1CD636590053CE72 /* AddTeamImageTableViewCell.swift in Sources */,
 				754FD7C41CD7125100029F22 /* AddGameLocationViewController.swift in Sources */,
 				7596EEA91CD463BF00C55438 /* TeamCollectionViewCell.swift in Sources */,
 				9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */,
 				752357471CD63D130053CE72 /* AddTeamLabelTableViewCell.swift in Sources */,
+				75A432AD1CDA01090036578F /* EditPlayerOfTeamTableViewCell.swift in Sources */,
 				9F7F890A1CD86D4E00BA240F /* OrTableViewCell.swift in Sources */,
 				7596EEA31CD462CF00C55438 /* Team.swift in Sources */,
 				E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */,
