@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kGq-Nc-tXd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,37 +7,6 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Login Page-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginPage" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKp-mw-Yp6">
-                                <rect key="frame" x="281" y="285" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5n-2r-RPI"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mKp-mw-Yp6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ain-Ht-6ZO"/>
-                            <constraint firstItem="mKp-mw-Yp6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iFs-uc-D14"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="93" y="339"/>
-        </scene>
         <!--Personal Main Page-->
         <scene sceneID="eh9-hn-v6g">
             <objects>
@@ -146,6 +115,67 @@
             </objects>
             <point key="canvasLocation" x="1770" y="339"/>
         </scene>
+        <!--Login Page-->
+        <scene sceneID="P46-lF-FRq">
+            <objects>
+                <tableViewController id="kGq-Nc-tXd" customClass="LoginPage" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qRd-1U-9Zk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="4cn-Od-gG1">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="263"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_logo_3x" translatesAutoresizingMaskIntoConstraints="NO" id="e53-Od-Kgi">
+                                    <rect key="frame" x="240" y="38.5" width="120" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="X6c-kS-HGr"/>
+                                        <constraint firstAttribute="height" constant="120" id="sYH-P1-9TI"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的計分板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwx-Fh-oYg">
+                                    <rect key="frame" x="225" y="168" width="150" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="創造你的大聯盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS1-4X-92e">
+                                    <rect key="frame" x="240" y="242" width="119" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="XS1-4X-92e" firstAttribute="top" secondItem="wwx-Fh-oYg" secondAttribute="bottom" constant="4" id="5jl-Zg-F7D"/>
+                                <constraint firstItem="wwx-Fh-oYg" firstAttribute="top" secondItem="e53-Od-Kgi" secondAttribute="bottom" constant="10" id="FI3-xA-AeG"/>
+                                <constraint firstItem="XS1-4X-92e" firstAttribute="centerX" secondItem="4cn-Od-gG1" secondAttribute="centerX" id="Fn8-sY-EPE"/>
+                                <constraint firstItem="e53-Od-Kgi" firstAttribute="centerX" secondItem="4cn-Od-gG1" secondAttribute="centerX" id="GUP-Sx-nyc"/>
+                                <constraint firstItem="e53-Od-Kgi" firstAttribute="centerY" secondItem="4cn-Od-gG1" secondAttribute="centerY" multiplier="3:4" id="THF-eW-Bd8"/>
+                                <constraint firstItem="wwx-Fh-oYg" firstAttribute="centerX" secondItem="4cn-Od-gG1" secondAttribute="centerX" id="wpR-Ma-FVJ"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" alpha="0.0" contentMode="scaleToFill" id="XfX-8c-4Nq">
+                            <rect key="frame" x="0.0" y="263" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="kGq-Nc-tXd" id="n1G-oT-mk4"/>
+                            <outlet property="delegate" destination="kGq-Nc-tXd" id="Ata-Ch-Ahq"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="footerView" destination="XfX-8c-4Nq" id="IRU-n8-otd"/>
+                        <outlet property="headerView" destination="4cn-Od-gG1" id="TQR-eb-0Ln"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7y-pI-oOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136" y="-144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tKv-hY-qSq">
             <objects>
@@ -172,6 +202,7 @@
     </scenes>
     <resources>
         <image name="person" width="24" height="24"/>
+        <image name="pic_logo_3x" width="480" height="480"/>
         <image name="rank" width="24" height="24"/>
         <image name="team" width="24" height="24"/>
         <image name="warrior" width="512" height="512"/>
