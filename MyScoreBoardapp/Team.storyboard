@@ -17,35 +17,6 @@
                     <view key="view" contentMode="scaleToFill" id="5Ef-il-CpU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZK-QC-zMa">
-                                <rect key="frame" x="64" y="548" width="536" height="52"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-XV-Ips">
-                                <rect key="frame" x="200" y="550" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.46274509800000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="  排行榜" image="rank"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68O-6f-LXD">
-                                <rect key="frame" x="400" y="550" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.46274509800000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="  我的球隊" image="team"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIt-yu-Eeg">
-                                <rect key="frame" x="0.0" y="550" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.46274509800000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mIt-yu-Eeg" secondAttribute="height" multiplier="4:1" id="Upb-t4-dVt"/>
-                                </constraints>
-                                <state key="normal" title="  個人頁面" image="person"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Upb-t4-dVt"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="排行榜" image="rank" id="jgq-wb-tLc"/>
@@ -104,7 +75,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-mh-P6C">
                                 <rect key="frame" x="8" y="506" width="572" height="36"/>
                                 <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -136,7 +106,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.29019607843137257" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -167,7 +136,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKv-qD-IDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="-884" y="1218"/>
         </scene>
         <!--新增球隊-->
