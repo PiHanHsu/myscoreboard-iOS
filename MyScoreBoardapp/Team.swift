@@ -16,5 +16,8 @@ class Team: NSObject {
     var GameTimeDay:String?
     var GameTimeHour:String?
     var GameLocation:String?
+    var TeamId:String?
+    
     
    }
+
