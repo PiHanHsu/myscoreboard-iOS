@@ -32,7 +32,7 @@ class LoginPage: UITableViewController {
         let orCellNib = UINib(nibName: "OrTableViewCell", bundle: nil)
         
         self.tableView.registerNib(buttonCellNib, forCellReuseIdentifier: "buttonCell")
-        self.tableView.registerNib(labelCellNib, forCellReuseIdentifier: "labelCell")
+        self.tableView.registerNib(labelCellNib, forCellReuseIdentifier: "AddTeamLabelTableViewCell")
         self.tableView.registerNib(orCellNib, forCellReuseIdentifier: "orCell")
     }
 
@@ -69,7 +69,7 @@ class LoginPage: UITableViewController {
             cellReturn = cell
             
         case 2 :
-            reuseId = "labelCell"
+            reuseId = "AddTeamLabelTableViewCell"
             let cell = tableView.dequeueReusableCellWithIdentifier(reuseId, forIndexPath: indexPath) as! AddTeamLabelTableViewCell
             cell.addTeamDetailText.textColor = UIColor.whiteColor()
             let placeholder = NSAttributedString(string: "信箱", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
@@ -78,7 +78,7 @@ class LoginPage: UITableViewController {
             cellReturn = cell
             
         case 3 :
-            reuseId = "labelCell"
+            reuseId = "AddTeamLabelTableViewCell"
             let cell = tableView.dequeueReusableCellWithIdentifier(reuseId, forIndexPath: indexPath) as! AddTeamLabelTableViewCell
             cell.addTeamDetailText.textColor = UIColor.whiteColor()
             let placeholder = NSAttributedString(string: "密碼", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
