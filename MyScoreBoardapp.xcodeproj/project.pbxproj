@@ -26,6 +26,13 @@
 		7596EEAE1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEAC1CD465BB00C55438 /* PlayerCardCollectionViewCell.xib */; };
 		7596EEB11CD5A80600C55438 /* addTeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */; };
 		7596EEB21CD5A80600C55438 /* addTeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */; };
+		9F2601171CD9C8C000C56B23 /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601151CD9C8C000C56B23 /* PasswordTableViewCell.swift */; };
+		9F2601181CD9C8C000C56B23 /* PasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2601161CD9C8C000C56B23 /* PasswordTableViewCell.xib */; };
+		9F26011C1CD9D77600C56B23 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26011B1CD9D77600C56B23 /* BasicTableViewController.swift */; };
+		9F26011E1CD9DB6400C56B23 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26011D1CD9DB6400C56B23 /* ForgetPasswordViewController.swift */; };
+		9F2601221CD9E5DF00C56B23 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601211CD9E5DF00C56B23 /* protocol.swift */; };
+		9F2601241CD9EFED00C56B23 /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601231CD9EFED00C56B23 /* RegisterAccountTableViewController.swift */; };
+		9F2601261CDA243A00C56B23 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601251CDA243A00C56B23 /* Api.swift */; };
 		9F3AE8721CC4D62800869F06 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AE8711CC4D62800869F06 /* Params.swift */; };
 		9F3FF0E61CD79FF900167C5F /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */; };
 		9F3FF0E71CD79FF900167C5F /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3FF0E51CD79FF900167C5F /* ButtonTableViewCell.xib */; };
@@ -82,6 +89,13 @@
 		7596EEAF1CD5A80600C55438 /* addTeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		7596EEB01CD5A80600C55438 /* addTeamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addTeamCollectionViewCell.xib; sourceTree = "<group>"; };
 		9B4EBACC2ADA9DC607975E51 /* Pods_MyScoreBoardapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyScoreBoardapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F2601151CD9C8C000C56B23 /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
+		9F2601161CD9C8C000C56B23 /* PasswordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordTableViewCell.xib; sourceTree = "<group>"; };
+		9F26011B1CD9D77600C56B23 /* BasicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
+		9F26011D1CD9DB6400C56B23 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		9F2601211CD9E5DF00C56B23 /* protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
+		9F2601231CD9EFED00C56B23 /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
+		9F2601251CDA243A00C56B23 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		9F3AE8711CC4D62800869F06 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		9F3FF0E51CD79FF900167C5F /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -187,6 +201,8 @@
 				7523573D1CD636590053CE72 /* AddTeamImageTableViewCell.xib */,
 				752357451CD63D130053CE72 /* AddTeamLabelTableViewCell.swift */,
 				752357461CD63D130053CE72 /* AddTeamLabelTableViewCell.xib */,
+				9F2601151CD9C8C000C56B23 /* PasswordTableViewCell.swift */,
+				9F2601161CD9C8C000C56B23 /* PasswordTableViewCell.xib */,
 				9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */,
 				9F3FF0E51CD79FF900167C5F /* ButtonTableViewCell.xib */,
 				9F7F89081CD86D4E00BA240F /* OrTableViewCell.swift */,
@@ -199,6 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				9F3AE8711CC4D62800869F06 /* Params.swift */,
+				9F26011B1CD9D77600C56B23 /* BasicTableViewController.swift */,
+				9F2601211CD9E5DF00C56B23 /* protocol.swift */,
+				9F2601251CDA243A00C56B23 /* Api.swift */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -217,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				9F7F890E1CD88EA300BA240F /* LoginPage.swift */,
+				9F26011D1CD9DB6400C56B23 /* ForgetPasswordViewController.swift */,
+				9F2601231CD9EFED00C56B23 /* RegisterAccountTableViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -390,6 +411,7 @@
 				E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */,
 				752357481CD63D130053CE72 /* AddTeamLabelTableViewCell.xib in Resources */,
 				7596EEB21CD5A80600C55438 /* addTeamCollectionViewCell.xib in Resources */,
+				9F2601181CD9C8C000C56B23 /* PasswordTableViewCell.xib in Resources */,
 				9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */,
 				9F7F890B1CD86D4E00BA240F /* OrTableViewCell.xib in Resources */,
 				7523573F1CD636590053CE72 /* AddTeamImageTableViewCell.xib in Resources */,
@@ -474,17 +496,23 @@
 				7523573E1CD636590053CE72 /* AddTeamImageTableViewCell.swift in Sources */,
 				754FD7C41CD7125100029F22 /* AddGameLocationViewController.swift in Sources */,
 				7596EEA91CD463BF00C55438 /* TeamCollectionViewCell.swift in Sources */,
+				9F2601241CD9EFED00C56B23 /* RegisterAccountTableViewController.swift in Sources */,
+				9F2601261CDA243A00C56B23 /* Api.swift in Sources */,
 				9F48A6451CC4C261001CE4A4 /* PersonalMainPage.swift in Sources */,
 				752357471CD63D130053CE72 /* AddTeamLabelTableViewCell.swift in Sources */,
 				9F7F890A1CD86D4E00BA240F /* OrTableViewCell.swift in Sources */,
 				7596EEA31CD462CF00C55438 /* Team.swift in Sources */,
+				9F2601171CD9C8C000C56B23 /* PasswordTableViewCell.swift in Sources */,
+				9F26011C1CD9D77600C56B23 /* BasicTableViewController.swift in Sources */,
 				E87DF8D41CBF80C900329ECA /* AppDelegate.swift in Sources */,
 				7596EEB11CD5A80600C55438 /* addTeamCollectionViewCell.swift in Sources */,
 				7596EEA51CD462EF00C55438 /* Player.swift in Sources */,
 				9F3AE8721CC4D62800869F06 /* Params.swift in Sources */,
+				9F26011E1CD9DB6400C56B23 /* ForgetPasswordViewController.swift in Sources */,
 				754FD7C21CD70F2F00029F22 /* AddTeamMemberViewController.swift in Sources */,
 				7596EE9F1CD4625000C55438 /* TeamViewController.swift in Sources */,
 				7596EEA11CD462A000C55438 /* PlayerViewController.swift in Sources */,
+				9F2601221CD9E5DF00C56B23 /* protocol.swift in Sources */,
 				9F3FF0E61CD79FF900167C5F /* ButtonTableViewCell.swift in Sources */,
 				7523574A1CD6411E0053CE72 /* AddTeamTableViewController.swift in Sources */,
 				754FD7C61CD773FC00029F22 /* Teams.swift in Sources */,

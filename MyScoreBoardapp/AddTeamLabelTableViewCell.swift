@@ -10,6 +10,9 @@ import UIKit
 
 class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
 
+    @IBOutlet weak var bottomLineView: UIView!
+    var delegate:labelCellDelegate?
+    var textFieldType:TextFieldType?
     @IBOutlet weak var addTeamDetailText: UITextField!
     @IBOutlet weak var addTeamDetailIcon: UIImageView!
     
@@ -27,9 +30,16 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let enteredText = self.addTeamDetailText.text
+        self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
         self.addTeamDetailText.endEditing(true)
         return false
     }
 
+    @IBAction func textEditingChange(sender: UITextField) {
+        let enteredText = self.addTeamDetailText.text
+        self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
+        
+    }
     
 }

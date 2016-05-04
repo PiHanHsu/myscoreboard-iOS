@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ButtonTableViewCell: UITableViewCell {
 
+class ButtonTableViewCell: UITableViewCell {
+    
+    var delegate:buttonCellDelegate?
+    var type:ButtonType?
     @IBOutlet weak var buttonInCell: UIButton!
     
     override func awakeFromNib() {
@@ -21,6 +24,10 @@ class ButtonTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func cellClickAction(sender: AnyObject) {
+        self.delegate?.buttonClick(self.type!)
     }
     
 }

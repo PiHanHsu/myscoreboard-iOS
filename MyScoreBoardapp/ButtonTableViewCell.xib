@@ -17,6 +17,9 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-Ob-2B8">
                         <rect key="frame" x="16" y="0.0" width="288" height="44"/>
+                        <connections>
+                            <action selector="cellClickAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OkW-6v-Ia9"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
