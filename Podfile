@@ -6,6 +6,9 @@
 target 'MyScoreBoardapp' do
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
+	pod 'FBSDKLoginKit', '~> 4.11'
+	pod 'FBSDKShareKit', '~> 4.11'
+	pod 'IQKeyboardManagerSwift', '~> 4.0'
 end
 
 target 'MyScoreBoardappTests' do
