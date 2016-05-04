@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orCell" id="KGk-i7-Jjw" customClass="OrTableViewCell" customModule="MyScoreBoardapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="或" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkm-Au-bpa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vkm-Au-bpa" secondAttribute="trailing" id="4TD-rc-eKO"/>
+                    <constraint firstAttribute="bottom" secondItem="vkm-Au-bpa" secondAttribute="bottom" id="JeT-Za-fPg"/>
+                    <constraint firstItem="vkm-Au-bpa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="Pf5-Y7-Vs5"/>
+                    <constraint firstItem="vkm-Au-bpa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RGO-XG-HQa"/>
+                    <constraint firstItem="vkm-Au-bpa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Yhj-xl-Nvj"/>
+                    <constraint firstAttribute="trailing" secondItem="vkm-Au-bpa" secondAttribute="trailing" id="dKz-6E-Mae"/>
+                    <constraint firstItem="vkm-Au-bpa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eQ4-Se-KeC"/>
+                    <constraint firstItem="vkm-Au-bpa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="hzZ-zA-Fi1"/>
+                    <constraint firstItem="vkm-Au-bpa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="k8v-T9-Oac"/>
+                    <constraint firstAttribute="bottom" secondItem="vkm-Au-bpa" secondAttribute="bottom" id="r0L-YD-ivJ"/>
+                    <constraint firstAttribute="trailing" secondItem="vkm-Au-bpa" secondAttribute="trailing" constant="188" id="xSA-5k-KpO"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="4TD-rc-eKO"/>
+                        <exclude reference="Pf5-Y7-Vs5"/>
+                        <exclude reference="RGO-XG-HQa"/>
+                        <exclude reference="Yhj-xl-Nvj"/>
+                        <exclude reference="hzZ-zA-Fi1"/>
+                        <exclude reference="r0L-YD-ivJ"/>
+                        <exclude reference="xSA-5k-KpO"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelInCell" destination="vkm-Au-bpa" id="xtL-fw-27s"/>
+            </connections>
+            <point key="canvasLocation" x="166" y="231"/>
+        </tableViewCell>
+    </objects>
+</document>
