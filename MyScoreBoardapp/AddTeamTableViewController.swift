@@ -8,19 +8,25 @@
 
 import UIKit
 
-class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource, GooglePlacesAutocompleteDelegate {
 
+    
     @IBOutlet var pickerBackgroundView: UIView!
     @IBOutlet weak var gameTimepicker: UIPickerView!
     
     let dayArray = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
     let startTimeArray = ["00:00","00:30","01:00:","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00:","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
     let endTimeArray = ["00:00","00:30","01:00:","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00:","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
-   
-    
+
     var daytime:String?
     var starttime:String?
     var endtime:String?
+    
+    let gpaViewController = GooglePlacesAutocomplete(
+        apiKey: "AIzaSyD9Phzy4CZWofeZD3RnEuFemlWTaM4n_po",
+        placeType: .Address
+    )
+
     
     var totalTime:String?
     //will add
@@ -37,11 +43,8 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         daytime = dayArray[0]
         starttime = startTimeArray[0]
         endtime = endTimeArray[0]
-        
-        
-        
 
-        
+        gpaViewController.placeDelegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -153,14 +156,22 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         }
         
         if indexPath.section == 2{
-            self.performSegueWithIdentifier("showAddGameLocation", sender: self)
+            presentViewController(gpaViewController, animated: true, completion: nil)
+            //self.performSegueWithIdentifier("showAddGameLocation", sender: self)
         }else if indexPath.section == 3{
             self.performSegueWithIdentifier("showAddTeamMember", sender: self)
         }else{
         
         }
+    }
+    
+    //after select place from gpaViewController
+    func placeSelected(place: Place){
+        place.getDetails { details in
+            print(details.raw)
         }
-   
+    }
+
     
     //首先先把要顯示的資料分別存在兩個Array
     
