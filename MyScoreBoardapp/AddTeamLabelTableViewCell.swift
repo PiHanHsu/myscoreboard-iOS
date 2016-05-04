@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTeamLabelTableViewCell: UITableViewCell {
+class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var addTeamDetailText: UITextField!
     @IBOutlet weak var addTeamDetailIcon: UIImageView!
@@ -16,6 +16,7 @@ class AddTeamLabelTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.addTeamDetailText.delegate = self
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -23,5 +24,12 @@ class AddTeamLabelTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.addTeamDetailText.endEditing(true)
+        return false
+    }
+
     
 }
