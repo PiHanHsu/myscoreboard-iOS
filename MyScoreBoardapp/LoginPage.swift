@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelegate, buttonCellDelegate {
     
@@ -55,15 +57,47 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
     
     @IBAction func registerAction(sender: UIButton) {
         // api test
+        
+        //create team
+// "place_name, 中山運動中心
+//        addres,
+//        lat,
+//        lng,
+//        name,
+//        day, 星期二
+//        start_time, 09:00
+//        end_time,  20:00
+//        logo, 圖片"
         HttpManager.sharedInstance
-            .request(HttpMethod.HttpMethodGet,
-                     apiFunc: APiFunction.GetRanking,
-                     param: ["auth_token" : "3NYxhnqFQVZqKAD5mAN5"],
+            .uploadDataWithImage(HttpMethod.HttpMethodPost, path: Params.apiRootPath + Params.apiCreateTeam ,
+                uploadImage: UIImage(named: "warrior")!,
+                param: ["auth_token":"3NYxhnqFQVZqKAD5mAN5"],
+//                        "place_name":"中山運動中心test",
+//                        "addres":"中山運動中心testAddress",
+//                        "lat":"23.5",
+//                        "lng":"33.5",
+//                        "name":"teamOne",
+//                        "day":"星期日",
+//                        "start_time":"19:30",
+//                        "end_time":"22:00"],
                      success: { (code , data ) in
                         self.success(code, data: data)
                 }, failure: { (code , data) in
-                        self.failure(code!, data: data!)
+                    self.failure(code!, data: data!)
                 }, complete: nil)
+        
+        
+//        HttpManager.sharedInstance
+//            .request(HttpMethod.HttpMethodGet,
+//                     apiFunc: APiFunction.EditTeam,
+//                     param: ["auth_token" : "3NYxhnqFQVZqKAD5mAN5",
+//                             ":id":"1"],
+//                     success: { (code , data ) in
+//                        self.success(code, data: data)
+//                }, failure: { (code , data) in
+//                        self.failure(code!, data: data!)
+//                }, complete: nil)
+        
         //"auth_token" : "3NYxhnqFQVZqKAD5mAN5"
         
         //test account/password : ["email":"hello@test.co","password":"12345678"]
@@ -211,6 +245,31 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
         case .FBLogin:
             // FB Login
             print(buttonType)
+            let facebookLogin = FBSDKLoginManager()
+            
+            facebookLogin.logInWithReadPermissions(["email"], fromViewController: self, handler: {
+                (facebookresult, facebookError) -> Void in
+                
+                if facebookError != nil {
+                    print("FaceBook login failed. Error: \(facebookError)")
+                }else if facebookresult.isCancelled{
+                    print("Facebook login was cancelled.")
+                }else {
+                    let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                    print(accessToken)
+        
+                    HttpManager.sharedInstance
+                        .request(
+                            HttpMethod.HttpMethodPost,
+                            apiFunc: APiFunction.FBLogin,
+                            param: ["access_token":accessToken],
+                            success: { (code, data ) in
+                                self.success(code, data: data)
+                            }, failure: { (code, data) in
+                                self.failure(code!, data: data!)
+                            }, complete: nil)
+                }
+            })
         }
     }
     

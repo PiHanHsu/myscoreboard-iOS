@@ -80,7 +80,8 @@ class HttpManager {
             path = Params.apiRootPath + Params.apiRemovePlayerInTeam + (requestParam![":id"]?.stringValue)!
             requestParam?.removeValueForKey(":id")
         case .EditTeam :
-            let teamIdAndApiPath = (Params.apiEditTeam as NSString).stringByReplacingOccurrencesOfString(":id", withString: (requestParam![":id"]?.stringValue)!)
+            let team_id = String(requestParam![":id"]!)
+            let teamIdAndApiPath = (Params.apiEditTeam as NSString).stringByReplacingOccurrencesOfString(":id", withString: team_id)
             path = Params.apiRootPath + teamIdAndApiPath
             requestParam?.removeValueForKey(":id")
         //case .LeaveTeam :
@@ -143,14 +144,32 @@ class HttpManager {
         
     }
     
-    func uploadData(path: String, name: String, data: NSData, success: HttpCallbackSuccess? = nil, failure: HttpCallbackFailure? = nil, complete: HttpCallbackComplete? = nil) {
+    func uploadDataWithImage(httpMethod: HttpMethod,path: String, uploadImage: UIImage, param: [String: AnyObject]?, success: HttpCallbackSuccess? = nil, failure: HttpCallbackFailure? = nil, complete: HttpCallbackComplete? = nil) {
+        
+        var method: Alamofire.Method = .GET
+    
+        switch httpMethod {
+        case .HttpMethodGet:
+            method = .GET
+        case .HttpMethodPost:
+            method = .POST
+        case .HttpMethodPatch:
+            method = .PATCH
+        }
         
         Alamofire
             .upload(
-                .POST,
-                baseUrl + path,
+                method,
+                path,
                 multipartFormData: { multipartFormData in
-                    multipartFormData.appendBodyPart(data: data, name: name, fileName: "\(name).jpg", mimeType: "image/jpeg")
+                    //multipartFormData.appendBodyPart(data: data, name: name, fileName: "\(name).jpg", mimeType: "image/jpeg")
+                    if let imageData = UIImageJPEGRepresentation(uploadImage, 1.0) {
+                        multipartFormData.appendBodyPart(data: imageData, name: "logo", fileName: "file.png", mimeType: "image/png")
+                    }
+                    for (key, value) in param! {
+                        multipartFormData.appendBodyPart(data: value.dataUsingEncoding(NSUTF8StringEncoding)!, name: key)
+                    }
+                    
                 },
                 encodingCompletion: { encodingResult in
                     switch encodingResult {
