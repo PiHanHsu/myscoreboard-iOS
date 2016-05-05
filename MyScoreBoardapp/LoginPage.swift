@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelegate, buttonCellDelegate {
     
@@ -53,7 +54,37 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
     }
     
     @IBAction func registerAction(sender: UIButton) {
+        // api test
+        HttpManager.sharedInstance
+            .request(HttpMethod.HttpMethodGet,
+                     apiFunc: APiFunction.GetRanking,
+                     param: ["auth_token" : "3NYxhnqFQVZqKAD5mAN5"],
+                     success: { (code , data ) in
+                        self.success(code, data: data)
+                }, failure: { (code , data) in
+                        self.failure(code!, data: data!)
+                }, complete: nil)
+        //"auth_token" : "3NYxhnqFQVZqKAD5mAN5"
         
+        //test account/password : ["email":"hello@test.co","password":"12345678"]
+        //SaveGameScore
+//        ["team_id": "9",
+//            "game_type": "",
+//            "scores[0]":"{'user' : 12, 'score' : 21, 'result' : W}",
+//            "scores[1]":"{'user' : 13, 'score' : 18, 'result' : L}"]
+        
+    }
+    
+    func success(code:Int, data:JSON ) {
+        print("\(#function)")
+        print(code)
+        print(data)
+    }
+    
+    func failure(code:Int, data:JSON ) {
+        print("\(#function)")
+        print(code)
+        print(data)
     }
     
     func isValidEmail(emailStr:String) -> Bool {
