@@ -22,29 +22,6 @@
                                 <rect key="frame" x="64" y="548" width="536" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-XV-Ips">
-                                <rect key="frame" x="200" y="550" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.46274509800000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="  排行榜" image="rank"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68O-6f-LXD">
-                                <rect key="frame" x="400" y="550" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.46274509800000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="  我的球隊" image="team"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIt-yu-Eeg">
-                                <rect key="frame" x="0.0" y="550" width="200" height="50"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.46274509800000002" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mIt-yu-Eeg" secondAttribute="height" multiplier="4:1" id="Upb-t4-dVt"/>
-                                </constraints>
-                                <state key="normal" title="  個人頁面" image="person"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Upb-t4-dVt"/>
-                                    </mask>
-                                </variation>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -105,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-mh-P6C">
-                                <rect key="frame" x="8" y="506" width="572" height="36"/>
+                                <rect key="frame" x="8" y="500" width="572" height="36"/>
                                 <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="進入計分">
@@ -113,7 +90,7 @@
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Th-nM4" userLabel="Team Collection View">
-                                <rect key="frame" x="8" y="76" width="572" height="420"/>
+                                <rect key="frame" x="8" y="76" width="562" height="394"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
@@ -140,13 +117,13 @@
                         <constraints>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="12" id="Ba8-U6-e99"/>
                             <constraint firstAttribute="trailing" secondItem="2GQ-mh-P6C" secondAttribute="trailing" constant="20" id="Bia-5b-bP7"/>
-                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="10" id="Csb-gX-7bL"/>
+                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="30" id="Csb-gX-7bL"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="20" id="EH6-XT-O2M"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="7k0-mq-ryN" secondAttribute="top" constant="75" id="UWj-JE-WjG"/>
                             <constraint firstItem="2GQ-mh-P6C" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="XI5-wq-zR7"/>
-                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="9" id="ZXr-i1-wFg"/>
+                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="15" id="ZXr-i1-wFg"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="m0q-Tj-rQV"/>
-                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="20" id="p6F-FM-Xgi"/>
+                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="30" id="p6F-FM-Xgi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -165,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKv-qD-IDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2612" y="1194"/>
+            <point key="canvasLocation" x="-2555" y="1187"/>
         </scene>
         <!--新增球隊-->
         <scene sceneID="7ez-Rp-hew">
@@ -237,7 +214,7 @@
                                 <rect key="frame" x="0.0" y="242" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRC-vT-xCY" id="X66-Ac-AjA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
