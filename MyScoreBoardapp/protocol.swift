@@ -6,7 +6,7 @@
 //  Copyright © 2016 PiHan Hsu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol passwordCellDelegate{
     func getToDestinationController()
@@ -14,6 +14,7 @@ protocol passwordCellDelegate{
 
 protocol labelCellDelegate {
     func getText(type: TextFieldType , enterText: String )
+    func callPicker(sender: UITableViewCell , pickerContent: [String] )
 }
 
 

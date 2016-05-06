@@ -13,6 +13,9 @@ class PersonalMainPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Params.PersonalMainPageTitle
+        self.navigationItem.title = Params.PersonalMainPageTitle
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.rotate))
+        self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +23,11 @@ class PersonalMainPage: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func rotate() {
+        print("\(#function)")
+    }
+    
     
 
     /*

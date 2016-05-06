@@ -229,6 +229,9 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
         }
     }
     
+    func callPicker(sender:UITableViewCell, pickerContent: [String]) {
+    }
+    
     func buttonClick(buttonType: ButtonType) {
         
         switch buttonType {
@@ -252,9 +255,12 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
                             self.failure(code!, data: data!)
                         }, complete: nil)
                 
-                
             }
         case .FBLogin:
+            
+            // test 
+            let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
+            self.presentViewController(controller, animated: true, completion: nil)
             // FB Login
             print(buttonType)
             let facebookLogin = FBSDKLoginManager()
