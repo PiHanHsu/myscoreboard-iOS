@@ -41,7 +41,7 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
         self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
         
         switch self.textFieldType! {
-        case .Gender:
+        case .Gender, .ChoseTeam, .GameMode:
             print(self.addTeamDetailText.resignFirstResponder())
         default:
             break
@@ -55,7 +55,15 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
         case .Gender:
             pickerContent = ["男","女"]
             self.delegate?.callPicker(self, pickerContent: pickerContent)
-        self.addTeamDetailText.resignFirstResponder()
+            self.addTeamDetailText.resignFirstResponder()
+        case .ChoseTeam:
+            pickerContent = ["世界大賽冠軍","AlphaCamp8"]
+            self.delegate?.callPicker(self, pickerContent: pickerContent)
+            self.addTeamDetailText.resignFirstResponder()
+        case .GameMode:
+            pickerContent = ["手動排賽","自動排賽"]
+            self.delegate?.callPicker(self, pickerContent: pickerContent)
+            self.addTeamDetailText.resignFirstResponder()
         default:
             pickerContent = []
         }

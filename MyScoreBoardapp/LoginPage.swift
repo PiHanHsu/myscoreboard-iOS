@@ -296,6 +296,8 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
                             }, complete: nil)
                 }
             })
+        default :
+            break
         }
     }
     

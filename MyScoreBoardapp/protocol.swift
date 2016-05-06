@@ -21,3 +21,7 @@ protocol labelCellDelegate {
 protocol buttonCellDelegate{
     func buttonClick(buttonType:ButtonType)
 }
+
+protocol pickerDelegate{
+    func didSelect(pickerType:PickerType,pickerItem:String)
+}

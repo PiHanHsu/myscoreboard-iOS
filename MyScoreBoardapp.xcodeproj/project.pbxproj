@@ -43,6 +43,8 @@
 		9F7F890A1CD86D4E00BA240F /* OrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F89081CD86D4E00BA240F /* OrTableViewCell.swift */; };
 		9F7F890B1CD86D4E00BA240F /* OrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7F89091CD86D4E00BA240F /* OrTableViewCell.xib */; };
 		9F7F890F1CD88EA300BA240F /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F890E1CD88EA300BA240F /* LoginPage.swift */; };
+		9FD270731CDD001C008ED065 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD270721CDD001C008ED065 /* pickerView.swift */; };
+		9FD270751CDD04C9008ED065 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD270741CDD04C9008ED065 /* Game.swift */; };
 		9FF8353C1CDC8D370001D353 /* GameSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8353B1CDC8D370001D353 /* GameSetTableViewController.swift */; };
 		9FF8353F1CDC8E640001D353 /* CollectionViewInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8353D1CDC8E640001D353 /* CollectionViewInTableViewCell.swift */; };
 		9FF835401CDC8E640001D353 /* CollectionViewInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF8353E1CDC8E640001D353 /* CollectionViewInTableViewCell.xib */; };
@@ -112,6 +114,8 @@
 		9F7F89081CD86D4E00BA240F /* OrTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrTableViewCell.swift; sourceTree = "<group>"; };
 		9F7F89091CD86D4E00BA240F /* OrTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrTableViewCell.xib; sourceTree = "<group>"; };
 		9F7F890E1CD88EA300BA240F /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		9FD270721CDD001C008ED065 /* pickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
+		9FD270741CDD04C9008ED065 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9FF8353B1CDC8D370001D353 /* GameSetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSetTableViewController.swift; sourceTree = "<group>"; };
 		9FF8353D1CDC8E640001D353 /* CollectionViewInTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewInTableViewCell.swift; sourceTree = "<group>"; };
 		9FF8353E1CDC8E640001D353 /* CollectionViewInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewInTableViewCell.xib; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 				9F26011B1CD9D77600C56B23 /* BasicTableViewController.swift */,
 				9F2601211CD9E5DF00C56B23 /* protocol.swift */,
 				9F2601251CDA243A00C56B23 /* Api.swift */,
+				9FD270721CDD001C008ED065 /* pickerView.swift */,
+				9FD270741CDD04C9008ED065 /* Game.swift */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 				9F7F890F1CD88EA300BA240F /* LoginPage.swift in Sources */,
 				75A432AB1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift in Sources */,
 				7523573E1CD636590053CE72 /* AddTeamImageTableViewCell.swift in Sources */,
+				9FD270731CDD001C008ED065 /* pickerView.swift in Sources */,
 				754FD7C41CD7125100029F22 /* AddGameLocationViewController.swift in Sources */,
 				9FF835421CDC9CB30001D353 /* GameScoreViewController.swift in Sources */,
 				7596EEA91CD463BF00C55438 /* TeamCollectionViewCell.swift in Sources */,
@@ -537,6 +544,7 @@
 				9F2601221CD9E5DF00C56B23 /* protocol.swift in Sources */,
 				9F3FF0E61CD79FF900167C5F /* ButtonTableViewCell.swift in Sources */,
 				7523574A1CD6411E0053CE72 /* AddTeamTableViewController.swift in Sources */,
+				9FD270751CDD04C9008ED065 /* Game.swift in Sources */,
 				9FF8353C1CDC8D370001D353 /* GameSetTableViewController.swift in Sources */,
 				9FF8353F1CDC8E640001D353 /* CollectionViewInTableViewCell.swift in Sources */,
 				754FD7C61CD773FC00029F22 /* Teams.swift in Sources */,
