@@ -31,7 +31,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
-                            <action selector="selectedTextFieldAction:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="Pyv-A0-EBR"/>
+                            <action selector="selectedTextFieldAction:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="oiz-Mj-g3R"/>
                             <action selector="textEditingChange:" destination="KGk-i7-Jjw" eventType="editingChanged" id="r7S-Gl-wBV"/>
                         </connections>
                     </textField>

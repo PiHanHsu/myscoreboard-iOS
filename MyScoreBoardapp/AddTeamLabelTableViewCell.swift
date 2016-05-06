@@ -39,6 +39,13 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBAction func textEditingChange(sender: UITextField) {
         let enteredText = self.addTeamDetailText.text
         self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
+        
+        switch self.textFieldType! {
+        case .Gender:
+            print(self.addTeamDetailText.resignFirstResponder())
+        default:
+            break
+        }
     }
     
     @IBAction func selectedTextFieldAction(sender: UITextField) {
@@ -48,7 +55,7 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
         case .Gender:
             pickerContent = ["男","女"]
             self.delegate?.callPicker(self, pickerContent: pickerContent)
-            print(self.addTeamDetailText.resignFirstResponder())
+        self.addTeamDetailText.resignFirstResponder()
         default:
             pickerContent = []
         }

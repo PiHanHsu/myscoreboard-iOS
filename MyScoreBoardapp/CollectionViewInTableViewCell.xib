@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollectionViewInTableViewCell" id="KGk-i7-Jjw" customClass="CollectionViewInTableViewCell" customModule="MyScoreBoardapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9TV-C2-1fw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="dPi-ZV-cKN">
+                            <size key="itemSize" width="80" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="8" maxX="5" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9TV-C2-1fw" secondAttribute="bottom" id="afi-dw-wVA"/>
+                    <constraint firstItem="9TV-C2-1fw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="e5j-t3-ZNt"/>
+                    <constraint firstAttribute="trailing" secondItem="9TV-C2-1fw" secondAttribute="trailing" id="eV2-cQ-4tI"/>
+                    <constraint firstItem="9TV-C2-1fw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uie-K1-kk5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionViewInCell" destination="9TV-C2-1fw" id="aEX-0b-7sS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

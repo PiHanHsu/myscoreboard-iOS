@@ -141,7 +141,8 @@ class RegisterAccountTableViewController: BasicTableViewController,labelCellDele
             let placeholder = NSAttributedString(string: "請選擇性別", attributes: [NSForegroundColorAttributeName : UIColor.grayColor()])
             cell.addTeamDetailText.attributedPlaceholder = placeholder
             // cell.addTeamDetailIcon.image = UIImage(named: "icon_field_account_mail_3x")
-            cell.addTeamDetailText.allowsEditingTextAttributes = false
+//            cell.addTeamDetailText.userInteractionEnabled = false
+//            cell.userInteractionEnabled = true
             cell.textFieldType = TextFieldType.Gender
             cell.delegate = self
             self.gender = cell
@@ -168,6 +169,11 @@ class RegisterAccountTableViewController: BasicTableViewController,labelCellDele
         
     }
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("select cell 123")
+        self.callPicker(self.gender, pickerContent: ["男","女"])
+    }
     
     // MARK: - customDelegate
     
@@ -256,7 +262,6 @@ class RegisterAccountTableViewController: BasicTableViewController,labelCellDele
         self.blackBackGround.removeFromSuperview()
         self.pickerBackgroundView.removeFromSuperview()
         self.gender.addTeamDetailText.text = self.selectedGender
-        self.gender.addTeamDetailText.resignFirstResponder()
     }
     
     
