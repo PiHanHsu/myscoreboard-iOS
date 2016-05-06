@@ -15,22 +15,38 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="210" height="302"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addTeam" translatesAutoresizingMaskIntoConstraints="NO" id="qJV-l5-UDp">
-                        <rect key="frame" x="53" y="98.5" width="105" height="105"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bn_team_create_normal_3x" translatesAutoresizingMaskIntoConstraints="NO" id="qJV-l5-UDp">
+                        <rect key="frame" x="50" y="0.0" width="110" height="302"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="qJV-l5-UDp" secondAttribute="height" multiplier="1:1" id="sg3-Wy-bVr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sg3-Wy-bVr"/>
+                            </mask>
+                        </variation>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="1:2" id="8Tb-GU-oSo"/>
+                <constraint firstItem="qJV-l5-UDp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EGj-5H-adi"/>
+                <constraint firstItem="qJV-l5-UDp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="J1D-5j-SfG"/>
+                <constraint firstAttribute="trailing" secondItem="qJV-l5-UDp" secondAttribute="trailing" constant="50" id="Xbi-vn-L2y"/>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="oZq-wJ-Z8l"/>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="otg-1k-m9M"/>
+                <constraint firstAttribute="bottom" secondItem="qJV-l5-UDp" secondAttribute="bottom" id="qU0-Lm-l0w"/>
             </constraints>
             <size key="customSize" width="210" height="302"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8Tb-GU-oSo"/>
+                    <exclude reference="oZq-wJ-Z8l"/>
+                    <exclude reference="otg-1k-m9M"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="addTeamImage" destination="qJV-l5-UDp" id="Q02-Ce-NcA"/>
             </connections>
@@ -38,6 +54,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="addTeam" width="119" height="114"/>
+        <image name="bn_team_create_normal_3x" width="670" height="948"/>
     </resources>
 </document>
