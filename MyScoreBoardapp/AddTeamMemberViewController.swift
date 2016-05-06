@@ -16,7 +16,7 @@ class AddTeamMemberViewController: UIViewController {
     @IBOutlet weak var addMemberText: UITextField!
     
     var team:Team?
-    var deldgate:AddMemberDelegate?
+    var delegate:AddMemberDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class AddTeamMemberViewController: UIViewController {
         
     }
 //    @IBAction func saveBtn(sender: AnyObject) {
-//        delegate?.nameChanged(NameTextField.text!)
+//        delegate?.nameChanged(addMemberText.text!)
 //        self.dismissViewControllerAnimated(true, completion: nil)
 //    }
 
