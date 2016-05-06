@@ -16,7 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="210" height="302"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bn_team_create_normal_3x" translatesAutoresizingMaskIntoConstraints="NO" id="qJV-l5-UDp">
-                        <rect key="frame" x="50" y="0.0" width="110" height="302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="210" height="302"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="qJV-l5-UDp" secondAttribute="height" multiplier="1:1" id="sg3-Wy-bVr"/>
                         </constraints>
@@ -33,8 +34,8 @@
             <constraints>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="1:2" id="8Tb-GU-oSo"/>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EGj-5H-adi"/>
-                <constraint firstItem="qJV-l5-UDp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="J1D-5j-SfG"/>
-                <constraint firstAttribute="trailing" secondItem="qJV-l5-UDp" secondAttribute="trailing" constant="50" id="Xbi-vn-L2y"/>
+                <constraint firstItem="qJV-l5-UDp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="J1D-5j-SfG"/>
+                <constraint firstAttribute="trailing" secondItem="qJV-l5-UDp" secondAttribute="trailing" id="Xbi-vn-L2y"/>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="oZq-wJ-Z8l"/>
                 <constraint firstItem="qJV-l5-UDp" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="otg-1k-m9M"/>
                 <constraint firstAttribute="bottom" secondItem="qJV-l5-UDp" secondAttribute="bottom" id="qU0-Lm-l0w"/>

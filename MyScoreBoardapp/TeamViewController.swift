@@ -10,8 +10,9 @@ import UIKit
 
 class TeamViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate, MyCollectionViewCellProtocal {
     
+    var editTeamButton:UIBarButtonItem?
     var teams = [Team]()
-    
+    var number:Int = 0
     @IBOutlet weak var teamCollectionView: UICollectionView!
     @IBOutlet weak var teamLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var recordScoreButton: UIButton!
@@ -22,7 +23,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        editTeamButton = self.navigationItem.rightBarButtonItem
         self.teamCollectionView.registerNib(UINib(nibName: "TeamCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "TeamCollectionViewCell")
     
         
@@ -140,36 +141,36 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-       
+        
         
         if indexPath.row < self.teams.count{
             
-        let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("TeamCollectionViewCell", forIndexPath: indexPath) as! TeamCollectionViewCell
+            let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("TeamCollectionViewCell", forIndexPath: indexPath) as! TeamCollectionViewCell
             
-        let myTeams = teams[indexPath.row]
-        myCell.delegate = self
-        myCell.team = myTeams
-        
-        myCell.teamImageUrl.image = UIImage(named: (teams[indexPath.row].TeamImageUrl)!)
-        myCell.teamNameLabel.text = teams[indexPath.row].TeamName
-        myCell.gameTimeDay.text = teams[indexPath.row].GameTimeDay
-        myCell.gameTimeHour.text = teams[indexPath.row].GameTimeHour
-        myCell.gameLocation.text = teams[indexPath.row].GameLocation
-        
-        return myCell
+            let myTeams = teams[indexPath.row]
+            myCell.delegate = self
+            myCell.team = myTeams
+            
+            myCell.teamImageUrl.image = UIImage(named: (teams[indexPath.row].TeamImageUrl)!)
+            myCell.teamNameLabel.text = teams[indexPath.row].TeamName
+            myCell.gameTimeDay.text = teams[indexPath.row].GameTimeDay
+            myCell.gameTimeHour.text = teams[indexPath.row].GameTimeHour
+            myCell.gameLocation.text = teams[indexPath.row].GameLocation
+            
+            return myCell
             
         }else if indexPath.row == self.teams.count{
             
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("addTeamCollectionViewCell", forIndexPath: indexPath) as! addTeamCollectionViewCell
-                
-        cell.addTeamImage.image = UIImage(named:"addTeam")
-                
-        return cell
-        
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("addTeamCollectionViewCell", forIndexPath: indexPath) as! addTeamCollectionViewCell
+            
+            cell.addTeamImage.image = UIImage(named:"bn_team_create_normal_3x")
+            
+            return cell
+            
         }else{
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("addTeamCollectionViewCell", forIndexPath: indexPath) as! addTeamCollectionViewCell
             return cell
-        
+            
         }
         
     }
@@ -186,16 +187,50 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         
         //call segue .. 把 player 丟進對象 controller 去顯示
         //        performSegueWithIdentifier("segueToPlayer", sender: player)
+        
+        
     }
     
+    func didAddPlayer() {
+        self.performSegueWithIdentifier("AddPlayer", sender: nil)
+    }
+    
+    
     override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let player = sender as! Player
+      
+        if segue.identifier == "showEditTeam" {
+            let destinationController = segue.destinationViewController as! AddTeamTableViewController
+        
+            
+            destinationController.isAddTeam = false
+            
+        }
+        else if  segue.identifier == "showAddTeam" {
+            let destinationController = segue.destinationViewController as! AddTeamTableViewController
+                
+            destinationController.isAddTeam = true 
+
+        }
+        
+
+        
+
+        
+//        if indexPath.row = 0{
+//        
+//        
+//        }
+        //        let player = sender as! Player
 //        
 //        let destinationController = segue.destinationViewController as! PlayerViewController
 //        destinationController.player = player
     }
     
-    
+//    func getToDestinationController() {
+//        let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ForgetPasswordViewController")
+//        self.presentViewController(destinationController, animated: true, completion: nil)
+//    }
+
     
     
     
@@ -206,4 +241,16 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     
     
+}
+
+extension TeamViewController:UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        self.number = Int(floor(scrollView.contentOffset.x / UIScreen.mainScreen().bounds.width))
+        if number == teams.count - 1 {
+            self.navigationItem.rightBarButtonItem = nil
+        } else {
+            self.navigationItem.rightBarButtonItem = editTeamButton
+        }
+    }
 }

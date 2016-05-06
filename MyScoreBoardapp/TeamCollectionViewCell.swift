@@ -10,6 +10,7 @@ import UIKit
 
 protocol MyCollectionViewCellProtocal {
     func didSelectedChild(player:Player)
+    func didAddPlayer()
 }
 
 
@@ -31,7 +32,7 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     @IBOutlet weak var gameLocationTitle: UILabel!
     @IBOutlet weak var gameLocation: UILabel!
     @IBOutlet weak var TeamMemberTitle: UILabel!
-    @IBOutlet weak var lightBlueView: UIView!
+//    @IBOutlet weak var lightBlueView: UIView!
     @IBOutlet weak var imageBackground: UIView!
     @IBOutlet weak var teamDetailBackground: UIView!
     @IBOutlet weak var headerBackground: UIView!
@@ -48,7 +49,7 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         self.childCollectionView.delegate = self
         
         
-        self.lightBlueView.layer.cornerRadius = 10
+//        self.lightBlueView.layer.cornerRadius = 10
         self.teamBackgroundView.layer.cornerRadius = 10
         self.imageBackground.layer.cornerRadius = 10
         self.teamBackgroundView.layer.cornerRadius = 10
@@ -60,18 +61,26 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return team!.players.count
+        return team!.players.count + 1
         
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlayerCardCollectionViewCell", forIndexPath: indexPath) as! PlayerCardCollectionViewCell
-        let player = team!.players[indexPath.row]
-        
-        cell.playerName.text = player.playerName
-        cell.playerImage.image = UIImage(named: player.playerImageUrl!)
-        
+        if indexPath.item == 0 {
+            cell.playerName.text = "新增成員"
+            cell.playerImage.image = UIImage(named: "ico_member_add_3x")
+            
+        }else{
+            
+            let player = team!.players[indexPath.row-1]
+            cell.playerName.text = player.playerName
+            cell.playerImage.image = UIImage(named: player.playerImageUrl!)
+
+            
+        }
+               
         return cell
     }
     
@@ -79,8 +88,9 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = self.contentView.frame.size.width/4
-        return CGSize.init(width: size, height: size*1.2)
+        let size = (self.teamBackgroundView.frame.size.width-24)/3
+        return CGSize.init(width: size, height: size)
+        
     }
     
     //計算 minimumInteritemSpacing 的間隔是多少
@@ -100,17 +110,25 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     //由此 collectionView delegate 得知某個 player 被點擊到
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        //依據 indexPath 把被點擊到的 Player 資訊取出
-        let player = team!.players[indexPath.row]
         
         guard let controller = delegate else {
             print("unwrap failed")
             return;
         }
         
-        //將此 Player 資訊透過 自己定義的 delegate 回傳到 controller
+
+        //依據 indexPath 把被點擊到的 Player 資訊取出
+        
+        if indexPath.item == 0 {
+            controller.didAddPlayer()
+        }
+        
+        
+        let player = team!.players[indexPath.row]
+               //將此 Player 資訊透過 自己定義的 delegate 回傳到 controller
         controller.didSelectedChild(player)
         
     }
     
 }
+

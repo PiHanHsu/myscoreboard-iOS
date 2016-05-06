@@ -8,12 +8,14 @@
 
 import UIKit
 
-class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource, GooglePlacesAutocompleteDelegate {
+class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource, GooglePlacesAutocompleteDelegate,UITextFieldDelegate {
 
     
+    var isAddTeam = false
     @IBOutlet var pickerBackgroundView: UIView!
     @IBOutlet weak var gameTimepicker: UIPickerView!
     @IBOutlet weak var TeamImageuploadbackground: UIView!
+    @IBOutlet weak var countText: UILabel!
     
     let dayArray = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
     let startTimeArray = ["00:00","00:30","01:00","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00:","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
@@ -36,6 +38,13 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if isAddTeam == false {
+        navigationItem.title = ""
+        }else{
+        navigationItem.title = ""
+        }
+        
 
         let teams = Teams.sharedInstance
         
@@ -70,6 +79,27 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
         
     }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        let currentCharacterCount = textField.text?.characters.count ?? 0
+        
+        
+        if (range.length + range.location > currentCharacterCount){
+            return false
+        }
+        let newLength = currentCharacterCount + string.characters.count - range.length
+    
+        if newLength < 21 {
+            self.countText.text = "\(newLength)"
+            return true
+        }
+        else {
+            return false
+        }
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,6 +137,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             
             cell.addTeamDetailIcon.image = UIImage(named:"" )
             cell.addTeamDetailText.placeholder = "請輸入球隊名稱"
+            cell.addTeamDetailText.delegate = self
             return cell
             
         case 1:
@@ -117,6 +148,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.addTeamDetailText.placeholder = "聚會時間"
             cell.addTeamDetailText.userInteractionEnabled = false
             cell.addTeamDetailText.text = ""
+
             gameTime = cell
             
             
@@ -165,8 +197,14 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             presentViewController(gpaViewController, animated: true, completion: nil)
             
             //self.performSegueWithIdentifier("showAddGameLocation", sender: self)
+            
         }else if indexPath.section == 3{
-            self.performSegueWithIdentifier("showAddTeamMember", sender: self)
+            
+            if isAddTeam == true{
+                self.performSegueWithIdentifier("showAddTeamMember", sender: self)}
+            else{
+                self.performSegueWithIdentifier("showEditTeamMember", sender: self)
+            }
         }else{
         
         }
@@ -176,6 +214,10 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     func placeSelected(place: Place){
         place.getDetails { details in
             print(details.raw)
+            
+            
+            
+            
         }
     }
 
