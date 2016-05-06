@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--排行榜-->
@@ -90,10 +91,9 @@
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Th-nM4" userLabel="Team Collection View">
-                                <rect key="frame" x="8" y="76" width="562" height="394"/>
+                                <rect key="frame" x="8" y="84" width="572" height="396"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Blv-8S-hBj" userLabel="TeamLayout">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -115,15 +115,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.29019607843137257" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="12" id="Ba8-U6-e99"/>
+                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="20" id="Ba8-U6-e99"/>
                             <constraint firstAttribute="trailing" secondItem="2GQ-mh-P6C" secondAttribute="trailing" constant="20" id="Bia-5b-bP7"/>
-                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="30" id="Csb-gX-7bL"/>
+                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="20" id="Csb-gX-7bL"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="20" id="EH6-XT-O2M"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="7k0-mq-ryN" secondAttribute="top" constant="75" id="UWj-JE-WjG"/>
                             <constraint firstItem="2GQ-mh-P6C" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="XI5-wq-zR7"/>
                             <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="15" id="ZXr-i1-wFg"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="m0q-Tj-rQV"/>
-                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="30" id="p6F-FM-Xgi"/>
+                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="20" id="p6F-FM-Xgi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -132,17 +132,24 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="我的球隊" id="A5t-PU-i8L"/>
+                    <navigationItem key="navigationItem" title="我的球隊" id="A5t-PU-i8L">
+                        <barButtonItem key="rightBarButtonItem" image="icon_nav_edit_normal" id="Fpb-VI-2vS">
+                            <connections>
+                                <segue destination="BhG-wz-Llj" kind="show" identifier="showEditAddTeam" id="5wQ-cV-oIv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="recordScoreButton" destination="2GQ-mh-P6C" id="aFc-kp-4lV"/>
                         <outlet property="teamCollectionView" destination="Snr-Th-nM4" id="hAZ-sS-SFp"/>
                         <outlet property="teamLayout" destination="Blv-8S-hBj" id="JyV-4M-nUx"/>
                         <segue destination="BhG-wz-Llj" kind="show" identifier="showAddTeam" id="uVj-Ui-JZx"/>
+                        <segue destination="TfL-8P-GTy" kind="show" identifier="AddPlayer" id="4G9-hf-xfd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKv-qD-IDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2555" y="1187"/>
+            <point key="canvasLocation" x="-2451" y="1497"/>
         </scene>
         <!--新增球隊-->
         <scene sceneID="7ez-Rp-hew">
@@ -165,17 +172,44 @@
                                     </constraints>
                                     <state key="normal" title="Button" image="icon_upload_3x"/>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-Oq-KCo">
+                                    <rect key="frame" x="538" y="129" width="42" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="rn2-SA-7f1"/>
+                                        <constraint firstAttribute="width" constant="42" id="xyW-pP-RyZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-ve-pOD">
+                                    <rect key="frame" x="527" y="129" width="11" height="21"/>
+                                    <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="Mcg-YM-5cs"/>
+                                        <constraint firstAttribute="width" constant="42" id="kqW-la-Nq6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="fFy-Oq-KCo" secondAttribute="trailing" constant="20" id="3fJ-pc-5f2"/>
+                                <constraint firstItem="fFy-Oq-KCo" firstAttribute="leading" secondItem="F2c-ve-pOD" secondAttribute="trailing" id="BQd-2S-Aho"/>
+                                <constraint firstItem="F2c-ve-pOD" firstAttribute="centerY" secondItem="fFy-Oq-KCo" secondAttribute="centerY" id="D3S-uC-TAo"/>
                                 <constraint firstItem="73B-eN-k9f" firstAttribute="centerX" secondItem="f5z-jB-vsK" secondAttribute="centerX" id="IHl-as-d2Z"/>
                                 <constraint firstItem="73B-eN-k9f" firstAttribute="height" secondItem="f5z-jB-vsK" secondAttribute="height" id="OYY-MH-8AB"/>
+                                <constraint firstAttribute="bottom" secondItem="fFy-Oq-KCo" secondAttribute="bottom" id="UQI-Se-YuF"/>
                                 <constraint firstAttribute="bottom" secondItem="73B-eN-k9f" secondAttribute="bottom" constant="10" id="YGA-1M-Kef"/>
                                 <constraint firstItem="73B-eN-k9f" firstAttribute="top" secondItem="f5z-jB-vsK" secondAttribute="top" constant="25" id="ix7-Uy-bbQ"/>
+                                <constraint firstItem="F2c-ve-pOD" firstAttribute="bottom" secondItem="f5z-jB-vsK" secondAttribute="bottomMargin" constant="8" id="r2c-ng-Xip"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="OYY-MH-8AB"/>
+                                    <exclude reference="r2c-ng-Xip"/>
                                 </mask>
                             </variation>
                         </view>
@@ -229,10 +263,12 @@
                     <navigationItem key="navigationItem" title="新增球隊" id="yIX-Zy-USr"/>
                     <connections>
                         <outlet property="TeamImageuploadbackground" destination="f5z-jB-vsK" id="mjZ-Jn-1db"/>
+                        <outlet property="countText" destination="F2c-ve-pOD" id="g1n-7f-az5"/>
                         <outlet property="gameTimepicker" destination="91E-sP-4zU" id="g5S-7G-Bhk"/>
                         <outlet property="pickerBackgroundView" destination="WZY-3d-nAD" id="Zl8-Ox-MPb"/>
                         <segue destination="0Bm-cL-iWD" kind="show" identifier="showAddGameLocation" id="QqA-o5-oGK"/>
                         <segue destination="TfL-8P-GTy" kind="show" identifier="showAddTeamMember" id="mdw-fr-CaR"/>
+                        <segue destination="9gO-du-wAL" kind="show" identifier="showEditTeamMember" id="GWb-1p-Xcp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FX7-tN-4dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,7 +344,7 @@
                     </variation>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-2628" y="2082"/>
+            <point key="canvasLocation" x="-2464" y="2306"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="pEu-p2-xay">
@@ -333,7 +369,7 @@
                                                 <constraint firstAttribute="width" constant="243" id="rob-eQ-mJw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-hG-Ncf">
@@ -377,23 +413,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbh-7d-25u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2287" y="3775"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2Zw-LL-Ovn">
-            <objects>
-                <navigationController id="Lc0-tt-OeA" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cGX-WX-m6X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9gO-du-wAL" kind="relationship" relationship="rootViewController" id="EGm-tA-M3Z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7rD-NM-O8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3107" y="3775"/>
+            <point key="canvasLocation" x="-2409" y="3113"/>
         </scene>
         <!--新增成員-->
         <scene sceneID="TGs-pD-bM2">
@@ -494,7 +514,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1707" y="2541"/>
+            <point key="canvasLocation" x="-1751" y="2505"/>
         </scene>
         <!--我的球隊-->
         <scene sceneID="yBb-0T-Cqk">
@@ -517,9 +537,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_nav_edit_normal" width="41" height="42"/>
         <image name="icon_upload_3x" width="230" height="230"/>
         <image name="person" width="24" height="24"/>
         <image name="rank" width="24" height="24"/>
         <image name="team" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4G9-hf-xfd"/>
+        <segue reference="5wQ-cV-oIv"/>
+    </inferredMetricsTieBreakers>
 </document>
