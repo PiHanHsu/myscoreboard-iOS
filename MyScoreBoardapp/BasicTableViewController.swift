@@ -15,6 +15,11 @@ class BasicTableViewController: UITableViewController {
         self.tableView.separatorStyle = .None
         self.tableView.allowsSelection = false
         self.tableView.bounces = false
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,6 +40,12 @@ class BasicTableViewController: UITableViewController {
         let headerView = UIView()
         headerView.alpha = 0
         return headerView
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     // MARK: - Table view data source

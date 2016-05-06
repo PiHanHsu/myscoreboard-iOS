@@ -1,21 +1,18 @@
 //
-//  PersonalMainPage.swift
+//  GameScoreViewController.swift
 //  MyScoreBoardapp
 //
-//  Created by MBPrDyson on 4/18/16.
+//  Created by MBPrDyson on 5/6/16.
 //  Copyright © 2016 PiHan Hsu. All rights reserved.
 //
 
 import UIKit
 
-class PersonalMainPage: UIViewController {
+class GameScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = Params.PersonalMainPageTitle
-        self.navigationItem.title = Params.PersonalMainPageTitle
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.rotate))
-        self.view.addGestureRecognizer(tap)
+
         // Do any additional setup after loading the view.
     }
 
@@ -23,11 +20,6 @@ class PersonalMainPage: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func rotate() {
-        print("\(#function)")
-    }
-    
     
 
     /*

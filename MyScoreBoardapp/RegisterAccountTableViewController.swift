@@ -8,12 +8,20 @@
 
 import UIKit
 
-class RegisterAccountTableViewController: BasicTableViewController,labelCellDelegate, buttonCellDelegate {
+class RegisterAccountTableViewController: BasicTableViewController,labelCellDelegate, buttonCellDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var uploadImage: UIImageView!
+    @IBOutlet weak var genderPicker: UIPickerView!
+    @IBOutlet var pickerBackgroundView: UIView!
     
+    var numberOfPicker = 0
+    var numberOfComponentsInPicker = 0
+    var pickerContent:[String] = []
     let numberOfRowInSection = [1,3,1,1,1]
+    var blackBackGround = UIView()
+    var gender = AddTeamLabelTableViewCell()
+    var selectedGender = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,8 +141,11 @@ class RegisterAccountTableViewController: BasicTableViewController,labelCellDele
             let placeholder = NSAttributedString(string: "請選擇性別", attributes: [NSForegroundColorAttributeName : UIColor.grayColor()])
             cell.addTeamDetailText.attributedPlaceholder = placeholder
             // cell.addTeamDetailIcon.image = UIImage(named: "icon_field_account_mail_3x")
+//            cell.addTeamDetailText.userInteractionEnabled = false
+//            cell.userInteractionEnabled = true
             cell.textFieldType = TextFieldType.Gender
             cell.delegate = self
+            self.gender = cell
             cellReturn = cell
         case 4 :
             reuseId = "buttonCell"
@@ -158,6 +169,14 @@ class RegisterAccountTableViewController: BasicTableViewController,labelCellDele
         
     }
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("select cell 123")
+        self.callPicker(self.gender, pickerContent: ["男","女"])
+    }
+    
+    // MARK: - customDelegate
+    
     func buttonClick(buttonType: ButtonType) {
         // register
         // api
@@ -179,6 +198,72 @@ class RegisterAccountTableViewController: BasicTableViewController,labelCellDele
             break
         }
     }
+    
+    func callPicker(sender: UITableViewCell, pickerContent: [String]) {
+        self.numberOfPicker = pickerContent.count
+        self.numberOfComponentsInPicker = 1
+        self.pickerContent = pickerContent
+        
+//        let chose = UIAlertController(title: "性別", message: "", preferredStyle: .ActionSheet)
+//        
+//        for item in pickerContent {
+//            let choseItem = UIAlertAction(title: item, style: .Default, handler: { UIAlertAction in
+//                self.endPicked(sender, title: item)
+//            })
+//            chose.addAction(choseItem)
+//        }
+//        
+//        presentViewController(chose, animated: true, completion: nil)
+        
+        //let genderPicker = UIPickerView(frame: CGRect(x: 0, y: UIScreen.mainScreen().bounds.height * 2/3 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height/2 ))
+        self.genderPicker.delegate = self
+        self.genderPicker.dataSource = self
+        
+        self.blackBackGround = UIView(frame: CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height ))
+        self.blackBackGround.backgroundColor = UIColor.blackColor()
+        self.blackBackGround.alpha = 0.5
+        self.view.addSubview(self.blackBackGround)
+//        self.view.addSubview(genderPicker)
+        
+        self.pickerBackgroundView.frame = CGRect(x: 0, y: UIScreen.mainScreen().bounds.height * 8/10 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height * 2/10 )
+        self.view.addSubview(pickerBackgroundView)
+        
+    }
+    
+    
+    
+    func endPicked(sender: UITableViewCell, title:String) {
+        let cell = sender as! AddTeamLabelTableViewCell
+        cell.addTeamDetailText.text = title
+    }
+    
+//    // MARK: - UIPickerViewDataSource
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.numberOfPicker
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return self.numberOfComponentsInPicker
+    }
+
+    // MARK: - UIPickerViewDelegate
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.pickerContent[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("end picker")
+        self.selectedGender = pickerContent[row]
+    }
+    
+    @IBAction func didSelectAction(sender: UIButton) {
+        self.blackBackGround.removeFromSuperview()
+        self.pickerBackgroundView.removeFromSuperview()
+        self.gender.addTeamDetailText.text = self.selectedGender
+    }
+    
     
     /*
      // Override to support conditional editing of the table view.
