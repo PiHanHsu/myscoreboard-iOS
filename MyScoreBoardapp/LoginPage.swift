@@ -113,6 +113,8 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
         print("\(#function)")
         print(code)
         print(data)
+        let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
+        self.presentViewController(controller, animated: true, completion: nil)
     }
     
     func failure(code:Int, data:JSON ) {
@@ -228,6 +230,7 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
     }
     
     func buttonClick(buttonType: ButtonType) {
+        
         switch buttonType {
         case .ApiLogin:
             // Api Login
@@ -237,10 +240,19 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
             
             if self.isValidEmail(self.account!) && self.isValidpassword(self.password!){
                 // api check
+                HttpManager.sharedInstance
+                    .request(
+                        HttpMethod.HttpMethodPost,
+                        apiFunc: APiFunction.Login,
+                        param: ["eamil": self.account!,
+                                "password": self.password!],
+                        success: { (code , data) in
+                            self.success(code, data: data)
+                        }, failure: { (code, data) in
+                            self.failure(code!, data: data!)
+                        }, complete: nil)
                 
                 
-                let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("NavigationController")
-                self.presentViewController(controller, animated: true, completion: nil)
             }
         case .FBLogin:
             // FB Login
