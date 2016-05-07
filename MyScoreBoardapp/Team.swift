@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 class Team: NSObject {
     
     var players = [Player]()
@@ -17,6 +17,19 @@ class Team: NSObject {
     var GameTimeHour:String?
     var GameLocation:String?
     var TeamId:String?
+    
+    init(data:JSON) {
+//        self.TeamImageUrl = data["team"]["logo_original_url"].stringValue
+//        self.TeamName = data["team"]["name"].stringValue
+//        self.GameTimeDay = data
+//        self.GameTimeHour =
+//        self.GameLocation = data["team"]["location"]["place_name"].stringValue
+//        self.TeamId = data["team"]["id"].stringValue       
+    }
+    
+    override init() {
+        
+    }
     
     
    }

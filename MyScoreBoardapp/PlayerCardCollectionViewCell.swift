@@ -19,8 +19,10 @@ class PlayerCardCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code   
 
+//        
+//        self.playerImage.layer.cornerRadius = self.playerImage.frame.size.width/4
         
-//        self.playerImage.layer.cornerRadius = (self.contentView.frame.size.width-24-28)/12
+        
         self.playerImage.layer.masksToBounds = true
         
      

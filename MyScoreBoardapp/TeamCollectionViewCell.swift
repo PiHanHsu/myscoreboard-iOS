@@ -88,8 +88,9 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = (self.teamBackgroundView.frame.size.width-24)/3
-        return CGSize.init(width: size, height: size)
+        let size = (self.childCollectionView.frame.size.width-4)/3
+        return CGSize.init(width: size, height: size*1.25)
+    
         
     }
     
@@ -97,14 +98,14 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                                minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 10.0
+        return 0
     }
     
     //計算 LineSpacing 的間隔是多少
     func collectionView(collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 20.0
+        return 0
     }
     
     //由此 collectionView delegate 得知某個 player 被點擊到

@@ -49,4 +49,6 @@ enum TextFieldType {
     case UserId
     case NickName
     case Gender
+    case TeamName
+//    case GameTime
 }

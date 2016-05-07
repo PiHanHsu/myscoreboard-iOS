@@ -50,8 +50,7 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBAction func selectedTextFieldAction(sender: UITextField) {
         var pickerContent:[String] = []
-        
-        switch self.textFieldType! {
+        switch textFieldType! {
         case .Gender:
             pickerContent = ["男","女"]
             self.delegate?.callPicker(self, pickerContent: pickerContent)

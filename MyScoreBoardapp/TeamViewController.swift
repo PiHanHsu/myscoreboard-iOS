@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Accelerate
+import SwiftyJSON
 
 class TeamViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate, MyCollectionViewCellProtocal {
     
@@ -77,14 +79,14 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         player12.playerImageUrl = "player1"
         player12.playerName = "abear"
         
-        
+
         
         
         
         
         
         let team1 = Team()
-        
+//
         team1.TeamImageUrl = "warrior"
         team1.TeamName = "金州勇士隊"
         team1.GameTimeDay = "星期三"
@@ -103,7 +105,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         team1.players.append(player11)
         team1.players.append(player12)
         
-        
+
         
         let team2 = Team()
         
@@ -113,14 +115,47 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         team2.GameTimeHour = "18:00 - 20:00"
         team2.GameLocation = "中正運動中心"
         team2.players.append(player1)
-        
+//
         teams.append(team1)
         teams.append(team2)
         
+        HttpManager.sharedInstance
+                   .request(HttpMethod.HttpMethodGet,
+                             apiFunc: APiFunction.GetTeamList,
+                             param: ["auth_token" : "HWNisxMz3HSjwcGjGeoP",
+                                     ":user_id":"1"],
+                             success: { (code , data ) in
+                            
+                                //self.success(code, data: data)
+                                for team in data["results"].arrayValue {
+                                    Teams.sharedInstance.teams.append(Team(data: team))
+                                    
+                                 }
+                             },
+                             failure: { (code , data) in
+                                    self.failure(code!, data: data!)
+                             },
+                             complete: nil)
         
+        
+
         
         // Do any additional setup after loading the view.
     }
+    
+    func success(code:Int, data:JSON ) {
+        print("\(#function)")
+        print(code)
+        print(data)
+    }
+    
+    func failure(code:Int, data:JSON ) {
+        print("\(#function)")
+        print(code)
+        print(data)
+    }
+
+    
     
     //計算每個 Cell 的大小，大小會決定一排會呈現幾個 Cell
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
@@ -242,14 +277,14 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     
 }
-
+//判斷滑到哪一頁的cell去控制它的編輯按鈕是否會出現
 extension TeamViewController:UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         self.number = Int(floor(scrollView.contentOffset.x / UIScreen.mainScreen().bounds.width))
-        if number == teams.count - 1 {
+        if number == teams.count-1 {
             self.navigationItem.rightBarButtonItem = nil
-        } else {
+        }else {
             self.navigationItem.rightBarButtonItem = editTeamButton
         }
     }
