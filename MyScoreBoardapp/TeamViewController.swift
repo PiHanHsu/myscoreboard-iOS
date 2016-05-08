@@ -104,7 +104,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         team1.players.append(player10)
         team1.players.append(player11)
         team1.players.append(player12)
-        
+
 
         
         let team2 = Team()
@@ -115,7 +115,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         team2.GameTimeHour = "18:00 - 20:00"
         team2.GameLocation = "中正運動中心"
         team2.players.append(player1)
-//
+
         teams.append(team1)
         teams.append(team2)
         
@@ -125,12 +125,14 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
                              param: ["auth_token" : "HWNisxMz3HSjwcGjGeoP",
                                      ":user_id":"1"],
                              success: { (code , data ) in
-                            
                                 //self.success(code, data: data)
                                 for team in data["results"].arrayValue {
-                                    Teams.sharedInstance.teams.append(Team(data: team))
                                     
+                                     Teams.sharedInstance.teams.append(Team(data: team))
+                            
                                  }
+                                
+//                                 self.teamCollectionView.reloadData()
                              },
                              failure: { (code , data) in
                                     self.failure(code!, data: data!)
@@ -168,15 +170,16 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return Teams.sharedInstance.teams.count + 1
         return self.teams.count+1
     }
-    
+
     
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        
+        self.teams = Teams.sharedInstance.teams
         
         if indexPath.row < self.teams.count{
             
@@ -281,8 +284,10 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
 extension TeamViewController:UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        self.number = Int(floor(scrollView.contentOffset.x / UIScreen.mainScreen().bounds.width))
-        if number == teams.count-1 {
+        
+        self.number = Int(floor(scrollView.contentOffset.x / scrollView.frame.width))
+
+        if number == teams.count {
             self.navigationItem.rightBarButtonItem = nil
         }else {
             self.navigationItem.rightBarButtonItem = editTeamButton
