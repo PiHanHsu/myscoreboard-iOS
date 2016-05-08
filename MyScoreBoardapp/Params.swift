@@ -45,7 +45,6 @@ class GameSetType {
 enum ButtonType {
     case FBLogin
     case ApiLogin
-    case StartGame
 }
 
 enum TextFieldType {
@@ -55,14 +54,6 @@ enum TextFieldType {
     case UserId
     case NickName
     case Gender
-    case ChoseTeam
-    case SelectGamePlayer
-    case GuestPlayer
-    case GameMode
-}
-
-enum PickerType {
-    case Gender
-    case ChoseTeam
-    case GameMode
+    case TeamName
+//    case GameTime
 }

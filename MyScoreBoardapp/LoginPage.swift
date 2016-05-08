@@ -68,10 +68,10 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
 //        start_time, 09:00
 //        end_time,  20:00
 //        logo, 圖片"
-//        HttpManager.sharedInstance
-//            .uploadDataWithImage(HttpMethod.HttpMethodPost, path: Params.apiRootPath + Params.apiCreateTeam ,
-//                uploadImage: UIImage(named: "warrior")!,
-//                param: ["auth_token":"1ErAQgxZgGuECRpYGTBU",
+        HttpManager.sharedInstance
+            .uploadDataWithImage(HttpMethod.HttpMethodPost, path: Params.apiRootPath + Params.apiCreateTeam ,
+                uploadImage: UIImage(named: "warrior")!,
+                param: ["auth_token":"3NYxhnqFQVZqKAD5mAN5"],
 //                        "place_name":"中山運動中心test",
 //                        "addres":"中山運動中心testAddress",
 //                        "lat":"23.5",
@@ -80,31 +80,23 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
 //                        "day":"星期日",
 //                        "start_time":"19:30",
 //                        "end_time":"22:00"],
-//                     success: { (code , data ) in
-//                        self.success(code, data: data)
-//                }, failure: { (code , data) in
-//                    self.failure(code!, data: data!)
-//                }, complete: nil)
-        
-        
-        HttpManager.sharedInstance
-            .request(HttpMethod.HttpMethodPatch,
-                     apiFunc: APiFunction.UpdateTeam,
-                     param: ["auth_token" : "1ErAQgxZgGuECRpYGTBU",
-                             ":id":"9",
-                            "place_name":"132中山運動中心test",
-                            "addres":"123中山運動中心testAddress",
-                            "lat":"55.5",
-                            "lng":"55.5",
-                            "name":"teamOne12",
-                            "day":"123星期日",
-                            "start_time":"19:30",
-                            "end_time":"22:00"],
                      success: { (code , data ) in
                         self.success(code, data: data)
                 }, failure: { (code , data) in
-                        self.failure(code!, data: data!)
+                    self.failure(code!, data: data!)
                 }, complete: nil)
+        
+        
+//        HttpManager.sharedInstance
+//            .request(HttpMethod.HttpMethodGet,
+//                     apiFunc: APiFunction.EditTeam,
+//                     param: ["auth_token" : "3NYxhnqFQVZqKAD5mAN5",
+//                             ":id":"1"],
+//                     success: { (code , data ) in
+//                        self.success(code, data: data)
+//                }, failure: { (code , data) in
+//                        self.failure(code!, data: data!)
+//                }, complete: nil)
         
         //"auth_token" : "3NYxhnqFQVZqKAD5mAN5"
         
@@ -267,8 +259,8 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
         case .FBLogin:
             
             // test 
-//            let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
-//            self.presentViewController(controller, animated: true, completion: nil)
+            let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
+            self.presentViewController(controller, animated: true, completion: nil)
             // FB Login
             print(buttonType)
             let facebookLogin = FBSDKLoginManager()
@@ -296,8 +288,6 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
                             }, complete: nil)
                 }
             })
-        default :
-            break
         }
     }
     

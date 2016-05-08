@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Mv-n7-YcB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Mv-n7-YcB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -263,6 +263,7 @@
                     <navigationItem key="navigationItem" title="新增球隊" id="yIX-Zy-USr"/>
                     <connections>
                         <outlet property="TeamImageuploadbackground" destination="f5z-jB-vsK" id="mjZ-Jn-1db"/>
+                        <outlet property="addEditTeamButton" destination="kTN-gK-owb" id="4EN-0f-RVn"/>
                         <outlet property="countText" destination="F2c-ve-pOD" id="g1n-7f-az5"/>
                         <outlet property="gameTimepicker" destination="91E-sP-4zU" id="g5S-7G-Bhk"/>
                         <outlet property="pickerBackgroundView" destination="WZY-3d-nAD" id="Zl8-Ox-MPb"/>
@@ -544,7 +545,7 @@
         <image name="team" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4G9-hf-xfd"/>
         <segue reference="5wQ-cV-oIv"/>
+        <segue reference="mdw-fr-CaR"/>
     </inferredMetricsTieBreakers>
 </document>

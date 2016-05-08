@@ -8,13 +8,8 @@
 
 import UIKit
 
-class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class GameScoreViewController: UIViewController {
 
-    @IBOutlet weak var redSidePicker: UIPickerView!
-    @IBOutlet weak var blueSidePicker: UIPickerView!
-    
-    var pickerContent:[Int] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +34,7 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
+
     // MARK: - UIPickerViewDataSource
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -82,11 +78,6 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         return self.blueSidePicker.bounds.height
     }
 
-//    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-//        
-//        
-//        return view
-//    }
 
     /*
     // MARK: - Navigation

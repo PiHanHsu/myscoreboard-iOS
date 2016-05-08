@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource, GooglePlacesAutocompleteDelegate,UITextFieldDelegate {
+class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource, GooglePlacesAutocompleteDelegate,UITextFieldDelegate,labelCellDelegate {
 
     
     var isAddTeam = false
@@ -16,6 +16,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     @IBOutlet weak var gameTimepicker: UIPickerView!
     @IBOutlet weak var TeamImageuploadbackground: UIView!
     @IBOutlet weak var countText: UILabel!
+    @IBOutlet weak var addEditTeamButton: UIButton!
     
     let dayArray = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
     let startTimeArray = ["00:00","00:30","01:00","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00:","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
@@ -30,7 +31,10 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         placeType: .Address
     )
 
+    var TeamName = ""
+//   var GameTime = ""
     
+//    picker
     var totalTime:String?
     //will add
     var gameTime:AddTeamLabelTableViewCell?
@@ -38,11 +42,19 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let newTeam = Team()
+        Teams.sharedInstance.addTeam(newTeam)
         
         if isAddTeam == false {
-        navigationItem.title = ""
+        navigationItem.title = "編輯球隊"
+        addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
+//        addEditTeamButton.setImage(UIImage(named: "bn_teamedit_submit_3x"), forState: UIControlState.Normal)
+
         }else{
-        navigationItem.title = ""
+        navigationItem.title = "新增球隊"
+        addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
+//        addEditTeamButton.setImage(UIImage(named: "bn_team_submit_3x"), forState: UIControlState.Normal)
+    
         }
         
 
@@ -67,8 +79,6 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         
-//         self.tableView.registerNib(UINib(nibName: "AddTeamImageTableViewCell",bundle: nil), forCellReuseIdentifier: "AddTeamImageTableViewCell")
-        
 
         
         self.tableView.registerNib(UINib(nibName: "AddTeamLabelTableViewCell",bundle: nil), forCellReuseIdentifier: "AddTeamLabelTableViewCell")
@@ -80,7 +90,25 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
     }
     
+    // MARK: - labelCellDelegate
+    
+    func getText(type: TextFieldType, enterText: String) {
+        switch type {
+        case .TeamName:
+            self.TeamName = enterText
+            print("self.TeamName = \(self.TeamName)")
+            
+        default:
+            break
+        }
+    }
+    
+    func callPicker(sender: UITableViewCell, pickerContent: [String]) {
+        //
+    }
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
         
         let currentCharacterCount = textField.text?.characters.count ?? 0
         
@@ -137,19 +165,22 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             
             cell.addTeamDetailIcon.image = UIImage(named:"" )
             cell.addTeamDetailText.placeholder = "請輸入球隊名稱"
+            cell.textFieldType = TextFieldType.TeamName
             cell.addTeamDetailText.delegate = self
+            cell.delegate = self
             return cell
             
         case 1:
             
             let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamLabelTableViewCell", forIndexPath: indexPath) as! AddTeamLabelTableViewCell
             
-            cell.addTeamDetailIcon.image = UIImage(named:"t_user" )
+            cell.addTeamDetailIcon.image = UIImage(named:"ico_field_time_3x" )
             cell.addTeamDetailText.placeholder = "聚會時間"
             cell.addTeamDetailText.userInteractionEnabled = false
             cell.addTeamDetailText.text = ""
-
+           
             gameTime = cell
+            print(totalTime)
             
             
             return cell
@@ -158,21 +189,23 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             
             let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamLabelTableViewCell", forIndexPath: indexPath) as! AddTeamLabelTableViewCell
             
-            cell.addTeamDetailIcon.image = UIImage(named:"t_user" )
+            cell.addTeamDetailIcon.image = UIImage(named:"ico_field_place_3x" )
             cell.addTeamDetailText.placeholder = "球場位置"
             cell.accessoryType = .DisclosureIndicator
             cell.addTeamDetailText.userInteractionEnabled = false
-            
+            cell.textFieldType = TextFieldType.Account
+            cell.delegate = self
             return cell
             
         case 3:
             
             let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamLabelTableViewCell", forIndexPath: indexPath) as! AddTeamLabelTableViewCell
             
-            cell.addTeamDetailIcon.image = UIImage(named:"t_user" )
+            cell.addTeamDetailIcon.image = UIImage(named:"ico_field_member_3x" )
             cell.addTeamDetailText.placeholder = "加入成員"
             cell.accessoryType = .DisclosureIndicator
             cell.addTeamDetailText.userInteractionEnabled = false
+            cell.textFieldType = TextFieldType.Account
             return cell
            
         default:
@@ -275,6 +308,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
         
             gameTime?.addTeamDetailText.text = totalTime!
+        print(gameTime?.addTeamDetailText.text)
             pickerBackgroundView.removeFromSuperview()
     
     }
