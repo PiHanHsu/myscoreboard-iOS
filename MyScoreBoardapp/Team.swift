@@ -19,18 +19,17 @@ class Team: NSObject {
     var TeamId:String?
     
     init(data:JSON) {
-//        self.TeamImageUrl = data["team"]["logo_original_url"].stringValue
-//        self.TeamName = data["team"]["name"].stringValue
-//        self.GameTimeDay = data
-//        self.GameTimeHour =
-//        self.GameLocation = data["team"]["location"]["place_name"].stringValue
-//        self.TeamId = data["team"]["id"].stringValue       
-    }
-    
-    override init() {
-        
-    }
-    
-    
-   }
+        self.TeamImageUrl = data["team"]["logo_original_url"].stringValue
+        self.TeamName = data["team"]["name"].stringValue
+        self.GameTimeDay = data["team"]["day"].stringValue
+        self.GameTimeHour = (data["team"]["start_time_hour"].stringValue)+":"+(data["team"]["start_time_min"].stringValue)+"-"+(data["team"]["end_time_hour"].stringValue)+":"+(data["team"]["end_time_min"].stringValue)
 
+        self.GameLocation = data["team"]["location"]["place_name"].stringValue
+        self.TeamId = data["team"]["id"].stringValue       
+
+      }
+    
+    
+    
+
+}
