@@ -17,8 +17,11 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.blueSidePicker.dataSource = self
         self.blueSidePicker.delegate = self
+        
+        //self.redSidePicker
         self.redSidePicker.dataSource = self
         self.redSidePicker.delegate = self
         
@@ -28,7 +31,9 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,15 +51,42 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     
     // MARK: - UIPickerViewDelegate
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(self.pickerContent[row])
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        let titleData = String(self.pickerContent[row])
+//        let myTitle = NSAttributedString(string:titleData, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+//        return String(myTitle)
+//    }
+//    
+//    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        let titleData = String(self.pickerContent[row])
+//        let myTitle = NSAttributedString(string:titleData, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+//        return myTitle
+//    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        let pickerLabel = UILabel()
+        let titleData = String(self.pickerContent[row])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Arial", size:pickerView.bounds.height * 8/10 )!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        pickerLabel.attributedText = myTitle
+        pickerLabel.textAlignment = .Center
+        pickerLabel.backgroundColor = UIColor.clearColor()
+        return pickerLabel
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("end picker : \(self.pickerContent[row])")
         //self.selectedGender = pickerContent[row]
     }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return self.blueSidePicker.bounds.height
+    }
 
+//    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+//        
+//        
+//        return view
+//    }
 
     /*
     // MARK: - Navigation

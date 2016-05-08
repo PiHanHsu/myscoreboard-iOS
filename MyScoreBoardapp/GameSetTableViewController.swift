@@ -25,39 +25,52 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     
         override func viewDidLoad() {
         super.viewDidLoad()
+            
+        
+            
         self.picker = self.pickerBackGroundView as! PickerView
         self.picker!.delegate = self
             
             
             let player1 = Player()
             player1.playerName = "Steven"
+            player1.didSelectToJoinGame = false
             teamPlayers.append(player1)
             let player2 = Player()
             player2.playerName = "Steph"
+            player2.didSelectToJoinGame = false
             teamPlayers.append(player2)
             let player3 = Player()
             player3.playerName = "Dyson"
+            player3.didSelectToJoinGame = false
             teamPlayers.append(player3)
             let player4 = Player()
             player4.playerName = "Damon"
+            player4.didSelectToJoinGame = false
             teamPlayers.append(player4)
             let player5 = Player()
             player5.playerName = "Pihan"
+            player5.didSelectToJoinGame = false
             teamPlayers.append(player5)
             let player6 = Player()
             player6.playerName = "Abear"
+            player6.didSelectToJoinGame = false
             teamPlayers.append(player6)
             let player7 = Player()
             player7.playerName = "Eric"
+            player7.didSelectToJoinGame = false
             teamPlayers.append(player7)
             let player8 = Player()
             player8.playerName = "Veronica"
+            player8.didSelectToJoinGame = false
             teamPlayers.append(player8)
             let player9 = Player()
             player9.playerName = "Will"
+            player9.didSelectToJoinGame = false
             teamPlayers.append(player9)
             let player10 = Player()
             player10.playerName = "Martin"
+            player10.didSelectToJoinGame = false
             teamPlayers.append(player10)
             
             team.players = teamPlayers
@@ -217,15 +230,10 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         case .GameMode:
             let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 3)) as! AddTeamLabelTableViewCell
             switch pickerItem {
-            case GameType.single:
-                Game.shareInstance.GameMode = GameType.single
-                cell.addTeamDetailText.text = GameType.single
-            case GameType.double:
-                Game.shareInstance.GameMode = GameType.double
-                cell.addTeamDetailText.text = GameType.double
-            case GameType.mix:
-                Game.shareInstance.GameMode = GameType.mix
-                cell.addTeamDetailText.text = GameType.mix
+            case GameSetType.Automatic:
+                cell.addTeamDetailText.text = GameSetType.Automatic
+            case GameSetType.Manual:
+                cell.addTeamDetailText.text = GameSetType.Manual
             default:
                 break
             }
@@ -325,12 +333,28 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         cell.playerImage.image = UIImage(named: "ico_team_3x")
         cell.playerName.text = self.team.players[indexPath.row].playerName //"Golden Warrior"
         
+        if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {
+            cell.frameView.image = UIImage(named: "frame_member_pick_blue")
+        } else {
+            cell.frameView.image = UIImage()
+        }
         return cell
     }
     
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width = UIScreen.mainScreen().bounds.width / 4
         return CGSize(width: width , height: width * 5/4)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame = Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame ? false : true
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PlayerCardCollectionViewCell
+        if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {
+            cell.frameView.image = UIImage(named: "frame_member_pick_blue")
+        } else {
+            cell.frameView.image = UIImage()
+        }
     }
     
     /*

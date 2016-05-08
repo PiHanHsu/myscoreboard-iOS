@@ -37,6 +37,11 @@ class GameType {
     static let mix = "mix"
 }
 
+class GameSetType {
+    static let Manual = "手動排賽"
+    static let Automatic = "自動排賽"
+}
+
 enum ButtonType {
     case FBLogin
     case ApiLogin

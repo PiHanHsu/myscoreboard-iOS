@@ -12,5 +12,6 @@ class Player: NSObject {
     var playerName:String?
     var playerImageUrl:String?
     var playerId:String?
+    var didSelectToJoinGame:Bool = false
 }
 
