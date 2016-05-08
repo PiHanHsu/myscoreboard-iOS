@@ -42,6 +42,8 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let newTeam = Team()
+        Teams.sharedInstance.addTeam(newTeam)
         
         if isAddTeam == false {
         navigationItem.title = "編輯球隊"
@@ -95,6 +97,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         case .TeamName:
             self.TeamName = enterText
             print("self.TeamName = \(self.TeamName)")
+            
         default:
             break
         }
@@ -163,6 +166,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.addTeamDetailIcon.image = UIImage(named:"" )
             cell.addTeamDetailText.placeholder = "請輸入球隊名稱"
             cell.textFieldType = TextFieldType.TeamName
+            cell.addTeamDetailText.delegate = self
             cell.delegate = self
             return cell
             
@@ -173,11 +177,8 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.addTeamDetailIcon.image = UIImage(named:"ico_field_time_3x" )
             cell.addTeamDetailText.placeholder = "聚會時間"
             cell.addTeamDetailText.userInteractionEnabled = false
-//            cell.textFieldType = TextFieldType.GameTime
-//            cell.delegate = self
-            
             cell.addTeamDetailText.text = ""
-
+           
             gameTime = cell
             print(totalTime)
             
@@ -193,7 +194,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.accessoryType = .DisclosureIndicator
             cell.addTeamDetailText.userInteractionEnabled = false
             cell.textFieldType = TextFieldType.Account
-            
+            cell.delegate = self
             return cell
             
         case 3:
@@ -307,6 +308,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
         
             gameTime?.addTeamDetailText.text = totalTime!
+        print(gameTime?.addTeamDetailText.text)
             pickerBackgroundView.removeFromSuperview()
     
     }

@@ -77,8 +77,9 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
             let player = team!.players[indexPath.row-1]
             cell.playerName.text = player.playerName
             cell.playerImage.image = UIImage(named: player.playerImageUrl!)
-
             
+            let size = (self.childCollectionView.frame.size.width)/3
+            cell.playerImage.layer.cornerRadius = size / 2
         }
                
         return cell
@@ -88,9 +89,8 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = (self.childCollectionView.frame.size.width-4)/3
+        let size = (self.childCollectionView.frame.size.width)/3
         return CGSize.init(width: size, height: size*1.25)
-    
         
     }
     

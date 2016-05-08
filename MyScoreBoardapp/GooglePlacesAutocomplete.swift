@@ -233,6 +233,8 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
   }
 
   public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    print(self.places[indexPath.row])
+    Teams.sharedInstance.teams[0].GameLocation = self.places[indexPath.row].description
     delegate?.placeSelected?(self.places[indexPath.row])
     self.dismissViewControllerAnimated(true, completion: nil)
   }
