@@ -54,6 +54,9 @@ enum TextFieldType {
     case UserId
     case NickName
     case Gender
+<<<<<<< HEAD
     case TeamName
 //    case GameTime
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
 }

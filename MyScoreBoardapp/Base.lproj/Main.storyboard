@@ -509,6 +509,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYc-m4-Cpb">
                                 <rect key="frame" x="0.0" y="40" width="600" height="150"/>
                                 <subviews>
+<<<<<<< HEAD
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dr4-wa-bUm">
                                         <rect key="frame" x="135" y="8" width="135" height="135"/>
                                         <color key="backgroundColor" red="1" green="0.18536402569999999" blue="0.21890959639999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -521,14 +522,22 @@
                                         <rect key="frame" x="135" y="8" width="135" height="135"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 
+=======
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-3L-u5m">
+                                        <rect key="frame" x="105" y="0.0" width="150" height="150"/>
+>>>>>>> parent of 18b2784... commit for rehearsal
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="p7Q-3L-u5m" secondAttribute="height" multiplier="1:1" id="wxO-Uy-riZ"/>
                                         </constraints>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YO1-jk-Zzc">
+<<<<<<< HEAD
                                         <rect key="frame" x="330" y="8" width="135" height="135"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 
+=======
+                                        <rect key="frame" x="345" y="0.0" width="150" height="150"/>
+>>>>>>> parent of 18b2784... commit for rehearsal
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="YO1-jk-Zzc" secondAttribute="height" multiplier="1:1" id="CCi-78-sd6"/>
                                             <constraint firstAttribute="width" secondItem="YO1-jk-Zzc" secondAttribute="height" multiplier="1:1" id="tUj-jf-KGE"/>
@@ -584,6 +593,7 @@
                                 <rect key="frame" x="266" y="190" width="68" height="56"/>
                                 <state key="normal" image="icon_counter_switch"/>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n24-j1-zc2">
                                 <rect key="frame" x="200" y="348" width="200" height="52"/>
                                 <constraints>
@@ -723,6 +733,8 @@
                                     <constraint firstAttribute="trailing" secondItem="YST-xR-ftX" secondAttribute="trailing" id="sMA-Ui-0c1"/>
                                 </constraints>
                             </view>
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMY-yG-VW6">
                                 <rect key="frame" x="0.0" y="246" width="600" height="150"/>
                                 <subviews>
@@ -740,6 +752,7 @@
                                             <constraint firstAttribute="width" constant="70" id="UdG-fp-yRN"/>
                                         </constraints>
                                     </imageView>
+<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvt-6T-eJV">
                                         <rect key="frame" x="86" y="24" width="29" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -778,6 +791,8 @@
                                             <constraint firstAttribute="width" secondItem="yT1-a8-pRX" secondAttribute="height" multiplier="1:1" id="zMX-tt-geZ"/>
                                         </constraints>
                                     </imageView>
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>

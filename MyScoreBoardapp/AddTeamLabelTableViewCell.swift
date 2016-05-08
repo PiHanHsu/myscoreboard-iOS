@@ -41,7 +41,7 @@ class AddTeamLabelTableViewCell: UITableViewCell, UITextFieldDelegate {
         self.delegate?.getText(self.textFieldType!, enterText: enteredText!)
         
         switch self.textFieldType! {
-        case .Gender, .ChoseTeam, .GameMode:
+        case .Gender:
             print(self.addTeamDetailText.resignFirstResponder())
         default:
             break

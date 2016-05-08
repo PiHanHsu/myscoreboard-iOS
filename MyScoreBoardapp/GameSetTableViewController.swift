@@ -20,6 +20,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     
         override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
             
         
             
@@ -71,6 +72,8 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             team.players = teamPlayers
             Teams.sharedInstance.addTeam(team)
         
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -204,6 +207,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         return cellReturn!
     }
     
+<<<<<<< HEAD
     // MARK: - pickerDelegate
     
     func didSelect(pickerType: PickerType, pickerItem: String) {
@@ -229,6 +233,8 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     }
     
    
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
     // MARK: - labelCellDelegate
     func getText(type: TextFieldType, enterText: String) {
         
@@ -241,6 +247,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+<<<<<<< HEAD
         
         self.blackBackGround = UIView(frame: CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height ))
         self.blackBackGround.backgroundColor = UIColor.blackColor()
@@ -248,12 +255,22 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         self.view.addSubview(self.blackBackGround)
         //        self.view.addSubview(genderPicker)
         
+=======
+        
+        self.blackBackGround = UIView(frame: CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height ))
+        self.blackBackGround.backgroundColor = UIColor.blackColor()
+        self.blackBackGround.alpha = 0.5
+        self.view.addSubview(self.blackBackGround)
+        //        self.view.addSubview(genderPicker)
+        
+>>>>>>> parent of 18b2784... commit for rehearsal
         self.blackBackGround.frame = CGRect(x: 0, y: UIScreen.mainScreen().bounds.height * 8/10 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height * 2/10 )
         self.view.addSubview(blackBackGround)
         
     }
 
     // MARK: - UIPickerViewDataSource
+<<<<<<< HEAD
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.numberOfPicker
@@ -269,6 +286,23 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         return self.pickerContent[row]
     }
     
+=======
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.numberOfPicker
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return self.numberOfComponentsInPicker
+    }
+    
+    // MARK: - UIPickerViewDelegate
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.pickerContent[row]
+    }
+    
+>>>>>>> parent of 18b2784... commit for rehearsal
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("end picker")
     }
@@ -291,6 +325,12 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlayerCardCollectionViewCell", forIndexPath: indexPath) as! PlayerCardCollectionViewCell
+<<<<<<< HEAD
+=======
+        
+        cell.playerImage.image = UIImage(named: "warrior")
+        cell.playerName.text = "Golden Warrior"
+>>>>>>> parent of 18b2784... commit for rehearsal
         
         cell.playerImage.image = UIImage(named: "warrior")
         cell.playerName.text = "Golden Warrior"
@@ -306,6 +346,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width = UIScreen.mainScreen().bounds.width / 4
         return CGSize(width: width , height: width)
+<<<<<<< HEAD
     }
     
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
@@ -317,6 +358,8 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         } else {
             cell.frameView.image = UIImage()
         }
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
     }
     
     /*

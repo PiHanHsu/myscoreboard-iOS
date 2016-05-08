@@ -12,6 +12,7 @@ class GameScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         self.blueSidePicker.dataSource = self
         self.blueSidePicker.delegate = self
@@ -24,6 +25,9 @@ class GameScoreViewController: UIViewController {
             self.pickerContent.append(i)
         }
         
+=======
+
+>>>>>>> parent of 18b2784... commit for rehearsal
         // Do any additional setup after loading the view.
     }
     
@@ -34,6 +38,7 @@ class GameScoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+<<<<<<< HEAD
 
     // MARK: - UIPickerViewDataSource
     
@@ -78,6 +83,8 @@ class GameScoreViewController: UIViewController {
         return self.blueSidePicker.bounds.height
     }
 
+=======
+>>>>>>> parent of 18b2784... commit for rehearsal
 
     /*
     // MARK: - Navigation
