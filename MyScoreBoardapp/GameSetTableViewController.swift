@@ -319,7 +319,9 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     func buttonClick(buttonType: ButtonType) {
         // start game
         let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("GameScoreViewController")
+        
         self.navigationController?.pushViewController(destinationController, animated: true)
+        
     }
 
     // MARK: - UICollectionViewDataSource

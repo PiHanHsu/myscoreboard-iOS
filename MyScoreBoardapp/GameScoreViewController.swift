@@ -29,10 +29,29 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
             self.pickerContent.append(i)
         }
         
+        
+        let rightItem = UIBarButtonItem()
+        let backItem = UIBarButtonItem()
+        rightItem.title = "今日紀錄"
+        rightItem.target = self
+        rightItem.action = #selector(self.getTodayRecord)
+        backItem.title = "我的球隊"
+        backItem.target = self
+        backItem.action = #selector(self.backToGameSet)
+        self.navigationItem.setLeftBarButtonItem(backItem, animated: true)
+        self.navigationItem.setRightBarButtonItem(rightItem, animated: true)
+        //self.navigationItem.leftBarButtonItem = backItem
         // Do any additional setup after loading the view.
     }
     
+    func getTodayRecord() {
+        let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TodayRankTableViewController")
+        self.navigationController?.pushViewController(destinationController, animated: true)
+    }
     
+    func backToGameSet() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

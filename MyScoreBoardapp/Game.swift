@@ -16,3 +16,20 @@ class Game {
     
     static let shareInstance = Game()
 }
+
+class Score {
+    static let shareInstance = Score()
+    
+    var redTeamPlayerOne = ""
+    var redTeamPlayerTwo = ""
+    var blueTeamPlayerOne = ""
+    var blueTeamPlayerTwo = ""
+    var redTeamScore = 0
+    var blueTeamScore = 0
+    
+}
+
+
+class Scores {
+    var score:[Score] = []
+}
