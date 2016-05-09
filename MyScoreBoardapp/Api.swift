@@ -71,13 +71,19 @@ class HttpManager {
         case .CreateTeam :
             path = Params.apiRootPath + Params.apiCreateTeam
         case .UpdateTeam :
-            path = Params.apiRootPath + Params.apiUpdateTeam + (requestParam![":id"]?.stringValue)!
+            let team_id = String(requestParam![":id"]!)
+            path = Params.apiRootPath + Params.apiUpdateTeam + team_id
+            //path = Params.apiRootPath + Params.apiUpdateTeam + (requestParam![":id"]?.stringValue)!
             requestParam?.removeValueForKey(":id")
         case .AddPlayersInTeam :
-            path = Params.apiRootPath + Params.apiAddPlayerInTeam + (requestParam![":id"]?.stringValue)!
+            let team_id = String(requestParam![":id"]!)
+            path = Params.apiRootPath + Params.apiAddPlayerInTeam + team_id
+            //path = Params.apiRootPath + Params.apiAddPlayerInTeam + (requestParam![":id"]?.stringValue)!
             requestParam?.removeValueForKey(":id")
         case .RemovePlayerInTeam :
-            path = Params.apiRootPath + Params.apiRemovePlayerInTeam + (requestParam![":id"]?.stringValue)!
+            let team_id = String(requestParam![":id"]!)
+            path = Params.apiRootPath + Params.apiRemovePlayerInTeam + team_id
+            //path = Params.apiRootPath + Params.apiRemovePlayerInTeam + (requestParam![":id"]?.stringValue)!
             requestParam?.removeValueForKey(":id")
         case .EditTeam :
             let team_id = String(requestParam![":id"]!)
@@ -121,7 +127,7 @@ class HttpManager {
             }
         case .HttpMethodPatch :
             Alamofire
-                .request(method, path)
+                .request(method, path, parameters: requestParam, encoding: encode, headers: nil)
                 .responseJSON { (response) in
                     switch response.result {
                     case .Success(let data):

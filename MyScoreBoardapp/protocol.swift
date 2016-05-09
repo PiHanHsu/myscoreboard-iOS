@@ -17,6 +17,9 @@ protocol labelCellDelegate {
     func callPicker(sender: UITableViewCell , pickerContent: [String] )
 }
 
+protocol pickerDelegate{
+    func didSelect(pickerType:PickerType,pickerItem:String)
+}
 
 protocol buttonCellDelegate{
     func buttonClick(buttonType:ButtonType)

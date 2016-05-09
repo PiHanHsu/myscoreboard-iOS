@@ -31,6 +31,7 @@
                     <constraint firstItem="9TV-C2-1fw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uie-K1-kk5"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="collectionViewInCell" destination="9TV-C2-1fw" id="aEX-0b-7sS"/>
             </connections>

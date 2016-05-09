@@ -35,6 +35,7 @@ class GameType {
     static let single = "single"
     static let double = "double"
     static let mix = "mix"
+    
 }
 
 class GameSetType {
@@ -45,6 +46,7 @@ class GameSetType {
 enum ButtonType {
     case FBLogin
     case ApiLogin
+    case StartGame
 }
 
 enum TextFieldType {
@@ -54,9 +56,17 @@ enum TextFieldType {
     case UserId
     case NickName
     case Gender
-<<<<<<< HEAD
+    case ChoseTeam
+    case SelectGamePlayer
+    case GuestPlayer
+    case GameMode
     case TeamName
-//    case GameTime
-=======
->>>>>>> parent of 18b2784... commit for rehearsal
+    //    case GameTime
+}
+
+enum PickerType {
+    case Gender
+    case ChoseTeam
+    case GameMode
+    
 }
