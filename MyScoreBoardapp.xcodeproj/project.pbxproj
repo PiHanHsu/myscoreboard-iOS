@@ -35,6 +35,8 @@
 		9F2601221CD9E5DF00C56B23 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601211CD9E5DF00C56B23 /* protocol.swift */; };
 		9F2601241CD9EFED00C56B23 /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601231CD9EFED00C56B23 /* RegisterAccountTableViewController.swift */; };
 		9F2601261CDA243A00C56B23 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2601251CDA243A00C56B23 /* Api.swift */; };
+		9F3A360E1CE07E1500975118 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A360C1CE07E1500975118 /* RankingTableViewCell.swift */; };
+		9F3A360F1CE07E1500975118 /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3A360D1CE07E1500975118 /* RankingTableViewCell.xib */; };
 		9F3AE8721CC4D62800869F06 /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AE8711CC4D62800869F06 /* Params.swift */; };
 		9F3FF0E61CD79FF900167C5F /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */; };
 		9F3FF0E71CD79FF900167C5F /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3FF0E51CD79FF900167C5F /* ButtonTableViewCell.xib */; };
@@ -110,6 +112,8 @@
 		9F2601211CD9E5DF00C56B23 /* protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		9F2601231CD9EFED00C56B23 /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		9F2601251CDA243A00C56B23 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		9F3A360C1CE07E1500975118 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		9F3A360D1CE07E1500975118 /* RankingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
 		9F3AE8711CC4D62800869F06 /* Params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
 		9F3FF0E41CD79FF900167C5F /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		9F3FF0E51CD79FF900167C5F /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				9FF8353E1CDC8E640001D353 /* CollectionViewInTableViewCell.xib */,
 				9F7F89081CD86D4E00BA240F /* OrTableViewCell.swift */,
 				9F7F89091CD86D4E00BA240F /* OrTableViewCell.xib */,
+				9F3A360C1CE07E1500975118 /* RankingTableViewCell.swift */,
+				9F3A360D1CE07E1500975118 /* RankingTableViewCell.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				E87DF8DE1CBF80C900329ECA /* LaunchScreen.storyboard in Resources */,
 				752357481CD63D130053CE72 /* AddTeamLabelTableViewCell.xib in Resources */,
 				7596EEB21CD5A80600C55438 /* addTeamCollectionViewCell.xib in Resources */,
+				9F3A360F1CE07E1500975118 /* RankingTableViewCell.xib in Resources */,
 				9F2601181CD9C8C000C56B23 /* PasswordTableViewCell.xib in Resources */,
 				9F48A63F1CC4BDD8001CE4A4 /* Team.storyboard in Resources */,
 				9F7F890B1CD86D4E00BA240F /* OrTableViewCell.xib in Resources */,
@@ -531,6 +538,7 @@
 			files = (
 				E80C331B1CD9AB3E0036A49F /* GooglePlacesAutocomplete.swift in Sources */,
 				9F7F890F1CD88EA300BA240F /* LoginPage.swift in Sources */,
+				9F3A360E1CE07E1500975118 /* RankingTableViewCell.swift in Sources */,
 				75A432AB1CD9FDA90036578F /* EditPlayerOfTeamTableViewController.swift in Sources */,
 				7523573E1CD636590053CE72 /* AddTeamImageTableViewCell.swift in Sources */,
 				754FD7C41CD7125100029F22 /* AddGameLocationViewController.swift in Sources */,
