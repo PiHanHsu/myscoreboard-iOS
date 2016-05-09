@@ -12,6 +12,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
 
     
     var isAddTeam = false
+    var currentTeamIndex = ""
     @IBOutlet var pickerBackgroundView: UIView!
     @IBOutlet weak var gameTimepicker: UIPickerView!
     @IBOutlet weak var TeamImageuploadbackground: UIView!
@@ -42,18 +43,18 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let newTeam = Team()
-        Teams.sharedInstance.addTeam(newTeam)
+//        let newTeam = Team()
+//        Teams.sharedInstance.addTeam(newTeam)
         
         if isAddTeam == false {
         navigationItem.title = "編輯球隊"
-        addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
-//        addEditTeamButton.setImage(UIImage(named: "bn_teamedit_submit_3x"), forState: UIControlState.Normal)
+//        addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
+            addEditTeamButton.setImage(UIImage(named: "bn_teamedit_submit_3x"), forState: UIControlState.Normal)
 
         }else{
         navigationItem.title = "新增球隊"
-        addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
-//        addEditTeamButton.setImage(UIImage(named: "bn_team_submit_3x"), forState: UIControlState.Normal)
+//        addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
+            addEditTeamButton.setImage(UIImage(named: "bn_team_submit_3x"), forState: UIControlState.Normal)
     
         }
         

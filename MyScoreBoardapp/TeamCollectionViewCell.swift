@@ -60,6 +60,8 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         
     }
     
+    
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return team!.players.count + 1
         
@@ -108,6 +110,7 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         return 0
     }
     
+    // MARK: - 1.選擇新增成員
     //由此 collectionView delegate 得知某個 player 被點擊到
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
@@ -122,12 +125,11 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         
         if indexPath.item == 0 {
             controller.didAddPlayer()
+        }else {
+            let player = team!.players[indexPath.row]
+            //將此 Player 資訊透過 自己定義的 delegate 回傳到 controller
+            controller.didSelectedChild(player)
         }
-        
-        
-        let player = team!.players[indexPath.row]
-               //將此 Player 資訊透過 自己定義的 delegate 回傳到 controller
-        controller.didSelectedChild(player)
         
     }
     

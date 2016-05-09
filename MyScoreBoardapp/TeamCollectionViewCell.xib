@@ -10,18 +10,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamCollectionViewCell" id="gTV-IL-0wX" userLabel="TeamCollectionViewCell" customClass="TeamCollectionViewCell" customModule="MyScoreBoardapp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="333" height="431"/>
+            <rect key="frame" x="0.0" y="0.0" width="331" height="431"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="333" height="431"/>
+                <rect key="frame" x="0.0" y="0.0" width="331" height="431"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-ot-sxG">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-ot-sxG">
                         <rect key="frame" x="2" y="2" width="329" height="427"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-1s-JnS">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-1s-JnS">
                                 <rect key="frame" x="2" y="2" width="325" height="142.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v76-qF-915">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v76-qF-915">
                                         <rect key="frame" x="-3" y="0.0" width="109" height="142.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OFG-CC-Ucf">
@@ -93,7 +93,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z59-4Y-VNg">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z59-4Y-VNg">
                                         <rect key="frame" x="106" y="0.0" width="219" height="142.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vdy-as-FeP">
@@ -216,7 +216,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-Y4-dLU" userLabel="ChildPlayerCollection View">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-Y4-dLU" userLabel="ChildPlayerCollection View">
                                 <rect key="frame" x="2" y="148" width="325" height="279"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7IB-u3-Sw8">
@@ -227,7 +227,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qWB-1s-JnS" firstAttribute="leading" secondItem="3ZZ-ot-sxG" secondAttribute="leading" constant="2" id="88u-8O-HP9"/>
                             <constraint firstAttribute="trailing" secondItem="qWB-1s-JnS" secondAttribute="trailing" constant="2" id="NB8-UR-v14"/>
@@ -259,7 +259,7 @@
                 <constraint firstAttribute="trailing" secondItem="3ZZ-ot-sxG" secondAttribute="trailing" constant="2" id="tYl-u5-kJY"/>
                 <constraint firstItem="PeP-Y4-dLU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="xZO-y4-auI"/>
             </constraints>
-            <size key="customSize" width="333" height="532"/>
+            <size key="customSize" width="331" height="532"/>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="3ZZ-ot-sxG"/>
@@ -287,7 +287,7 @@
                 <outlet property="teamImageUrl" destination="OFG-CC-Ucf" id="U95-yk-9T3"/>
                 <outlet property="teamNameLabel" destination="AtG-2D-64H" id="Zfq-Uc-ePu"/>
             </connections>
-            <point key="canvasLocation" x="-133.5" y="398.5"/>
+            <point key="canvasLocation" x="-134.5" y="398.5"/>
         </collectionViewCell>
     </objects>
 </document>
