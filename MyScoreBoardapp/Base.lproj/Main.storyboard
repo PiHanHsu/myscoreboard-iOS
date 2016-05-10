@@ -1623,10 +1623,10 @@
             </objects>
             <point key="canvasLocation" x="465.5" y="575.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar View Controller-->
         <scene sceneID="V8e-5f-JUI">
             <objects>
-                <tabBarController id="pCF-fL-ruW" sceneMemberID="viewController">
+                <tabBarController id="pCF-fL-ruW" customClass="MyTabBarViewController" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SJ3-a9-yGb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="oe6-Pp-32N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -1636,7 +1636,7 @@
                     <connections>
                         <segue destination="MN1-qT-lms" kind="relationship" relationship="viewControllers" id="VDu-yn-qoQ"/>
                         <segue destination="01V-2Y-k5A" kind="relationship" relationship="viewControllers" id="QLa-x3-vX0"/>
-                        <segue destination="EcP-IX-lI7" kind="relationship" relationship="viewControllers" id="4R1-Qx-4Ck"/>
+                        <segue destination="EcP-IX-lI7" kind="relationship" relationship="viewControllers" id="Urf-0T-Xyy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5m-EW-qin" userLabel="First Responder" sceneMemberID="firstResponder"/>

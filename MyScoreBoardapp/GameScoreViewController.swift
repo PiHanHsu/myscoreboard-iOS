@@ -76,7 +76,7 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         //        self.nextRedTeamPlayerOneImage.layer.cornerRadius = self.nextRedTeamPlayerOneImage.frame.size.width / 2
         //        self.nextRedTeamPlayerOneImage.clipsToBounds = true
         
-        self.playSet = [["player1":"Steven", "player2":"Damon"],["player1":"Dyson", "player2":"PiHan"],["player1":"Joyce", "player2":"July"],["player1":"Will", "player2":"Damon"],["player1":"Steven", "player2":"PiHan"],["player1":"Dyson", "player2":"Will"],["player1":"Martin", "player2":"Will"],["player1":"Veronica", "player2":"Joyce"],["player1":"Steph", "player2":"July"],["player1":"", "player2":""]]
+        self.playSet = [["player1":"Steven", "player2":"Damon"],["player1":"Dyson", "player2":"PiHan"],["player1":"Joyce", "player2":"Veronica"],["player1":"Dyson", "player2":"Damon"],["player1":"Steven", "player2":"Dyson"],["player1":"PiHan", "player2":"Steven"],["player1":"Damon", "player2":"PiHan"],["player1":"Veronica", "player2":"Joyce"],["player1":"Steph", "player2":"Joyce"],["player1":"", "player2":""]]
         
         
         self.blueSidePicker.dataSource = self
