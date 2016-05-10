@@ -35,11 +35,18 @@ class GameType {
     static let single = "single"
     static let double = "double"
     static let mix = "mix"
+    
+}
+
+class GameSetType {
+    static let Manual = "手動排賽"
+    static let Automatic = "自動排賽"
 }
 
 enum ButtonType {
     case FBLogin
     case ApiLogin
+    case StartGame
 }
 
 enum TextFieldType {
@@ -49,6 +56,17 @@ enum TextFieldType {
     case UserId
     case NickName
     case Gender
+    case ChoseTeam
+    case SelectGamePlayer
+    case GuestPlayer
+    case GameMode
     case TeamName
-//    case GameTime
+    //    case GameTime
+}
+
+enum PickerType {
+    case Gender
+    case ChoseTeam
+    case GameMode
+    
 }

@@ -8,18 +8,73 @@
 
 import UIKit
 
-class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, labelCellDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, labelCellDelegate, UICollectionViewDelegate, UICollectionViewDataSource, pickerDelegate {
+
 
     var numberOfPicker = 0
     var numberOfComponentsInPicker = 0
     var pickerContent:[String] = []
     let numberOfRowInSection = [1,1,1,1,1]
+    var picker:PickerView?
+    var blackBackGround = UIView()
+    let team = Team()
     
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet var blackBackGround: UIView!
+    @IBOutlet var pickerBackGroundView: UIView!
+    
     
         override func viewDidLoad() {
         super.viewDidLoad()
+            
+        self.picker = self.pickerBackGroundView as! PickerView
+        self.picker!.delegate = self
+            
+            
+            var teamPlayers:[Player] = []
+            let player1 = Player()
+            player1.playerName = "Steven"
+            player1.didSelectToJoinGame = false
+            teamPlayers.append(player1)
+            let player2 = Player()
+            player2.playerName = "Steph"
+            player2.didSelectToJoinGame = false
+            teamPlayers.append(player2)
+            let player3 = Player()
+            player3.playerName = "Dyson"
+            player3.didSelectToJoinGame = false
+            teamPlayers.append(player3)
+            let player4 = Player()
+            player4.playerName = "Damon"
+            player4.didSelectToJoinGame = false
+            teamPlayers.append(player4)
+            let player5 = Player()
+            player5.playerName = "PiHan"
+            player5.didSelectToJoinGame = false
+            teamPlayers.append(player5)
+            let player6 = Player()
+            player6.playerName = "Joyce"
+            player6.didSelectToJoinGame = false
+            teamPlayers.append(player6)
+            let player7 = Player()
+            player7.playerName = "Will"
+            player7.didSelectToJoinGame = false
+            teamPlayers.append(player7)
+            let player8 = Player()
+            player8.playerName = "Veronica"
+            player8.didSelectToJoinGame = false
+            teamPlayers.append(player8)
+            let player9 = Player()
+            player9.playerName = "July"
+            player9.didSelectToJoinGame = false
+            teamPlayers.append(player9)
+            let player10 = Player()
+            player10.playerName = "Martin"
+            player10.didSelectToJoinGame = false
+            teamPlayers.append(player10)
+            
+            team.players = teamPlayers
+            Teams.sharedInstance.addTeam(team)
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,7 +83,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
             
             
-            self.tableView.backgroundColor = UIColor.lightGrayColor()
+            self.tableView.backgroundColor = UIColor.whiteColor()
             // cell register
             let buttonCellNib = UINib(nibName: "ButtonTableViewCell", bundle: nil)
             let labelCellNib = UINib(nibName: "AddTeamLabelTableViewCell", bundle: nil)
@@ -45,6 +100,17 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.tableHeaderView
+        headerView?.backgroundColor = UIColor.clearColor()
+        return headerView
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(30)
+    }
+
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
@@ -103,7 +169,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             cell.addTeamDetailText.textColor = UIColor.grayColor()
             let placeholder = NSAttributedString(string: "選擇球隊", attributes: [NSForegroundColorAttributeName : UIColor.grayColor()])
             cell.addTeamDetailText.attributedPlaceholder = placeholder
-            cell.textFieldType = TextFieldType.Gender
+            cell.textFieldType = TextFieldType.ChoseTeam
             cell.delegate = self
             
             cellReturn = cell
@@ -114,7 +180,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             cell.collectionViewInCell.dataSource = self
             let cellNib = UINib(nibName: "PlayerCardCollectionViewCell", bundle: nil)
             cell.collectionViewInCell.registerNib(cellNib, forCellWithReuseIdentifier: "PlayerCardCollectionViewCell")
-            
+            cell.collectionViewInCell.backgroundColor = UIColor.whiteColor()
             cellReturn = cell
             
         case 2:
@@ -123,7 +189,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             cell.addTeamDetailText.textColor = UIColor.grayColor()
             let placeholder = NSAttributedString(string: "臨打人數", attributes: [NSForegroundColorAttributeName : UIColor.grayColor()])
             cell.addTeamDetailText.attributedPlaceholder = placeholder
-            cell.textFieldType = TextFieldType.Gender
+            cell.textFieldType = TextFieldType.GuestPlayer
             cell.delegate = self
             
             cellReturn = cell
@@ -133,29 +199,62 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             cell.addTeamDetailText.textColor = UIColor.grayColor()
             let placeholder = NSAttributedString(string: "排賽模式", attributes: [NSForegroundColorAttributeName : UIColor.grayColor()])
             cell.addTeamDetailText.attributedPlaceholder = placeholder
-            cell.textFieldType = TextFieldType.Gender
+            cell.textFieldType = TextFieldType.GameMode
             cell.delegate = self
             
             cellReturn = cell
         case 4:
             reuseId = "buttonCell"
             let cell = tableView.dequeueReusableCellWithIdentifier(reuseId, forIndexPath: indexPath) as! ButtonTableViewCell
-            cell.buttonInCell.setBackgroundImage(UIImage(named: "bn_login_3x"), forState: .Normal)
+            cell.buttonInCell.setBackgroundImage(UIImage(named: "bn_setting_submit"), forState: .Normal)
             cell.backgroundColor = UIColor.clearColor()
-            cell.type = ButtonType.FBLogin
+            cell.type = ButtonType.StartGame
             cell.delegate = self
             cellReturn = cell
         default:
             break
         }
         
-        
+        cellReturn!.backgroundColor = UIColor.clearColor()
         return cellReturn!
     }
     
+    // MARK: - pickerDelegate
+    
+    func didSelect(pickerType: PickerType, pickerItem: String) {
+        print(pickerItem)
+        switch pickerType {
+        case .ChoseTeam:
+            Game.shareInstance.TeamId = 9
+            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! AddTeamLabelTableViewCell
+            cell.addTeamDetailText.text = pickerItem
+        case .GameMode:
+            let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 3)) as! AddTeamLabelTableViewCell
+            switch pickerItem {
+            case GameSetType.Automatic:
+                cell.addTeamDetailText.text = GameSetType.Automatic
+            case GameSetType.Manual:
+                cell.addTeamDetailText.text = GameSetType.Manual
+            default:
+                break
+            }
+        default:
+            break
+        }
+        
+        self.blackBackGround.removeFromSuperview()
+        self.pickerBackGroundView.removeFromSuperview()
+    }
+    
+   
     // MARK: - labelCellDelegate
     func getText(type: TextFieldType, enterText: String) {
-        
+        switch type {
+        case .GuestPlayer:
+            Game.shareInstance.NumberOfGuestPlayer = Int(enterText)
+        default:
+            break
+        }
     }
     
     func callPicker(sender: UITableViewCell, pickerContent: [String]) {
@@ -163,39 +262,55 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         self.numberOfComponentsInPicker = 1
         self.pickerContent = pickerContent
         
-        self.pickerView.delegate = self
-        self.pickerView.dataSource = self
+//        self.pickerView.delegate = self
+//        self.pickerView.dataSource = self
+        let senderType = sender as! AddTeamLabelTableViewCell
+        switch senderType.textFieldType! {
+        case .ChoseTeam:
+            self.picker?.pickerType = PickerType.ChoseTeam
+            self.picker?.pickerContent = pickerContent
+        case .GameMode:
+            self.picker?.pickerType = PickerType.GameMode
+            self.picker?.pickerContent = pickerContent
+        default:
+            break
+        }
+
         
-        self.blackBackGround = UIView(frame: CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height ))
-        self.blackBackGround.backgroundColor = UIColor.blackColor()
-        self.blackBackGround.alpha = 0.5
-        self.view.addSubview(self.blackBackGround)
-        //        self.view.addSubview(genderPicker)
-        
-        self.blackBackGround.frame = CGRect(x: 0, y: UIScreen.mainScreen().bounds.height * 8/10 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height * 2/10 )
+        self.picker?.pickerView.reloadAllComponents()
+
+        blackBackGround = UIView(frame: CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height ))
+        blackBackGround.backgroundColor = UIColor.blackColor()
+        blackBackGround.alpha = 0.5
         self.view.addSubview(blackBackGround)
+        
+        self.pickerBackGroundView.frame = CGRect(x: 0, y: UIScreen.mainScreen().bounds.height * 6/10 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height * 2/10 )
+        self.view.addSubview(self.pickerBackGroundView)
         
     }
 
-    // MARK: - UIPickerViewDataSource
+
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.numberOfPicker
-    }
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return self.numberOfComponentsInPicker
-    }
-    
-    // MARK: - UIPickerViewDelegate
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.pickerContent[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("end picker")
-    }
+//    // MARK: - UIPickerViewDataSource
+//
+//    
+//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return self.numberOfPicker
+//    }
+//    
+//    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+//        return self.numberOfComponentsInPicker
+//    }
+//    
+//    // MARK: - UIPickerViewDelegate
+//    
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return self.pickerContent[row]
+//    }
+//    
+//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        print("end picker")
+//    }
     
 
     
@@ -204,27 +319,46 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     func buttonClick(buttonType: ButtonType) {
         // start game
         let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("GameScoreViewController")
+        
         self.navigationController?.pushViewController(destinationController, animated: true)
+        
     }
 
     // MARK: - UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return self.team.players.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlayerCardCollectionViewCell", forIndexPath: indexPath) as! PlayerCardCollectionViewCell
-        
-        cell.playerImage.image = UIImage(named: "warrior")
-        cell.playerName.text = "Golden Warrior"
-        
+        cell.playerName.textColor = UIColor.blackColor()
+        cell.playerImage.image = UIImage(named: self.team.players[indexPath.row].playerName!)
+        cell.playerName.text = self.team.players[indexPath.row].playerName //"Golden Warrior"
+
+        if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {
+            cell.frameView.image = UIImage(named: "frame_member_pick_blue")
+        } else {
+            cell.frameView.image = UIImage()
+        }
         return cell
     }
     
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width = UIScreen.mainScreen().bounds.width / 4
-        return CGSize(width: width , height: width)
+        return CGSize(width: width , height: width * 5/4)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame = Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame ? false : true
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PlayerCardCollectionViewCell
+        if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {
+            cell.frameView.image = UIImage(named: "frame_member_pick_blue")
+        } else {
+            cell.frameView.image = UIImage()
+        }
+
     }
     
     /*

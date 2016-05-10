@@ -259,8 +259,8 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
         case .FBLogin:
             
             // test 
-            let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
-            self.presentViewController(controller, animated: true, completion: nil)
+//            let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
+//            self.presentViewController(controller, animated: true, completion: nil)
             // FB Login
             print(buttonType)
             let facebookLogin = FBSDKLoginManager()
@@ -288,6 +288,8 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
                             }, complete: nil)
                 }
             })
+        default :
+            break
         }
     }
     
