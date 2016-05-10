@@ -48,15 +48,15 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             player4.didSelectToJoinGame = false
             teamPlayers.append(player4)
             let player5 = Player()
-            player5.playerName = "Pihan"
+            player5.playerName = "PiHan"
             player5.didSelectToJoinGame = false
             teamPlayers.append(player5)
             let player6 = Player()
-            player6.playerName = "Abear"
+            player6.playerName = "Joyce"
             player6.didSelectToJoinGame = false
             teamPlayers.append(player6)
             let player7 = Player()
-            player7.playerName = "Eric"
+            player7.playerName = "Will"
             player7.didSelectToJoinGame = false
             teamPlayers.append(player7)
             let player8 = Player()
@@ -64,7 +64,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             player8.didSelectToJoinGame = false
             teamPlayers.append(player8)
             let player9 = Player()
-            player9.playerName = "Will"
+            player9.playerName = "July"
             player9.didSelectToJoinGame = false
             teamPlayers.append(player9)
             let player10 = Player()
@@ -333,7 +333,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlayerCardCollectionViewCell", forIndexPath: indexPath) as! PlayerCardCollectionViewCell
         cell.playerName.textColor = UIColor.blackColor()
-        cell.playerImage.image = UIImage(named: "ico_team_3x")
+        cell.playerImage.image = UIImage(named: self.team.players[indexPath.row].playerName!)
         cell.playerName.text = self.team.players[indexPath.row].playerName //"Golden Warrior"
 
         if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {

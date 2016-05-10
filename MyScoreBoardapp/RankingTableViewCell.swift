@@ -63,6 +63,11 @@ class RankingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        //self.playerImage.layer.cornerRadius = self.playerImage.layer.bounds.width / 2
+        //self.playerImage.clipsToBounds = true
+        //self.playerImage.layer.masksToBounds = true
+        
     }
     
     

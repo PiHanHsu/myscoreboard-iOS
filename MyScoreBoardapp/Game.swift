@@ -6,7 +6,7 @@
 //  Copyright © 2016 PiHan Hsu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Game {
     var TeamId:Int?
@@ -32,4 +32,14 @@ class Score {
 
 class Scores {
     var score:[Score] = []
+}
+
+class Ranking {
+    var loseCount = 0
+    var winCount = 0
+    var winRate = CGFloat(0)
+    var pointsAccumulation = 0
+    var playerImage = UIImage()
+    var playerName = ""
+    var RankNumber = "0"
 }

@@ -85,6 +85,14 @@ class TodayRankTableViewController: BasicTableViewController {
         game7.redTeamPlayerOne = "iHower"
         game7.redTeamPlayerTwo = "Brian"
         self.todayScores.score.append(game7)
+        let game8 = Score()
+        game8.blueTeamScore = 18
+        game8.blueTeamPlayerOne = "Eric"
+        game8.blueTeamPlayerTwo = "Hugo"
+        game8.redTeamScore = 21
+        game8.redTeamPlayerOne = "Nagi"
+        game8.redTeamPlayerTwo = "Jhon"
+        self.todayScores.score.append(game8)
         
         
         let backItem = UIBarButtonItem()
