@@ -83,18 +83,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-mh-P6C">
-                                <rect key="frame" x="8" y="500" width="572" height="36"/>
-                                <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="8" y="486" width="572" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C3J-k3-S0a"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="進入計分">
-                                    <color key="titleColor" red="0.0013402549084275961" green="0.14563238620758057" blue="0.37882575392723083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Th-nM4" userLabel="Team Collection View">
-                                <rect key="frame" x="8" y="84" width="572" height="396"/>
+                                <rect key="frame" x="8" y="84" width="572" height="382"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Blv-8S-hBj" userLabel="TeamLayout">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Blv-8S-hBj" userLabel="TeamLayout">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -122,6 +124,7 @@
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="7k0-mq-ryN" secondAttribute="top" constant="75" id="UWj-JE-WjG"/>
                             <constraint firstItem="2GQ-mh-P6C" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="XI5-wq-zR7"/>
                             <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="15" id="ZXr-i1-wFg"/>
+                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="20" id="ebD-KT-PPV"/>
                             <constraint firstItem="Snr-Th-nM4" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="m0q-Tj-rQV"/>
                             <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="20" id="p6F-FM-Xgi"/>
                         </constraints>
@@ -129,6 +132,7 @@
                             <mask key="constraints">
                                 <exclude reference="EH6-XT-O2M"/>
                                 <exclude reference="UWj-JE-WjG"/>
+                                <exclude reference="Csb-gX-7bL"/>
                             </mask>
                         </variation>
                     </view>
@@ -170,7 +174,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="73B-eN-k9f" secondAttribute="height" multiplier="1:1" id="fn5-b3-K2F"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="icon_upload_3x"/>
+                                    <state key="normal" title="Button"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-Oq-KCo">
                                     <rect key="frame" x="538" y="129" width="42" height="21"/>
@@ -182,9 +186,9 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-ve-pOD">
-                                    <rect key="frame" x="527" y="129" width="11" height="21"/>
-                                    <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-ve-pOD">
+                                    <rect key="frame" x="496" y="129" width="42" height="21"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="Mcg-YM-5cs"/>
                                         <constraint firstAttribute="width" constant="42" id="kqW-la-Nq6"/>
@@ -193,6 +197,12 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_upload_3x" translatesAutoresizingMaskIntoConstraints="NO" id="qx7-19-S9u">
+                                    <rect key="frame" x="242.5" y="25" width="115" height="115"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="qx7-19-S9u" secondAttribute="height" id="sUb-q0-j1N"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -203,6 +213,9 @@
                                 <constraint firstItem="73B-eN-k9f" firstAttribute="height" secondItem="f5z-jB-vsK" secondAttribute="height" id="OYY-MH-8AB"/>
                                 <constraint firstAttribute="bottom" secondItem="fFy-Oq-KCo" secondAttribute="bottom" id="UQI-Se-YuF"/>
                                 <constraint firstAttribute="bottom" secondItem="73B-eN-k9f" secondAttribute="bottom" constant="10" id="YGA-1M-Kef"/>
+                                <constraint firstAttribute="bottom" secondItem="qx7-19-S9u" secondAttribute="bottom" constant="10" id="aK2-vC-sQy"/>
+                                <constraint firstItem="qx7-19-S9u" firstAttribute="centerX" secondItem="f5z-jB-vsK" secondAttribute="centerX" id="h3v-jJ-scY"/>
+                                <constraint firstItem="qx7-19-S9u" firstAttribute="top" secondItem="f5z-jB-vsK" secondAttribute="top" constant="25" id="h8g-YH-iuU"/>
                                 <constraint firstItem="73B-eN-k9f" firstAttribute="top" secondItem="f5z-jB-vsK" secondAttribute="top" constant="25" id="ix7-Uy-bbQ"/>
                                 <constraint firstItem="F2c-ve-pOD" firstAttribute="bottom" secondItem="f5z-jB-vsK" secondAttribute="bottomMargin" constant="8" id="r2c-ng-Xip"/>
                             </constraints>
@@ -217,12 +230,14 @@
                             <rect key="frame" x="0.0" y="286" width="600" height="215"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-gK-owb">
-                                    <rect key="frame" x="30" y="40" width="540" height="42"/>
-                                    <color key="backgroundColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-gK-owb">
+                                    <rect key="frame" x="20" y="40" width="540" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="kTN-gK-owb" secondAttribute="height" multiplier="54:5" id="DtI-ug-ydn"/>
+                                        <constraint firstAttribute="height" constant="50" id="kze-Un-laQ"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                    <color key="tintColor" red="0.99680107831954956" green="0.83325141668319702" blue="0.00061819137772545218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="建立球隊">
+                                    <state key="normal">
                                         <color key="titleColor" red="0.20000000000000001" green="0.2901960784" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
@@ -231,8 +246,8 @@
                             <constraints>
                                 <constraint firstItem="kTN-gK-owb" firstAttribute="centerX" secondItem="1Sq-K4-05m" secondAttribute="centerX" id="2J3-Yi-Xbx"/>
                                 <constraint firstItem="kTN-gK-owb" firstAttribute="top" secondItem="1Sq-K4-05m" secondAttribute="top" constant="40" id="EyM-i4-aN9"/>
-                                <constraint firstAttribute="trailing" secondItem="kTN-gK-owb" secondAttribute="trailing" constant="30" id="GMI-Zo-YT4"/>
-                                <constraint firstItem="kTN-gK-owb" firstAttribute="leading" secondItem="1Sq-K4-05m" secondAttribute="leading" constant="30" id="dMo-LE-kuQ"/>
+                                <constraint firstAttribute="trailing" secondItem="kTN-gK-owb" secondAttribute="trailing" constant="20" id="GMI-Zo-YT4"/>
+                                <constraint firstItem="kTN-gK-owb" firstAttribute="leading" secondItem="1Sq-K4-05m" secondAttribute="leading" constant="20" id="dMo-LE-kuQ"/>
                                 <constraint firstAttribute="bottom" secondItem="kTN-gK-owb" secondAttribute="bottom" constant="172" id="kui-bu-ZBL"/>
                                 <constraint firstItem="kTN-gK-owb" firstAttribute="centerY" secondItem="1Sq-K4-05m" secondAttribute="centerY" id="rdW-Bp-bL2"/>
                             </constraints>
@@ -267,6 +282,7 @@
                         <outlet property="countText" destination="F2c-ve-pOD" id="g1n-7f-az5"/>
                         <outlet property="gameTimepicker" destination="91E-sP-4zU" id="g5S-7G-Bhk"/>
                         <outlet property="pickerBackgroundView" destination="WZY-3d-nAD" id="Zl8-Ox-MPb"/>
+                        <outlet property="showDownloadTeamImage" destination="qx7-19-S9u" id="alm-IZ-tNb"/>
                         <segue destination="0Bm-cL-iWD" kind="show" identifier="showAddGameLocation" id="QqA-o5-oGK"/>
                         <segue destination="TfL-8P-GTy" kind="show" identifier="showAddTeamMember" id="mdw-fr-CaR"/>
                         <segue destination="9gO-du-wAL" kind="show" identifier="showEditTeamMember" id="GWb-1p-Xcp"/>
@@ -347,10 +363,10 @@
             </objects>
             <point key="canvasLocation" x="-2464" y="2306"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Edit Player Of Team TableViewController-->
         <scene sceneID="pEu-p2-xay">
             <objects>
-                <tableViewController id="9gO-du-wAL" customClass="EditPlayerOfTeamTableViewController" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9gO-du-wAL" userLabel="Edit Player Of Team TableViewController" customClass="EditPlayerOfTeamTableViewController" customModule="MyScoreBoardapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Am-Vu-1Tn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,7 +423,7 @@
                             <outlet property="delegate" destination="9gO-du-wAL" id="ixq-pW-u3k"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="O0Q-xf-ZUk"/>
+                    <navigationItem key="navigationItem" title="成員" id="O0Q-xf-ZUk"/>
                     <connections>
                         <outlet property="playertableview" destination="6Am-Vu-1Tn" id="CI0-Ag-bIz"/>
                     </connections>
@@ -546,6 +562,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5wQ-cV-oIv"/>
-        <segue reference="mdw-fr-CaR"/>
+        <segue reference="4G9-hf-xfd"/>
     </inferredMetricsTieBreakers>
 </document>

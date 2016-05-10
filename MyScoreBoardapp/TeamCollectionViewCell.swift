@@ -55,6 +55,11 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         self.teamBackgroundView.layer.cornerRadius = 10
         self.headerBackground.layer.cornerRadius = 10
         self.childCollectionView.layer.cornerRadius = 10
+ 
+        let size = self.teamImageUrl.frame.size.width
+//        self.teamImageUrl.layer.cornerRadius = size/2
+        print("width: \(self.teamImageUrl.frame.size.width)")
+        print("height: \(self.teamImageUrl.frame.size.height)")
 
         
         
@@ -70,6 +75,10 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlayerCardCollectionViewCell", forIndexPath: indexPath) as! PlayerCardCollectionViewCell
+       
+//        cell.playerImage.image = UIImage(contentsOfFile: "")
+//        cell.playerName.text = ""
+        
         if indexPath.item == 0 {
             cell.playerName.text = "新增成員"
             cell.playerImage.image = UIImage(named: "ico_member_add_3x")
@@ -78,11 +87,24 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
             
             let player = team!.players[indexPath.row-1]
             cell.playerName.text = player.playerName
-            cell.playerImage.image = UIImage(named: player.playerImageUrl!)
             
-            let size = (self.childCollectionView.frame.size.width)/3
-            cell.playerImage.layer.cornerRadius = size / 2
+            if let imageUrl = player.playerImageUrl {
+                if imageUrl != "" {
+                    
+                    cell.playerImage.sd_setImageWithURL(NSURL(string: imageUrl)!)
+                    //UIImage(named: player.playerImageUrl!)
+                }
+            }else{
+                cell.playerImage.image = UIImage()
+                
+            }
+            
         }
+        
+        
+        let size = (self.childCollectionView.frame.size.width)/3 - 10-10
+        cell.playerImage.layer.cornerRadius = size / 2
+        
                
         return cell
     }
@@ -91,7 +113,7 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = (self.childCollectionView.frame.size.width)/3
+        let size = (self.childCollectionView.frame.size.width)/3 - 10-10
         return CGSize.init(width: size, height: size*1.25)
         
     }
@@ -126,7 +148,7 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         if indexPath.item == 0 {
             controller.didAddPlayer()
         }else {
-            let player = team!.players[indexPath.row]
+            let player = team!.players[indexPath.row-1]
             //將此 Player 資訊透過 自己定義的 delegate 回傳到 controller
             controller.didSelectedChild(player)
         }
