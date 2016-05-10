@@ -336,7 +336,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         cell.playerImage.image = UIImage(named: self.team.players[indexPath.row].playerName!)
         cell.playerName.text = self.team.players[indexPath.row].playerName //"Golden Warrior"
 
-        if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {
+        if self.team.players[indexPath.row].didSelectToJoinGame {
             cell.frameView.image = UIImage(named: "frame_member_pick_blue")
         } else {
             cell.frameView.image = UIImage()
@@ -350,10 +350,10 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     }
     
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
-        Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame = Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame ? false : true
+        self.team.players[indexPath.row].didSelectToJoinGame = self.team.players[indexPath.row].didSelectToJoinGame ? false : true
         
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PlayerCardCollectionViewCell
-        if Teams.sharedInstance.teams[0].players[indexPath.row].didSelectToJoinGame {
+        if self.team.players[indexPath.row].didSelectToJoinGame {
             cell.frameView.image = UIImage(named: "frame_member_pick_blue")
         } else {
             cell.frameView.image = UIImage()

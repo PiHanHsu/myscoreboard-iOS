@@ -282,6 +282,10 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goToGameSetAction(sender: UIButton) {
+        let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("GameSetTableViewController")
+        self.navigationController?.pushViewController(destinationController, animated: true)
+    }
     
     
 }

@@ -29,7 +29,9 @@ class Team: NSObject {
 
       }
     
-    
+    override init() {
+        
+    }
     
 
 }
