@@ -28,6 +28,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
             
         self.picker = self.pickerBackGroundView as! PickerView
         self.picker!.delegate = self
+        self.picker?.titleLabelInVIew.text = ""
             
             
             var teamPlayers:[Player] = []
