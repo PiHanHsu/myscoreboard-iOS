@@ -9,6 +9,7 @@
 import UIKit
 import Accelerate
 import SwiftyJSON
+import SDWebImage
 
 class TeamViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate, MyCollectionViewCellProtocal {
     
@@ -196,12 +197,14 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
             // MARK: - 7.重載成員的collectionView cell data
             myCell.team = myTeams
             myCell.childCollectionView.reloadData()
-            
-            myCell.teamImageUrl.image = UIImage(named: (Teams.sharedInstance.teams[indexPath.row].TeamImageUrl)!)
+            myCell.teamImageUrl.sd_setImageWithURL(NSURL(string: Teams.sharedInstance.teams[indexPath.row].TeamImageUrl!))
+                
             myCell.teamNameLabel.text = Teams.sharedInstance.teams[indexPath.row].TeamName
             myCell.gameTimeDay.text = Teams.sharedInstance.teams[indexPath.row].GameTimeDay
             myCell.gameTimeHour.text = Teams.sharedInstance.teams[indexPath.row].GameTimeHour
             myCell.gameLocation.text = Teams.sharedInstance.teams[indexPath.row].GameLocation
+            myCell.players = Teams.sharedInstance.teams[indexPath.row].players
+            
             
             // 成員的collectionView
             //myCell.childCollectionView
@@ -226,7 +229,12 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // Bug
-        performSegueWithIdentifier("showAddTeam", sender: self)
+        if number == teams.count{
+            performSegueWithIdentifier("showAddTeam", sender: self)
+        
+        }
+        //增加一個新的球隊
+        
     }
     
     //Delegate 方法，取得 TeamCollectionViewCell 中的 PlayerCardCollectionViewCell 被選擇的 Player 資訊
@@ -247,12 +255,17 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "showEditTeam" {
+        if segue.identifier == "showEditAddTeam" {
             let destinationController = segue.destinationViewController as! AddTeamTableViewController
             
             destinationController.currentTeamIndex = String(self.number)
             destinationController.isAddTeam = false
-            
+            print("number: \(self.number)")
+            print("team name: \(Teams.sharedInstance.teams[self.number].TeamName!)")
+            destinationController.TeamName = Teams.sharedInstance.teams[self.number].TeamName!
+            destinationController.totalTime = (Teams.sharedInstance.teams[self.number].GameTimeDay!+Teams.sharedInstance.teams[self.number].GameTimeHour!)
+
+            destinationController.imageName = Teams.sharedInstance.teams[self.number].TeamImageUrl
         }
         else if  segue.identifier == "showAddTeam" {
             let destinationController = segue.destinationViewController as! AddTeamTableViewController
