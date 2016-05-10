@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,15 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-YW-K30">
-                        <rect key="frame" x="3" y="193" width="175" height="35"/>
-
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-YW-K30">
+                        <rect key="frame" x="3" y="182" width="174" height="45"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zim-Ew-3Co">
-                        <rect key="frame" x="3" y="3" width="175" height="185"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zim-Ew-3Co">
+                        <rect key="frame" x="3" y="3" width="174" height="174"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Zim-Ew-3Co" secondAttribute="height" multiplier="3:4" id="0hx-3W-3Io"/>
                             <constraint firstAttribute="width" secondItem="Zim-Ew-3Co" secondAttribute="height" id="3me-Sz-riv"/>
@@ -51,7 +50,6 @@
                 <constraint firstItem="Zim-Ew-3Co" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="Jxh-7J-Pdk"/>
                 <constraint firstItem="PPO-YW-K30" firstAttribute="top" secondItem="Zim-Ew-3Co" secondAttribute="bottom" constant="5" id="KJi-kW-ug1"/>
                 <constraint firstItem="PPO-YW-K30" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="LaZ-iA-blP"/>
-
                 <constraint firstItem="Zim-Ew-3Co" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="QjR-10-UKZ"/>
                 <constraint firstAttribute="trailing" secondItem="5BP-cb-wWb" secondAttribute="trailing" id="V7o-e5-gKK"/>
                 <constraint firstAttribute="bottom" secondItem="Zim-Ew-3Co" secondAttribute="bottom" id="X3T-Ms-kRO"/>
