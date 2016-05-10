@@ -9,6 +9,7 @@ target 'MyScoreBoardapp' do
 	pod 'FBSDKLoginKit', '~> 4.11'
 	pod 'FBSDKShareKit', '~> 4.11'
 	pod 'IQKeyboardManagerSwift', '~> 4.0'
+	pod 'SDWebImage'
 end
 
 target 'MyScoreBoardappTests' do

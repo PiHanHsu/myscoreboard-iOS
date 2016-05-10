@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MyScoreBoardapp/FBSDKLoginKit.framework"
   install_framework "Pods-MyScoreBoardapp/FBSDKShareKit.framework"
   install_framework "Pods-MyScoreBoardapp/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-MyScoreBoardapp/SDWebImage.framework"
   install_framework "Pods-MyScoreBoardapp/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -99,5 +100,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MyScoreBoardapp/FBSDKLoginKit.framework"
   install_framework "Pods-MyScoreBoardapp/FBSDKShareKit.framework"
   install_framework "Pods-MyScoreBoardapp/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-MyScoreBoardapp/SDWebImage.framework"
   install_framework "Pods-MyScoreBoardapp/SwiftyJSON.framework"
 fi
