@@ -18,10 +18,11 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     @IBOutlet weak var TeamImageuploadbackground: UIView!
     @IBOutlet weak var countText: UILabel!
     @IBOutlet weak var addEditTeamButton: UIButton!
+    @IBOutlet weak var showDownloadTeamImage: UIImageView!
     
     let dayArray = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
-    let startTimeArray = ["00:00","00:30","01:00","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00:","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
-    let endTimeArray = ["00:00","00:30","01:00:","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00:","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
+    let startTimeArray = ["00:00","00:30","01:00","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
+    let endTimeArray = ["00:00","00:30","01:00:","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
 
     var daytime:String?
     var starttime:String?
@@ -31,6 +32,8 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         apiKey: "AIzaSyD9Phzy4CZWofeZD3RnEuFemlWTaM4n_po",
         placeType: .Address
     )
+    
+    var imageName: String?
 
     var TeamName = ""
 //   var GameTime = ""
@@ -49,13 +52,16 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         if isAddTeam == false {
         navigationItem.title = "編輯球隊"
 //        addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
-            addEditTeamButton.setImage(UIImage(named: "bn_teamedit_submit_3x"), forState: UIControlState.Normal)
+            addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
+            addEditTeamButton.setBackgroundImage(UIImage(named: "bn_teamedit_submit_3x"), forState: .Normal)
+        //addEditTeamButton.setImage(UIImage(named: "bn_teamedit_submit_3x"), forState: UIControlState.Normal)
+        //showDownloadTeamImage.image = UIImage(named: imageName!)
 
         }else{
         navigationItem.title = "新增球隊"
 //        addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
             addEditTeamButton.setImage(UIImage(named: "bn_team_submit_3x"), forState: UIControlState.Normal)
-    
+         
         }
         
 
@@ -167,6 +173,9 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.addTeamDetailIcon.image = UIImage(named:"" )
             cell.addTeamDetailText.placeholder = "請輸入球隊名稱"
             cell.textFieldType = TextFieldType.TeamName
+            if !self.TeamName.isEmpty {
+                cell.addTeamDetailText.text = self.TeamName
+            }
             cell.addTeamDetailText.delegate = self
             cell.delegate = self
             return cell
@@ -178,7 +187,10 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.addTeamDetailIcon.image = UIImage(named:"ico_field_time_3x" )
             cell.addTeamDetailText.placeholder = "聚會時間"
             cell.addTeamDetailText.userInteractionEnabled = false
-            cell.addTeamDetailText.text = ""
+            
+            if !(self.totalTime ?? "").isEmpty {
+                cell.addTeamDetailText.text = self.totalTime
+            }
            
             gameTime = cell
             print(totalTime)
