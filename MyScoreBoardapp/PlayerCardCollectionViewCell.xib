@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="181" height="231"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-YW-K30">
-                        <rect key="frame" x="0.0" y="191" width="181" height="40"/>
+                        <rect key="frame" x="0.0" y="181" width="181" height="50"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                 <constraint firstItem="PPO-YW-K30" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="7bg-E8-hyO"/>
                 <constraint firstItem="Zim-Ew-3Co" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Gkk-7j-dJR"/>
                 <constraint firstItem="Zim-Ew-3Co" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Jxh-7J-Pdk"/>
-                <constraint firstItem="PPO-YW-K30" firstAttribute="top" secondItem="Zim-Ew-3Co" secondAttribute="bottom" constant="10" id="KJi-kW-ug1"/>
+                <constraint firstItem="PPO-YW-K30" firstAttribute="top" secondItem="Zim-Ew-3Co" secondAttribute="bottom" id="KJi-kW-ug1"/>
                 <constraint firstItem="PPO-YW-K30" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LaZ-iA-blP"/>
                 <constraint firstItem="Zim-Ew-3Co" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="QjR-10-UKZ"/>
                 <constraint firstAttribute="bottom" secondItem="Zim-Ew-3Co" secondAttribute="bottom" id="X3T-Ms-kRO"/>
