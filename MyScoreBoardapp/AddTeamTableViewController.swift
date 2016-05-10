@@ -50,18 +50,20 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
 //        Teams.sharedInstance.addTeam(newTeam)
         
         if isAddTeam == false {
-        navigationItem.title = "編輯球隊"
-//        addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
+            navigationItem.title = "編輯球隊"
+            
+            self.addEditTeamButton.layer.cornerRadius = 10
             addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
             addEditTeamButton.setBackgroundImage(UIImage(named: "bn_teamedit_submit_3x"), forState: .Normal)
-        //addEditTeamButton.setImage(UIImage(named: "bn_teamedit_submit_3x"), forState: UIControlState.Normal)
-        //showDownloadTeamImage.image = UIImage(named: imageName!)
+            
 
         }else{
-        navigationItem.title = "新增球隊"
-//        addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
-            addEditTeamButton.setImage(UIImage(named: "bn_team_submit_3x"), forState: UIControlState.Normal)
-         
+            navigationItem.title = "新增球隊"
+            self.addEditTeamButton.layer.cornerRadius = 10
+            addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
+            addEditTeamButton.setBackgroundImage(UIImage(named: "bn_team_submit_3x"), forState: .Normal)
+
+
         }
         
 

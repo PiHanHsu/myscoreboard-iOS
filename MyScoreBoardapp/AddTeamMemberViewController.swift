@@ -21,7 +21,7 @@ class AddTeamMemberViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        ask Teams.sharedInstance 為什麼是放在27行
         addMemberText.text = team?.TeamName
         
         let teams = Teams.sharedInstance

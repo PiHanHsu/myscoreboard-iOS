@@ -36,7 +36,9 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         self.teamCollectionView.dataSource = self
         self.teamCollectionView.delegate = self
         
-        self.recordScoreButton.layer.cornerRadius = 5
+        self.recordScoreButton.layer.cornerRadius = 10
+        recordScoreButton.imageView?.contentMode = .ScaleAspectFit
+        recordScoreButton.setBackgroundImage(UIImage(named: "bn_team_gotocounter_normal_3x"), forState: .Normal)
         
         
         
@@ -123,8 +125,8 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         HttpManager.sharedInstance
             .request(HttpMethod.HttpMethodGet,
                      apiFunc: APiFunction.GetTeamList,
-                     param: ["auth_token" : "HWNisxMz3HSjwcGjGeoP",
-                        ":user_id":"1"],
+                     param: ["auth_token" : "PVP6V6EZbzq6WMV7eX1z",
+                        ":user_id":"25"],
                      success: { (code , data ) in
                         //self.success(code, data: data)
                         for team in data["results"].arrayValue {

@@ -25,8 +25,23 @@ class Team: NSObject {
         self.GameTimeHour = (data["team"]["start_time_hour"].stringValue)+":"+(data["team"]["start_time_min"].stringValue)+"-"+(data["team"]["end_time_hour"].stringValue)+":"+(data["team"]["end_time_min"].stringValue)
 
         self.GameLocation = data["team"]["location"]["place_name"].stringValue
-        self.TeamId = data["team"]["id"].stringValue       
-
+        self.TeamId = data["team"]["id"].stringValue
+        
+        for member in data["teammates"].arrayValue {
+            let newPlayer = Player()
+            let playerData = member.dictionary!
+            
+            print(member)
+            print(playerData["id"])
+ 
+            newPlayer.playerName = playerData["username"]?.stringValue
+            newPlayer.playerId = playerData["id"]?.stringValue
+            newPlayer.playerImageUrl = playerData["user_photo"]?.stringValue
+            print(playerData["user_photo"])
+            self.players.append(newPlayer)
+        }
+        
+        
       }
     
     
