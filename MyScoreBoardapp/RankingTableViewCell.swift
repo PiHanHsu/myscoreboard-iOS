@@ -64,12 +64,16 @@ class RankingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        //self.playerImage.layer.cornerRadius = self.playerImage.layer.bounds.width / 2
-        //self.playerImage.clipsToBounds = true
+//        self.playerImage.layer.cornerRadius = self.playerImage.layer.bounds.width / 2
+//        self.playerImage.clipsToBounds = true
         //self.playerImage.layer.masksToBounds = true
         
     }
     
+    override func drawRect(rect: CGRect) {
+        self.playerImage.layer.cornerRadius = self.playerImage.layer.bounds.width / 2
+        self.playerImage.clipsToBounds = true
+    }
     
 
     override func setSelected(selected: Bool, animated: Bool) {

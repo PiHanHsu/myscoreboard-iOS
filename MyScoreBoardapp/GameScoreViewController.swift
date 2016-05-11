@@ -44,8 +44,8 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         //data
         self.redTeamPlayerOne.text = "Steven"
         self.redTeamPlayerOneImage.image = UIImage(named: "Steven")
-        //        self.redTeamPlayerOneImage.layer.cornerRadius = self.redTeamPlayerOneImage.frame.size.width / 2
-        //        self.redTeamPlayerOneImage.clipsToBounds = true
+//                self.redTeamPlayerOneImage.layer.cornerRadius = self.redTeamPlayerOneImage.frame.size.width / 2
+//                self.redTeamPlayerOneImage.clipsToBounds = true
         self.redTeamPlayerTwo.text = ""
         self.redTeamPlayerTwoimage.image = UIImage()
         //        self.redTeamPlayerTwoimage.layer.cornerRadius = self.redTeamPlayerTwoimage.frame.size.width / 2
@@ -61,16 +61,17 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         
         self.nextBluePlayerOne.text = "PiHan"
         self.nextBlueTeamPlayerOneImage.image = UIImage(named: "PiHan")
-        //        self.nextBlueTeamPlayerOneImage.layer.cornerRadius = self.nextBlueTeamPlayerOneImage.frame.size.width / 2
-        //        self.nextBlueTeamPlayerOneImage.clipsToBounds = true
+            
+                self.nextBlueTeamPlayerOneImage.layer.cornerRadius = self.nextBlueTeamPlayerOneImage.frame.size.width / 2
+                self.nextBlueTeamPlayerOneImage.clipsToBounds = true
         self.nextBluePlayerTwo.text = ""
         self.nextBlueTeamPlayerTwoImage.image = UIImage()
         //        self.nextBlueTeamPlayerTwoImage.layer.cornerRadius = self.nextBlueTeamPlayerTwoImage.frame.size.width / 2
         //        self.nextBlueTeamPlayerTwoImage.clipsToBounds = true
         self.nextRedPlayerOne.text = "Dyson"
         self.nextRedTeamPlayerOneImage.image = UIImage(named: "Dyson")
-        //        self.nextRedTeamPlayerOneImage.layer.cornerRadius = self.nextRedTeamPlayerOneImage.frame.size.width / 2
-        //        self.nextRedTeamPlayerOneImage.clipsToBounds = true
+                self.nextRedTeamPlayerOneImage.layer.cornerRadius = self.nextRedTeamPlayerOneImage.frame.size.width / 2
+                self.nextRedTeamPlayerOneImage.clipsToBounds = true
         self.nextRedPlayerTwo.text = ""
         self.nextRedTeamPlayerTwoImage.image = UIImage()
         //        self.nextRedTeamPlayerOneImage.layer.cornerRadius = self.nextRedTeamPlayerOneImage.frame.size.width / 2

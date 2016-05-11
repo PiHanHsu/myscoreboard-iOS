@@ -18,37 +18,44 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-dt-VNT">
-                        <rect key="frame" x="8" y="8" width="99.5" height="99.5"/>
+                        <rect key="frame" x="8" y="8" width="40" height="40"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="99.5" id="Kf4-xy-I65"/>
+                            <constraint firstAttribute="height" constant="40" id="YuP-Tz-xcG"/>
                             <constraint firstAttribute="width" secondItem="I3G-dt-VNT" secondAttribute="height" multiplier="1:1" id="pju-Km-8RB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kf4-xy-I65"/>
+                            </mask>
+                        </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="playerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bN-5a-mEf">
-                        <rect key="frame" x="115" y="8" width="134" height="30"/>
+                        <rect key="frame" x="55.5" y="8" width="134" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhQ-Lj-Zl6">
-                        <rect key="frame" x="115" y="49" width="34" height="21"/>
+                        <rect key="frame" x="55.5" y="19" width="34" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="積分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhF-ic-wkq">
-                        <rect key="frame" x="115" y="87" width="34" height="20.5"/>
+                        <rect key="frame" x="55.5" y="27.5" width="34" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Ye-dFD">
-                        <rect key="frame" x="277" y="10" width="95.5" height="97"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Ye-dFD">
+                        <rect key="frame" x="277" y="10" width="95.5" height="37.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWD-gh-mzq">
-                        <rect key="frame" x="8" y="109" width="385" height="1"/>
+                        <rect key="frame" x="8" y="49.5" width="385" height="1"/>
                         <color key="backgroundColor" red="0.51764705882352935" green="0.68235294117647061" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="TWP-ZX-Ol4"/>
