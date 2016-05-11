@@ -32,66 +32,66 @@ class TodayRankTableViewController: BasicTableViewController {
         let game1 = Score()
         game1.blueTeamScore = 21
         game1.blueTeamPlayerOne = "Steven"
-        game1.blueTeamPlayerTwo = "Dyson"
+        game1.blueTeamPlayerTwo = ""
         game1.redTeamScore = 19
-        game1.redTeamPlayerOne = "Pi Han"
-        game1.redTeamPlayerTwo = "Damon"
+        game1.redTeamPlayerOne = "Damon"
+        game1.redTeamPlayerTwo = ""
         self.todayScores.score.append(game1)
         let game2 = Score()
         game2.blueTeamScore = 21
-        game2.blueTeamPlayerOne = "Steven"
-        game2.blueTeamPlayerTwo = "Abear"
+        game2.blueTeamPlayerOne = "Dyson"
+        game2.blueTeamPlayerTwo = ""
         game2.redTeamScore = 19
-        game2.redTeamPlayerOne = "Pi Han"
-        game2.redTeamPlayerTwo = "Veronica"
+        game2.redTeamPlayerOne = "PiHan"
+        game2.redTeamPlayerTwo = ""
         self.todayScores.score.append(game2)
         let game3 = Score()
         game3.blueTeamScore = 17
-        game3.blueTeamPlayerOne = "Steven"
-        game3.blueTeamPlayerTwo = "Damon"
+        game3.blueTeamPlayerOne = "Joyce"
+        game3.blueTeamPlayerTwo = ""
         game3.redTeamScore = 21
-        game3.redTeamPlayerOne = "Pi Han"
-        game3.redTeamPlayerTwo = "Dyson"
+        game3.redTeamPlayerOne = "Veronica"
+        game3.redTeamPlayerTwo = ""
         self.todayScores.score.append(game3)
         let game4 = Score()
         game4.blueTeamScore = 16
-        game4.blueTeamPlayerOne = "Eric"
-        game4.blueTeamPlayerTwo = "Dyson"
+        game4.blueTeamPlayerOne = "Dyson"
+        game4.blueTeamPlayerTwo = ""
         game4.redTeamScore = 21
-        game4.redTeamPlayerOne = "Martin"
-        game4.redTeamPlayerTwo = "Damon"
+        game4.redTeamPlayerOne = "Damon"
+        game4.redTeamPlayerTwo = ""
         self.todayScores.score.append(game4)
         let game5 = Score()
         game5.blueTeamScore = 21
-        game5.blueTeamPlayerOne = "Abear"
-        game5.blueTeamPlayerTwo = "July"
+        game5.blueTeamPlayerOne = "Steven"
+        game5.blueTeamPlayerTwo = ""
         game5.redTeamScore = 14
-        game5.redTeamPlayerOne = "Ariel"
-        game5.redTeamPlayerTwo = "Sali"
+        game5.redTeamPlayerOne = "Dyson"
+        game5.redTeamPlayerTwo = ""
         self.todayScores.score.append(game5)
         let game6 = Score()
         game6.blueTeamScore = 19
-        game6.blueTeamPlayerOne = "Will"
-        game6.blueTeamPlayerTwo = "Ted"
+        game6.blueTeamPlayerOne = "PiHan"
+        game6.blueTeamPlayerTwo = ""
         game6.redTeamScore = 21
-        game6.redTeamPlayerOne = "Max"
-        game6.redTeamPlayerTwo = "Jhonson"
+        game6.redTeamPlayerOne = "Steven"
+        game6.redTeamPlayerTwo = ""
         self.todayScores.score.append(game6)
         let game7 = Score()
         game7.blueTeamScore = 24
-        game7.blueTeamPlayerOne = "Tim"
-        game7.blueTeamPlayerTwo = "Hexter"
+        game7.blueTeamPlayerOne = "Damon"
+        game7.blueTeamPlayerTwo = ""
         game7.redTeamScore = 22
-        game7.redTeamPlayerOne = "iHower"
-        game7.redTeamPlayerTwo = "Brian"
+        game7.redTeamPlayerOne = "PiHan"
+        game7.redTeamPlayerTwo = ""
         self.todayScores.score.append(game7)
         let game8 = Score()
         game8.blueTeamScore = 18
-        game8.blueTeamPlayerOne = "Eric"
-        game8.blueTeamPlayerTwo = "Hugo"
+        game8.blueTeamPlayerOne = "Veronica"
+        game8.blueTeamPlayerTwo = ""
         game8.redTeamScore = 21
-        game8.redTeamPlayerOne = "Nagi"
-        game8.redTeamPlayerTwo = "Jhon"
+        game8.redTeamPlayerOne = "Joyce"
+        game8.redTeamPlayerTwo = ""
         self.todayScores.score.append(game8)
         
         
