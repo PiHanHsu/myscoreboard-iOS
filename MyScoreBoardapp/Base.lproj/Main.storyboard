@@ -579,23 +579,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYc-m4-Cpb">
                                 <rect key="frame" x="0.0" y="40" width="600" height="150"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dr4-wa-bUm">
-                                        <rect key="frame" x="144.5" y="15.5" width="120" height="120"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dr4-wa-bUm">
+                                        <rect key="frame" x="144" y="15" width="120" height="120"/>
                                         <color key="backgroundColor" red="1" green="0.18536402569999999" blue="0.21890959639999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fW-Bl-NCh">
-                                        <rect key="frame" x="335" y="15.5" width="120" height="120"/>
+                                        <rect key="frame" x="335" y="15" width="120" height="120"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-3L-u5m">
-                                        <rect key="frame" x="144.5" y="15.5" width="120" height="120"/>
+                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-3L-u5m">
+                                        <rect key="frame" x="144" y="15" width="120" height="120"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="p7Q-3L-u5m" secondAttribute="height" multiplier="1:1" id="wxO-Uy-riZ"/>
                                         </constraints>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YO1-jk-Zzc">
-                                        <rect key="frame" x="335" y="15.5" width="120" height="120"/>
+                                        <rect key="frame" x="335" y="15" width="120" height="120"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="YO1-jk-Zzc" secondAttribute="height" multiplier="1:1" id="CCi-78-sd6"/>
@@ -705,7 +705,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="sqZ-5j-Zik">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sqZ-5j-Zik">
                                         <rect key="frame" x="522" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sqZ-5j-Zik" secondAttribute="height" multiplier="1:1" id="9C0-ya-JDc"/>
@@ -783,26 +783,28 @@
                                                     <constraint firstAttribute="width" secondItem="r3Y-t2-tDN" secondAttribute="height" multiplier="141:13" id="xDP-JX-kx8"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="2en-e0-eVT">
-                                                <rect key="frame" x="45" y="-2" width="63" height="63"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2en-e0-eVT">
+                                                <rect key="frame" x="45" y="1" width="60" height="60"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="OLC-5Z-VbQ"/>
                                                     <constraint firstAttribute="width" secondItem="2en-e0-eVT" secondAttribute="height" multiplier="1:1" id="iT8-Wc-ula"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="sn3-ur-RZ3">
-                                                <rect key="frame" x="492" y="-2" width="63" height="63"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sn3-ur-RZ3">
+                                                <rect key="frame" x="495" y="1" width="60" height="60"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Xdu-1F-hsr"/>
                                                     <constraint firstAttribute="width" secondItem="sn3-ur-RZ3" secondAttribute="height" multiplier="1:1" id="v4G-9i-hls"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Abear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTq-6V-PUt">
-                                                <rect key="frame" x="115" y="20" width="46" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTq-6V-PUt">
+                                                <rect key="frame" x="113" y="20.5" width="46" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQT-X0-7rU">
-                                                <rect key="frame" x="456" y="19" width="28" height="21"/>
+                                                <rect key="frame" x="459" y="20.5" width="28" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -824,6 +826,12 @@
                                             <constraint firstItem="sQT-X0-7rU" firstAttribute="centerY" secondItem="sn3-ur-RZ3" secondAttribute="centerY" id="joq-Sd-p5E"/>
                                             <constraint firstItem="2en-e0-eVT" firstAttribute="height" secondItem="YST-xR-ftX" secondAttribute="height" multiplier="5:6" id="wVP-P6-lt0"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wVP-P6-lt0"/>
+                                                <exclude reference="cAW-uf-jVG"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-xN-9J8">
                                         <rect key="frame" x="0.0" y="75" width="600" height="75"/>
