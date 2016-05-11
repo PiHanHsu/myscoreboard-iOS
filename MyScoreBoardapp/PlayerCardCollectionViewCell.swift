@@ -19,13 +19,17 @@ class PlayerCardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code   
-
-        self.playerImage.clipsToBounds = true
+//
+//        self.playerImage.clipsToBounds = true
+//        self.playerImage.layer.masksToBounds = true
 //        self.playerImage.layer.cornerRadius = self.playerImage.frame.size.width/2
-        
-        
-        self.playerImage.layer.masksToBounds = true
-        
      
+    }
+    
+    override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        self.playerImage.layer.masksToBounds = true
+        self.playerImage.layer.cornerRadius = self.playerImage.frame.size.width/2
+        print("width: \(self.playerImage.frame.size.width)")
     }
 }

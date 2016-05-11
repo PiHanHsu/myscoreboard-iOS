@@ -55,17 +55,7 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         self.teamBackgroundView.layer.cornerRadius = 10
         self.headerBackground.layer.cornerRadius = 10
         self.childCollectionView.layer.cornerRadius = 10
- 
-        let size = self.teamImageUrl.frame.size.width
-//        self.teamImageUrl.layer.cornerRadius = size/2
-        print("width: \(self.teamImageUrl.frame.size.width)")
-        print("height: \(self.teamImageUrl.frame.size.height)")
-
-        
-        
     }
-    
-    
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return team!.players.count + 1
@@ -102,10 +92,14 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         }
         
         
-        let size = (self.childCollectionView.frame.size.width)/3 - 10-10
-        cell.playerImage.layer.cornerRadius = size / 2
+//        let size = (self.childCollectionView.frame.size.width)/3 - 10-10
+//        cell.playerImage.layer.cornerRadius = cell.playerImage.frame.width / 2
         
-               
+//        cell.playerImage.clipsToBounds = true
+//        cell.playerImage.layer.masksToBounds = true
+//        cell.playerImage.layer.cornerRadius = cell.playerImage.frame.size.width/2
+//        print("width: \(cell.playerImage.frame.size.width)")
+        
         return cell
     }
     
