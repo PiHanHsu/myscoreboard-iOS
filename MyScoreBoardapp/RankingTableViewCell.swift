@@ -41,45 +41,17 @@ class RankingTableViewCell: UITableViewCell {
         }
     }
 
-    
-//    var winRateString:String {
-//        get {
-//            return "勝率 ：\(winRate)% (勝 \(winCount) 敗 \(loseCount))"
-//        }
-//        set {
-//            self.winRateLabel.text = winRateString
-//        }
-//    }
-//
-//    var pointsAccumulationString:String {
-//        get {
-//            return "積分 ：\(pointsAccumulation)"
-//        }
-//        set {
-//            self.points.text = pointsAccumulationString
-//        }
-//    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-//        self.playerImage.layer.cornerRadius = self.playerImage.layer.bounds.width / 2
-//        self.playerImage.clipsToBounds = true
-        //self.playerImage.layer.masksToBounds = true
-        
     }
     
     override func drawRect(rect: CGRect) {
         self.playerImage.layer.cornerRadius = self.playerImage.layer.bounds.width / 2
         self.playerImage.clipsToBounds = true
     }
-    
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

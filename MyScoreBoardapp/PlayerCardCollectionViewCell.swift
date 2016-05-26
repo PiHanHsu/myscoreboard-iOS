@@ -30,6 +30,6 @@ class PlayerCardCollectionViewCell: UICollectionViewCell {
         super.drawRect(rect)
         self.playerImage.layer.masksToBounds = true
         self.playerImage.layer.cornerRadius = self.playerImage.frame.size.width/2
-        print("width: \(self.playerImage.frame.size.width)")
+        //print("width: \(self.playerImage.frame.size.width)")
     }
 }

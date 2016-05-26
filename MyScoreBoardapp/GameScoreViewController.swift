@@ -36,10 +36,16 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     
     var pickerContent:[Int] = []
     var playSet:[[String:String]] = []
+    var autoSet:[String:Int] = [:]
     var currentSetIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for player in Game.shareInstance.GamePlayers {
+            self.autoSet[player.playerName!] = 0
+        }
+        Game.shareInstance.playerM = self.autoSet
         
         //data
         self.redTeamPlayerOne.text = "Steven"
@@ -107,44 +113,57 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     }
     
     @IBAction func finishGameAction(sender: UIButton) {
+    
+//        if self.currentSetIndex < self.playSet.count-1 {
+//            self.currentSetIndex += 1
+//            self.initPicker()
+//            self.redTeamPlayerOne.text = self.playSet[self.currentSetIndex]["player1"]
+//            self.redTeamPlayerTwo.text = ""
+//            self.blueTeamPlayerOne.text = self.playSet[self.currentSetIndex]["player2"]
+//            self.blueTeamPlayerTwo.text = ""
+//            self.redTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex]["player1"]!)
+//            self.redTeamPlayerTwoimage.image = UIImage()
+//            self.blueTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex]["player2"]!)
+//            self.blueTeamPlayerTwoImage.image = UIImage()
+//            
+//            if self.currentSetIndex+1 < self.playSet.count {
+//                self.nextBluePlayerOne.text = self.playSet[self.currentSetIndex + 1]["player2"]
+//                self.nextRedPlayerOne.text = self.playSet[self.currentSetIndex + 1]["player1"]
+//                self.nextBluePlayerTwo.text = ""
+//                self.nextRedPlayerTwo.text = ""
+//                if self.playSet[self.currentSetIndex + 1]["player2"]! != "" {
+//                    self.nextBlueTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex + 1]["player2"]!)
+//                    self.nextBlueTeamPlayerTwoImage.image = UIImage()
+//                }else {
+//                    self.nextBlueTeamPlayerOneImage.image = UIImage()
+//                    self.nextBlueTeamPlayerTwoImage.image = UIImage()
+//                }
+//                
+//                if self.playSet[self.currentSetIndex + 1]["player1"]! != "" {
+//                    self.nextRedTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex + 1]["player1"]!)
+//                    self.nextRedTeamPlayerTwoImage.image = UIImage()
+//                }else {
+//                    self.nextRedTeamPlayerOneImage.image = UIImage()
+//                    self.nextRedTeamPlayerTwoImage.image = UIImage()
+//                }
+//            }else {
+//                
+//            }
+//        }else {
+//            let list = Game.shareInstance.getGameplayer(self.autoSet, playerFemale: [:])
+//            self.redTeamPlayerOne.text = list[0]
+//            self.redTeamPlayerTwo.text = list[1]
+//            self.blueTeamPlayerOne.text = list[2]
+//            self.blueTeamPlayerTwo.text = list[3]
+//        }
         
+        let list = Game.shareInstance.getGameplayer()
+        print(list)
+        self.redTeamPlayerOne.text = list[0]
+        self.redTeamPlayerTwo.text = list[1]
+        self.blueTeamPlayerOne.text = list[2]
+        self.blueTeamPlayerTwo.text = list[3]
         
-        if self.currentSetIndex < self.playSet.count-1 {
-            self.currentSetIndex += 1
-            self.initPicker()
-            self.redTeamPlayerOne.text = self.playSet[self.currentSetIndex]["player1"]
-            self.redTeamPlayerTwo.text = ""
-            self.blueTeamPlayerOne.text = self.playSet[self.currentSetIndex]["player2"]
-            self.blueTeamPlayerTwo.text = ""
-            self.redTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex]["player1"]!)
-            self.redTeamPlayerTwoimage.image = UIImage()
-            self.blueTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex]["player2"]!)
-            self.blueTeamPlayerTwoImage.image = UIImage()
-            
-            if self.currentSetIndex+1 < self.playSet.count {
-                self.nextBluePlayerOne.text = self.playSet[self.currentSetIndex + 1]["player2"]
-                self.nextRedPlayerOne.text = self.playSet[self.currentSetIndex + 1]["player1"]
-                self.nextBluePlayerTwo.text = ""
-                self.nextRedPlayerTwo.text = ""
-                if self.playSet[self.currentSetIndex + 1]["player2"]! != "" {
-                    self.nextBlueTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex + 1]["player2"]!)
-                    self.nextBlueTeamPlayerTwoImage.image = UIImage()
-                }else {
-                    self.nextBlueTeamPlayerOneImage.image = UIImage()
-                    self.nextBlueTeamPlayerTwoImage.image = UIImage()
-                }
-                
-                if self.playSet[self.currentSetIndex + 1]["player1"]! != "" {
-                    self.nextRedTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex + 1]["player1"]!)
-                    self.nextRedTeamPlayerTwoImage.image = UIImage()
-                }else {
-                    self.nextRedTeamPlayerOneImage.image = UIImage()
-                    self.nextRedTeamPlayerTwoImage.image = UIImage()
-                }
-            }else {
-                
-            }
-        }
     }
     
     func initPicker() {

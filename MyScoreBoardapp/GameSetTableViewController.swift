@@ -252,7 +252,7 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
     func getText(type: TextFieldType, enterText: String) {
         switch type {
         case .GuestPlayer:
-            Game.shareInstance.NumberOfGuestPlayer = Int(enterText)
+            Game.shareInstance.NumberOfGuestPlayer = Int(enterText)!
         default:
             break
         }
@@ -356,10 +356,14 @@ class GameSetTableViewController: BasicTableViewController, buttonCellDelegate, 
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PlayerCardCollectionViewCell
         if self.team.players[indexPath.row].didSelectToJoinGame {
             cell.frameView.image = UIImage(named: "frame_member_pick_blue")
+            Game.shareInstance.GamePlayers.append(self.team.players[indexPath.row])
         } else {
             cell.frameView.image = UIImage()
+            let index = Game.shareInstance.GamePlayers.indexOf(self.team.players[indexPath.row])
+            Game.shareInstance.GamePlayers.removeAtIndex(index!)
         }
-
+        
+        //print(Game.shareInstance.GamePlayers)
     }
     
     /*
