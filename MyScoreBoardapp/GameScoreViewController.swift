@@ -35,7 +35,6 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var nextBlueTeamPlayerTwoImage: UIImageView!
     
     var pickerContent:[Int] = []
-    var playSet:[[String:String]] = []
     var autoSet:[String:Int] = [:]
     var currentSetIndex = 0
     
@@ -47,56 +46,7 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         }
         Game.shareInstance.playerM = self.autoSet
         
-        //data
-        self.redTeamPlayerOne.text = "Steven"
-        self.redTeamPlayerOneImage.image = UIImage(named: "Steven")
-//                self.redTeamPlayerOneImage.layer.cornerRadius = self.redTeamPlayerOneImage.frame.size.width / 2
-//                self.redTeamPlayerOneImage.clipsToBounds = true
-        self.redTeamPlayerTwo.text = ""
-        self.redTeamPlayerTwoimage.image = UIImage()
-        //        self.redTeamPlayerTwoimage.layer.cornerRadius = self.redTeamPlayerTwoimage.frame.size.width / 2
-        //        self.redTeamPlayerTwoimage.clipsToBounds = true
-        self.blueTeamPlayerOne.text = "Damon"
-        self.blueTeamPlayerOneImage.image = UIImage(named: "Damon")
-        //        self.blueTeamPlayerOneImage.layer.cornerRadius = self.blueTeamPlayerOneImage.frame.size.width / 2
-        //        self.blueTeamPlayerOneImage.clipsToBounds = true
-        self.blueTeamPlayerTwo.text = ""
-        self.blueTeamPlayerTwoImage.image = UIImage()
-        //        self.blueTeamPlayerTwoImage.layer.cornerRadius = self.blueTeamPlayerTwoImage.frame.size.width / 2
-        //        self.blueTeamPlayerTwoImage.clipsToBounds = true
-        
-        self.nextBluePlayerOne.text = "PiHan"
-        self.nextBlueTeamPlayerOneImage.image = UIImage(named: "PiHan")
-            
-                self.nextBlueTeamPlayerOneImage.layer.cornerRadius = self.nextBlueTeamPlayerOneImage.frame.size.width / 2
-                self.nextBlueTeamPlayerOneImage.clipsToBounds = true
-        self.nextBluePlayerTwo.text = ""
-        self.nextBlueTeamPlayerTwoImage.image = UIImage()
-        //        self.nextBlueTeamPlayerTwoImage.layer.cornerRadius = self.nextBlueTeamPlayerTwoImage.frame.size.width / 2
-        //        self.nextBlueTeamPlayerTwoImage.clipsToBounds = true
-        self.nextRedPlayerOne.text = "Dyson"
-        self.nextRedTeamPlayerOneImage.image = UIImage(named: "Dyson")
-                self.nextRedTeamPlayerOneImage.layer.cornerRadius = self.nextRedTeamPlayerOneImage.frame.size.width / 2
-                self.nextRedTeamPlayerOneImage.clipsToBounds = true
-        self.nextRedPlayerTwo.text = ""
-        self.nextRedTeamPlayerTwoImage.image = UIImage()
-        //        self.nextRedTeamPlayerOneImage.layer.cornerRadius = self.nextRedTeamPlayerOneImage.frame.size.width / 2
-        //        self.nextRedTeamPlayerOneImage.clipsToBounds = true
-        
-        self.playSet = [["player1":"Steven", "player2":"Damon"],["player1":"Dyson", "player2":"PiHan"],["player1":"Joyce", "player2":"Veronica"],["player1":"Dyson", "player2":"Damon"],["player1":"Steven", "player2":"Dyson"],["player1":"PiHan", "player2":"Steven"],["player1":"Damon", "player2":"PiHan"],["player1":"Veronica", "player2":"Joyce"],["player1":"Steph", "player2":"Joyce"],["player1":"", "player2":""]]
-        
-        
-        self.blueSidePicker.dataSource = self
-        self.blueSidePicker.delegate = self
-        
-        //self.redSidePicker
-        self.redSidePicker.dataSource = self
-        self.redSidePicker.delegate = self
-        
-        for i in 0...21 {
-            self.pickerContent.append(i)
-        }
-        
+        self.initPicker()
         
         let rightItem = UIBarButtonItem()
         let backItem = UIBarButtonItem()
@@ -108,54 +58,10 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         backItem.action = #selector(self.backToGameSet)
         self.navigationItem.setLeftBarButtonItem(backItem, animated: true)
         self.navigationItem.setRightBarButtonItem(rightItem, animated: true)
-        //self.navigationItem.leftBarButtonItem = backItem
-        // Do any additional setup after loading the view.
+    
     }
     
     @IBAction func finishGameAction(sender: UIButton) {
-    
-//        if self.currentSetIndex < self.playSet.count-1 {
-//            self.currentSetIndex += 1
-//            self.initPicker()
-//            self.redTeamPlayerOne.text = self.playSet[self.currentSetIndex]["player1"]
-//            self.redTeamPlayerTwo.text = ""
-//            self.blueTeamPlayerOne.text = self.playSet[self.currentSetIndex]["player2"]
-//            self.blueTeamPlayerTwo.text = ""
-//            self.redTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex]["player1"]!)
-//            self.redTeamPlayerTwoimage.image = UIImage()
-//            self.blueTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex]["player2"]!)
-//            self.blueTeamPlayerTwoImage.image = UIImage()
-//            
-//            if self.currentSetIndex+1 < self.playSet.count {
-//                self.nextBluePlayerOne.text = self.playSet[self.currentSetIndex + 1]["player2"]
-//                self.nextRedPlayerOne.text = self.playSet[self.currentSetIndex + 1]["player1"]
-//                self.nextBluePlayerTwo.text = ""
-//                self.nextRedPlayerTwo.text = ""
-//                if self.playSet[self.currentSetIndex + 1]["player2"]! != "" {
-//                    self.nextBlueTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex + 1]["player2"]!)
-//                    self.nextBlueTeamPlayerTwoImage.image = UIImage()
-//                }else {
-//                    self.nextBlueTeamPlayerOneImage.image = UIImage()
-//                    self.nextBlueTeamPlayerTwoImage.image = UIImage()
-//                }
-//                
-//                if self.playSet[self.currentSetIndex + 1]["player1"]! != "" {
-//                    self.nextRedTeamPlayerOneImage.image = UIImage(named: self.playSet[self.currentSetIndex + 1]["player1"]!)
-//                    self.nextRedTeamPlayerTwoImage.image = UIImage()
-//                }else {
-//                    self.nextRedTeamPlayerOneImage.image = UIImage()
-//                    self.nextRedTeamPlayerTwoImage.image = UIImage()
-//                }
-//            }else {
-//                
-//            }
-//        }else {
-//            let list = Game.shareInstance.getGameplayer(self.autoSet, playerFemale: [:])
-//            self.redTeamPlayerOne.text = list[0]
-//            self.redTeamPlayerTwo.text = list[1]
-//            self.blueTeamPlayerOne.text = list[2]
-//            self.blueTeamPlayerTwo.text = list[3]
-//        }
         
         let list = Game.shareInstance.getGameplayer()
         print(list)
@@ -167,6 +73,18 @@ class GameScoreViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     }
     
     func initPicker() {
+        //self.blueSidePicker
+        self.blueSidePicker.dataSource = self
+        self.blueSidePicker.delegate = self
+        
+        //self.redSidePicker
+        self.redSidePicker.dataSource = self
+        self.redSidePicker.delegate = self
+        
+        for i in 0...21 {
+            self.pickerContent.append(i)
+        }
+
         self.redSidePicker.selectRow(0, inComponent: 0, animated: true)
         self.blueSidePicker.selectRow(0, inComponent: 0, animated: true)
     }

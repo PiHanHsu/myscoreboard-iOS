@@ -20,6 +20,37 @@ class Game {
         playerList[playerName] = playerList[playerName]! + 1
     }
     
+    
+    func getRandompair(itemArray:[String], itemArrayTwo:[String]=[]) -> [String]{
+        //C N取M
+        let N = itemArray.count
+        //let M = getM
+        var resultArray:[String] = []
+        var randomIndex = 0 //Int(arc4random_uniform(UInt32(N)))
+        var randomIndexTwo = 0 //Int(arc4random_uniform(UInt32(N)))
+        
+        if itemArrayTwo.count != 0 {
+            randomIndex = Int(arc4random_uniform(UInt32(2)))
+            resultArray.append(itemArray[randomIndex])
+            randomIndexTwo = Int(arc4random_uniform(UInt32(2)))
+            resultArray.append(itemArrayTwo[randomIndex])
+            
+            resultArray.append(itemArray[1-randomIndex])
+            resultArray.append(itemArrayTwo[1-randomIndex])
+        }else {
+            while resultArray.count < N  {
+                randomIndex = Int(arc4random_uniform(UInt32(N)))
+                if !resultArray.contains(itemArray[randomIndex]) {
+                    resultArray.append(itemArray[randomIndex])
+                }
+            }
+        }
+        
+        //print(resultArray)
+        return resultArray
+    }
+
+    
     func getGameplayer() -> [String] {
         let playerMan:[String:Int] = self.playerM
         let playerFemale:[String:Int] = self.playerF
@@ -91,10 +122,13 @@ class Game {
         
         if mix <= doubleF && mix <= doubleM {
             //mix
+            var player1:[String] = []
+            var player2:[String] = []
+            
             if playerArrayM.count >= 2 && playerArrayF.count >= 2 {
                 for (key, _) in playerArrayM {
                     if i <= 2 {
-                        gamePlayer.append(key)
+                        player1.append(key)
                         haveJoinGame(&playerM, playerName: key)
                         i += 1
                     }else {
@@ -105,7 +139,7 @@ class Game {
                 
                 for (key, _) in playerArrayF {
                     if i <= 2 {
-                        gamePlayer.append(key)
+                        player2.append(key)
                         haveJoinGame(&playerF, playerName: key)
                         i += 1
                     }else {
@@ -113,6 +147,7 @@ class Game {
                     }
                 }
                 i = 1
+                gamePlayer = getRandompair(player1, itemArrayTwo: player2)
             }
         }else if doubleM <= mix && doubleM <= doubleF {
             //doubleM
@@ -127,6 +162,7 @@ class Game {
                     }
                 }
                 i = 1
+                gamePlayer = getRandompair(gamePlayer)
             }
             
         }else {
@@ -142,6 +178,7 @@ class Game {
                     }
                 }
                 i = 1
+                gamePlayer = getRandompair(gamePlayer)
             }
         }
         
