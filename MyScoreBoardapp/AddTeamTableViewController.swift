@@ -54,15 +54,13 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             
             self.addEditTeamButton.layer.cornerRadius = 10
             addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
-            addEditTeamButton.setBackgroundImage(UIImage(named: "bn_teamedit_submit_3x"), forState: .Normal)
-            
+            addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
 
         }else{
             navigationItem.title = "新增球隊"
             self.addEditTeamButton.layer.cornerRadius = 10
             addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
-            addEditTeamButton.setBackgroundImage(UIImage(named: "bn_team_submit_3x"), forState: .Normal)
-
+            addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
 
         }
         
@@ -77,7 +75,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
 
         gpaViewController.placeDelegate = self
         
-        self.TeamImageuploadbackground.frame = CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height/4)
+        self.TeamImageuploadbackground.frame = CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height:50 )
         
         
         
