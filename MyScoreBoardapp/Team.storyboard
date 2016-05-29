@@ -82,22 +82,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-mh-P6C">
-                                <rect key="frame" x="8" y="486" width="572" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="C3J-k3-S0a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToGameSetAction:" destination="JVT-wd-D6H" eventType="touchUpInside" id="h0R-TL-0DC"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Snr-Th-nM4" userLabel="Team Collection View">
-                                <rect key="frame" x="8" y="84" width="572" height="382"/>
-                                <color key="backgroundColor" red="0.20392156862745098" green="0.29019607843137257" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="8" y="44" width="572" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.20392156859999999" green="0.90196078430000004" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Blv-8S-hBj" userLabel="TeamLayout">
                                     <size key="itemSize" width="150" height="150"/>
@@ -107,37 +94,25 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamPageCollectionViewCell" id="lhS-3L-iBB" userLabel="TeamCollection View Cell" customClass="TeamCollectionViewCell" customModule="MyScoreBoardapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="64" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.29019607843137257" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="20" id="Ba8-U6-e99"/>
-                            <constraint firstAttribute="trailing" secondItem="2GQ-mh-P6C" secondAttribute="trailing" constant="20" id="Bia-5b-bP7"/>
-                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="20" id="Csb-gX-7bL"/>
-                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="20" id="EH6-XT-O2M"/>
-                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="7k0-mq-ryN" secondAttribute="top" constant="75" id="UWj-JE-WjG"/>
-                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="XI5-wq-zR7"/>
-                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="2GQ-mh-P6C" secondAttribute="bottom" constant="15" id="ZXr-i1-wFg"/>
-                            <constraint firstItem="2GQ-mh-P6C" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="20" id="ebD-KT-PPV"/>
-                            <constraint firstItem="Snr-Th-nM4" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="m0q-Tj-rQV"/>
-                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="20" id="p6F-FM-Xgi"/>
+                            <constraint firstItem="Snr-Th-nM4" firstAttribute="leading" secondItem="7k0-mq-ryN" secondAttribute="leading" constant="8" id="BV0-Wl-Hme"/>
+                            <constraint firstItem="Snr-Th-nM4" firstAttribute="top" secondItem="jEx-aE-bXA" secondAttribute="bottom" constant="-20" id="IFe-MJ-GDm"/>
+                            <constraint firstItem="S5L-gQ-B4P" firstAttribute="top" secondItem="Snr-Th-nM4" secondAttribute="bottom" constant="8" id="rgJ-OS-XwV"/>
+                            <constraint firstAttribute="trailing" secondItem="Snr-Th-nM4" secondAttribute="trailing" constant="20" id="sYL-lU-DVK"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="EH6-XT-O2M"/>
-                                <exclude reference="UWj-JE-WjG"/>
-                                <exclude reference="Csb-gX-7bL"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="我的球隊" id="A5t-PU-i8L">
                         <barButtonItem key="rightBarButtonItem" image="icon_nav_edit_normal" id="Fpb-VI-2vS">
@@ -147,7 +122,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="recordScoreButton" destination="2GQ-mh-P6C" id="aFc-kp-4lV"/>
                         <outlet property="teamCollectionView" destination="Snr-Th-nM4" id="hAZ-sS-SFp"/>
                         <outlet property="teamLayout" destination="Blv-8S-hBj" id="JyV-4M-nUx"/>
                         <segue destination="BhG-wz-Llj" kind="show" identifier="showAddTeam" id="uVj-Ui-JZx"/>
@@ -543,6 +517,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5wQ-cV-oIv"/>
-        <segue reference="mdw-fr-CaR"/>
+        <segue reference="4G9-hf-xfd"/>
     </inferredMetricsTieBreakers>
 </document>
