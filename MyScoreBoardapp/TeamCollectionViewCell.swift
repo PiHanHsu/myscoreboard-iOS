@@ -24,17 +24,17 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
     @IBOutlet weak var childPlayerCardLayout: UICollectionViewFlowLayout!
     
     @IBOutlet weak var teamBackgroundView: UIView!
-    @IBOutlet weak var teamImageUrl: UIImageView!
+//    @IBOutlet weak var teamImageUrl: UIImageView!
     @IBOutlet weak var teamNameLabel: UILabel!
-    @IBOutlet weak var gameTimeTitle: UILabel!
+//    @IBOutlet weak var gameTimeTitle: UILabel!
     @IBOutlet weak var gameTimeDay: UILabel!
     @IBOutlet weak var gameTimeHour: UILabel!
-    @IBOutlet weak var gameLocationTitle: UILabel!
+//    @IBOutlet weak var gameLocationTitle: UILabel!
     @IBOutlet weak var gameLocation: UILabel!
     @IBOutlet weak var TeamMemberTitle: UILabel!
 //    @IBOutlet weak var lightBlueView: UIView!
-    @IBOutlet weak var imageBackground: UIView!
-    @IBOutlet weak var teamDetailBackground: UIView!
+//    @IBOutlet weak var imageBackground: UIView!
+//    @IBOutlet weak var teamDetailBackground: UIView!
     @IBOutlet weak var headerBackground: UIView!
     
     
@@ -50,8 +50,8 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         
         
 //        self.lightBlueView.layer.cornerRadius = 10
-        self.teamBackgroundView.layer.cornerRadius = 10
-        self.imageBackground.layer.cornerRadius = 10
+//        self.teamBackgroundView.layer.cornerRadius = 10
+//        self.imageBackground.layer.cornerRadius = 10
         self.teamBackgroundView.layer.cornerRadius = 10
         self.headerBackground.layer.cornerRadius = 10
         self.childCollectionView.layer.cornerRadius = 10
@@ -148,6 +148,12 @@ class TeamCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UI
         }
         
     }
+    
+    @IBAction func goToGame(sender: UIButton) {
+        let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("GameSetTableViewController")
+//        self.navigationController?.pushViewController(destinationController, animated: true)
+    }
+   
     
 }
 

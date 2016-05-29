@@ -32,9 +32,9 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         self.teamCollectionView.dataSource = self
         self.teamCollectionView.delegate = self
         
-        self.recordScoreButton.layer.cornerRadius = 10
-        recordScoreButton.imageView?.contentMode = .ScaleAspectFit
-        recordScoreButton.setBackgroundImage(UIImage(named: "bn_team_gotocounter_normal_3x"), forState: .Normal)
+//        self.recordScoreButton.layer.cornerRadius = 10
+//        recordScoreButton.imageView?.contentMode = .ScaleAspectFit
+//        recordScoreButton.setBackgroundImage(UIImage(named: "bn_team_gotocounter_normal_3x"), forState: .Normal)
         
         HttpManager.sharedInstance
             .request(HttpMethod.HttpMethodGet,
@@ -79,7 +79,9 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         
         let widthSize = self.teamCollectionView.frame.size.width
         let heightSize = self.teamCollectionView.frame.size.height
+        print("\(heightSize)")
         return CGSize.init(width: widthSize, height: heightSize)
+       
         //        return CGSizeMake(300, 300)
     }
     
@@ -102,7 +104,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
             // MARK: - 7.重載成員的collectionView cell data
             myCell.team = myTeams
             myCell.childCollectionView.reloadData()
-            myCell.teamImageUrl.sd_setImageWithURL(NSURL(string: Teams.sharedInstance.teams[indexPath.row].TeamImageUrl!))
+//            myCell.teamImageUrl.sd_setImageWithURL(NSURL(string: Teams.sharedInstance.teams[indexPath.row].TeamImageUrl!))
             
             myCell.teamNameLabel.text = Teams.sharedInstance.teams[indexPath.row].TeamName
             myCell.gameTimeDay.text = Teams.sharedInstance.teams[indexPath.row].GameTimeDay
