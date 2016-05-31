@@ -110,6 +110,8 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
             myCell.gameTimeDay.text = Teams.sharedInstance.teams[indexPath.row].GameTimeDay
             myCell.gameTimeHour.text = Teams.sharedInstance.teams[indexPath.row].GameTimeHour
             myCell.gameLocation.text = Teams.sharedInstance.teams[indexPath.row].GameLocation
+            print("----------------------")
+            print(Teams.sharedInstance.teams[indexPath.row].GameLocation)
             myCell.players = Teams.sharedInstance.teams[indexPath.row].players
             
             

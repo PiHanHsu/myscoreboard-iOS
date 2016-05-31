@@ -9,8 +9,8 @@
 import UIKit
 
 class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPickerViewDelegate,UIPickerViewDataSource, GooglePlacesAutocompleteDelegate,UITextFieldDelegate,labelCellDelegate {
-
     
+    var location = ""
     var isAddTeam = false
     var currentTeamIndex = ""
     @IBOutlet var pickerBackgroundView: UIView!
@@ -18,12 +18,12 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     @IBOutlet weak var TeamImageuploadbackground: UIView!
     @IBOutlet weak var countText: UILabel!
     @IBOutlet weak var addEditTeamButton: UIButton!
-//    @IBOutlet weak var showDownloadTeamImage: UIImageView!
+    //    @IBOutlet weak var showDownloadTeamImage: UIImageView!
     
     let dayArray = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
     let startTimeArray = ["00:00","00:30","01:00","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
     let endTimeArray = ["00:00","00:30","01:00:","01:30","02:00","02:30","03:00","03:30","04:00","04:30","05:00","05:30","06:00","06:30","07:00","07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00:","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00:","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30"]
-
+    
     var daytime:String?
     var starttime:String?
     var endtime:String?
@@ -34,11 +34,11 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     )
     
     var imageName: String?
-
-    var TeamName = ""
-//   var GameTime = ""
     
-//    picker
+    var TeamName = ""
+    //   var GameTime = ""
+    
+    //    picker
     var totalTime:String?
     //will add
     var gameTime:AddTeamLabelTableViewCell?
@@ -46,8 +46,8 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let newTeam = Team()
-//        Teams.sharedInstance.addTeam(newTeam)
+        //        let newTeam = Team()
+        //        Teams.sharedInstance.addTeam(newTeam)
         
         if isAddTeam == false {
             navigationItem.title = "編輯球隊"
@@ -55,16 +55,16 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             self.addEditTeamButton.layer.cornerRadius = 10
             addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
             addEditTeamButton.setTitle("儲存", forState: UIControlState.Normal)
-
+            
         }else{
             navigationItem.title = "新增球隊"
             self.addEditTeamButton.layer.cornerRadius = 10
             addEditTeamButton.imageView?.contentMode = .ScaleAspectFit
             addEditTeamButton.setTitle("建立球隊", forState: UIControlState.Normal)
-
+            
         }
         
-
+        
         let teams = Teams.sharedInstance
         
         print(teams)
@@ -72,7 +72,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         daytime = dayArray[0]
         starttime = startTimeArray[0]
         endtime = endTimeArray[0]
-
+        
         gpaViewController.placeDelegate = self
         
         self.TeamImageuploadbackground.frame = CGRect(x: 0, y: 0 , width: UIScreen.mainScreen().bounds.width , height:50 )
@@ -81,18 +81,18 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         
-
+        
         
         self.tableView.registerNib(UINib(nibName: "AddTeamLabelTableViewCell",bundle: nil), forCellReuseIdentifier: "AddTeamLabelTableViewCell")
         
-//        tableView.estimatedRowHeight = 300.0
-//        tableView.rowHeight = UITableViewAutomaticDimension
-
+        //        tableView.estimatedRowHeight = 300.0
+        //        tableView.rowHeight = UITableViewAutomaticDimension
+        
         
         
     }
@@ -124,7 +124,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             return false
         }
         let newLength = currentCharacterCount + string.characters.count - range.length
-    
+        
         if newLength < 21 {
             self.countText.text = "\(newLength)"
             return true
@@ -134,32 +134,32 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         }
         
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 4
         
-
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         //設定每個header的高度
-                return 20
-      }
-   
+        return 20
+    }
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -191,7 +191,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             if !(self.totalTime ?? "").isEmpty {
                 cell.addTeamDetailText.text = self.totalTime
             }
-           
+            
             gameTime = cell
             print(totalTime)
             
@@ -203,7 +203,10 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             let cell = tableView.dequeueReusableCellWithIdentifier("AddTeamLabelTableViewCell", forIndexPath: indexPath) as! AddTeamLabelTableViewCell
             
             cell.addTeamDetailIcon.image = UIImage(named:"ico_field_place_3x" )
-            cell.addTeamDetailText.placeholder = "球場位置"
+            cell.addTeamDetailText.placeholder = (self.location != "") ? nil : "球場位置"
+            cell.addTeamDetailText.text = self.location
+            print("1111111111111111")
+            print(self.location)
             cell.accessoryType = .DisclosureIndicator
             cell.addTeamDetailText.userInteractionEnabled = false
             cell.textFieldType = TextFieldType.Account
@@ -220,7 +223,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
             cell.addTeamDetailText.userInteractionEnabled = false
             cell.textFieldType = TextFieldType.Account
             return cell
-           
+            
         default:
             
             let cell = AddTeamLabelTableViewCell()
@@ -231,7 +234,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         //Add cases here to move to different segues
-      
+        
         if indexPath.section == 1{
             
             self.pickerBackgroundView.frame = CGRect(x: 0, y: UIScreen.mainScreen().bounds.height/2 , width: UIScreen.mainScreen().bounds.width , height: UIScreen.mainScreen().bounds.height/2 )
@@ -252,7 +255,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
                 self.performSegueWithIdentifier("showEditTeamMember", sender: self)
             }
         }else{
-        
+            
         }
     }
     
@@ -260,13 +263,18 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
     func placeSelected(place: Place){
         place.getDetails { details in
             print(details.raw)
+            //           print("______________")
+            //            print(details.name)
+            self.location = details.name
+            
             
             
             
             
         }
+        self.tableView.reloadData()
     }
-
+    
     
     //首先先把要顯示的資料分別存在兩個Array
     
@@ -314,36 +322,36 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
         totalTime = daytime!+" "+starttime!+"-"+endtime!
         //        pickerView.removeFromSuperview()
-//        (totalTime!)
+        //        (totalTime!)
     }
     
     @IBAction func finishAddTimeBtn(sender: AnyObject) {
         
         
-            gameTime?.addTeamDetailText.text = totalTime!
+        gameTime?.addTeamDetailText.text = totalTime!
         print(gameTime?.addTeamDetailText.text)
-            pickerBackgroundView.removeFromSuperview()
-    
+        pickerBackgroundView.removeFromSuperview()
+        
     }
     
     
     
     
-  
-
+    
+    
     //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showAddGameLocation" {
-//            let desViewcontroller = segue.destinationViewController as! AddTeamMemberViewController
-////            desViewcontroller.student = class1.students[0]
-////            desViewcontroller.delegate = self
-//        }
-//    }
-
+    //        if segue.identifier == "showAddGameLocation" {
+    //            let desViewcontroller = segue.destinationViewController as! AddTeamMemberViewController
+    ////            desViewcontroller.student = class1.students[0]
+    ////            desViewcontroller.delegate = self
+    //        }
+    //    }
     
-
+    
+    
     func addMemberChanged(newMember:String){
-    
-    
+        
+        
     }
     
 }
