@@ -22,6 +22,9 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        
         editTeamButton = self.navigationItem.rightBarButtonItem
         self.teamCollectionView.registerNib(UINib(nibName: "TeamCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "TeamCollectionViewCell")
         
@@ -39,11 +42,12 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
         HttpManager.sharedInstance
             .request(HttpMethod.HttpMethodGet,
                      apiFunc: APiFunction.GetTeamList,
-                     param: ["auth_token" : "PVP6V6EZbzq6WMV7eX1z",
-                        ":user_id":"25"],
+                     param: ["auth_token" : Usersinfo.sharedInstance.auth_token,
+                        ":user_id":Usersinfo.sharedInstance.user_id],
                      success: { (code , data ) in
                         //self.success(code, data: data)
-                        for team in data["results"].arrayValue {
+                    for team in data["results"].arrayValue
+                          {
                             Teams.sharedInstance.teams.append(Team(data: team))
                         }
                         self.teamCollectionView.reloadData()
@@ -58,6 +62,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     override func viewWillAppear(animated: Bool) {
         // MARK: - 5.重載資料
+        
         self.teamCollectionView.reloadData()
     }
     
@@ -178,7 +183,7 @@ class TeamViewController: UIViewController,UICollectionViewDataSource, UICollect
             // MARK: - 3.前往 新增成員畫面 傳 teamIndex
             let destinationController = segue.destinationViewController as! AddTeamMemberViewController
             destinationController.currentTeamIndex = String(self.number)
-            
+            destinationController.team = teams[self.number]
         }
         
         
