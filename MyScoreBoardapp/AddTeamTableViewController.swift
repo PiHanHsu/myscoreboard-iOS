@@ -334,19 +334,7 @@ class AddTeamTableViewController: UITableViewController,AddMemberDelegate,UIPick
         
     }
     
-    
-    
-    
-    
-    
-    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //        if segue.identifier == "showAddGameLocation" {
-    //            let desViewcontroller = segue.destinationViewController as! AddTeamMemberViewController
-    ////            desViewcontroller.student = class1.students[0]
-    ////            desViewcontroller.delegate = self
-    //        }
-    //    }
-    
+
     
     
     func addMemberChanged(newMember:String){
