@@ -113,6 +113,12 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
         print("\(#function)")
         print(code)
         print(data)
+        // add  save auth_oken to singleton
+        Usersinfo.sharedInstance.auth_token = data["auth_token"].stringValue
+        
+        
+        
+        
         let controller = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("MainPageNavigationController")
         self.presentViewController(controller, animated: true, completion: nil)
     }
@@ -274,7 +280,7 @@ class LoginPage: BasicTableViewController, passwordCellDelegate, labelCellDelega
                     print("Facebook login was cancelled.")
                 }else {
                     let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-                    print(accessToken)
+                    print( )
         
                     HttpManager.sharedInstance
                         .request(

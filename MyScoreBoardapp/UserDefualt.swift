@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class Usersinfo: NSObject{
+    
+    var auth_token:String = ""
+    var user_id:String = ""
+    
+    static let sharedInstance = Usersinfo()
+
+}
