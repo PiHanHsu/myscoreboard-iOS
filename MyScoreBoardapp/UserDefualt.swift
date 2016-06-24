@@ -2,7 +2,7 @@
 //  UserDefualt.swift
 //  MyScoreBoardapp
 //
-//  Created by stephanie yang on 2016/6/17.
+//  Created by stephanie yang on 2016/6/24.
 //  Copyright © 2016年 PiHan Hsu. All rights reserved.
 //
 
@@ -14,5 +14,4 @@ class Usersinfo: NSObject{
     var user_id:String = ""
     
     static let sharedInstance = Usersinfo()
-
 }
