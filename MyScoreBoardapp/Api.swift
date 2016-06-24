@@ -31,6 +31,7 @@ enum APiFunction {
     case SaveGameScore
     case GetRanking
     case GetUserStats
+    case SearchUser
 }
 
 typealias HttpCallbackSuccess = (code: Int, data: JSON) -> Void
@@ -77,7 +78,8 @@ class HttpManager {
             requestParam?.removeValueForKey(":id")
         case .AddPlayersInTeam :
             let team_id = String(requestParam![":id"]!)
-            path = Params.apiRootPath + Params.apiAddPlayerInTeam + team_id
+//            path = Params.apiRootPath + Params.apiAddPlayerInTeam + team_id
+            path = "https://product.myscoreboardapp.com/api/v1/teams/12"
             //path = Params.apiRootPath + Params.apiAddPlayerInTeam + (requestParam![":id"]?.stringValue)!
             requestParam?.removeValueForKey(":id")
         case .RemovePlayerInTeam :
@@ -100,6 +102,8 @@ class HttpManager {
             path = Params.apiRootPath + Params.apiGetRanking
         case .GetUserStats :
             path = Params.apiRootPath + Params.apiGetUserStats
+        case .SearchUser :
+            path = Params.apiRootPath + Params.apiSearchUser
         }
         
         
